@@ -275,7 +275,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmPelayananBPJS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "x";
+            this.Text = "Monitoring Pelayanan BPJS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPelayananBPJS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
