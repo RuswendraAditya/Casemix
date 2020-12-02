@@ -1,0 +1,90 @@
+﻿namespace Casemix.Forms.Analisa_BPJS
+{
+    partial class FrmAnalisaPerDokterDtl
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.btnExportExcel = new Syncfusion.WinForms.Controls.SfButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgPiutang
+            // 
+            this.dgPiutang.AccessibleName = "Table";
+            this.dgPiutang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgPiutang.Location = new System.Drawing.Point(21, 32);
+            this.dgPiutang.Name = "dgPiutang";
+            this.dgPiutang.PreviewRowHeight = 35;
+            this.dgPiutang.Size = new System.Drawing.Size(1473, 500);
+            this.dgPiutang.TabIndex = 38;
+            this.dgPiutang.Text = "sfDataGrid1";
+            this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn_1);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.AccessibleName = "Button";
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportExcel.BackColor = System.Drawing.Color.Lavender;
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.btnExportExcel.Location = new System.Drawing.Point(1366, 548);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(128, 34);
+            this.btnExportExcel.Style.BackColor = System.Drawing.Color.Lavender;
+            this.btnExportExcel.Style.Image = global::Casemix.Properties.Resources.excel;
+            this.btnExportExcel.TabIndex = 41;
+            this.btnExportExcel.Text = "Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // FrmAnalisaPerDokterDtl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(1763, 637);
+            this.Controls.Add(this.btnExportExcel);
+            this.Controls.Add(this.dgPiutang);
+            this.Name = "FrmAnalisaPerDokterDtl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detail Per Dokter ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAnalisaPerDokterDtl_FormClosing);
+            this.Load += new System.EventHandler(this.FrmAnalisaPerDokterDtl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
+        private Syncfusion.WinForms.Controls.SfButton btnExportExcel;
+    }
+}

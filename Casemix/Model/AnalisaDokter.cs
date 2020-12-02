@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Casemix.Model
+{
+    class AnalisaDokter
+    {
+        public string namaDokter { get; set; }
+        public string spesialisasi { get; set; }
+
+       
+
+        public string noRM { get; set; }
+
+        public string noReg { get; set; }
+
+        public string no_sep { get; set; }
+        public string namaPasien { get; set; }
+
+        public decimal biaya_rs { get; set; }
+        public decimal iurPasien { get; set; }
+
+        public decimal potongan { get; set; }
+
+        public decimal COB { get; set; }
+
+        public decimal piutangRS { get; set; }
+
+        public decimal umbal { get; set; }
+
+        public decimal selisihUmbal { get; set; }
+
+        public int los { get; set; }
+    }
+}
