@@ -38,6 +38,8 @@
             this.mnu020202020000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202030000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203000000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203010000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.Panel1.SuspendLayout();
@@ -66,7 +68,8 @@
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu020201000000,
             this.mnu020202000000,
-            this.mnu020203000000});
+            this.mnu020203000000,
+            this.mnu020204000000});
             this.MenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
@@ -130,10 +133,25 @@
             // 
             // mnu020203000000
             // 
+            this.mnu020203000000.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu020203010000});
             this.mnu020203000000.Name = "mnu020203000000";
-            this.mnu020203000000.Size = new System.Drawing.Size(66, 22);
-            this.mnu020203000000.Text = "&Selesai";
-            this.mnu020203000000.Click += new System.EventHandler(this.mnu020107000000_Click);
+            this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
+            this.mnu020203000000.Text = "Anti Fraud";
+            // 
+            // mnu020203010000
+            // 
+            this.mnu020203010000.Name = "mnu020203010000";
+            this.mnu020203010000.Size = new System.Drawing.Size(337, 26);
+            this.mnu020203010000.Text = "Variable 1 (Jumlah Kasus Per Bulan)";
+            this.mnu020203010000.Click += new System.EventHandler(this.mnu020203010000_Click);
+            // 
+            // mnu020204000000
+            // 
+            this.mnu020204000000.Name = "mnu020204000000";
+            this.mnu020204000000.Size = new System.Drawing.Size(66, 22);
+            this.mnu020204000000.Text = "&Selesai";
+            this.mnu020204000000.Click += new System.EventHandler(this.mnu020107000000_Click);
             // 
             // PicLogo1
             // 
@@ -184,11 +202,13 @@
         internal System.Windows.Forms.MenuStrip MenuStrip;
         internal System.Windows.Forms.ToolStripMenuItem mnu020201000000;
         internal System.Windows.Forms.ToolStripSeparator ToolStripMenuItem4;
-        internal System.Windows.Forms.ToolStripMenuItem mnu020203000000;
+        internal System.Windows.Forms.ToolStripMenuItem mnu020204000000;
         private System.Windows.Forms.ToolStripMenuItem mnu020202000000;
         private System.Windows.Forms.ToolStripMenuItem mnu020202010000;
         private System.Windows.Forms.ToolStripMenuItem mnu020202020000;
         private System.Windows.Forms.ToolStripMenuItem mnu020202030000;
         private System.Windows.Forms.ToolStripMenuItem mnu020201010000;
+        internal System.Windows.Forms.ToolStripMenuItem mnu020203000000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020203010000;
     }
 }

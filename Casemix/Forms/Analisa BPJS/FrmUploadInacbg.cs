@@ -91,6 +91,7 @@ namespace Casemix.Forms.Analisa_BPJS
             catch (Exception ex)
             {
                 isSuccuss = false;
+                MsgBoxUtil.MsgError(ex.Message);
             }
             return isSuccuss;
         }

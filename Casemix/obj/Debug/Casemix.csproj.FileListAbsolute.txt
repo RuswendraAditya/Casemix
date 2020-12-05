@@ -176,3 +176,5 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.csproj.C
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.csproj.CopyComplete
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.exe
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.pdb
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable1.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable2.resources

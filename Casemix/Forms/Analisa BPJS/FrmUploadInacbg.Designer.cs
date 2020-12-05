@@ -30,11 +30,11 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.btnUploadExcel = new Syncfusion.WinForms.Controls.SfButton();
             this.btnSave = new Syncfusion.WinForms.Controls.SfButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,18 +60,6 @@
             this.txtFileName.ReadOnly = true;
             this.txtFileName.Size = new System.Drawing.Size(567, 28);
             this.txtFileName.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 24);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "File Name";
             // 
             // label5
             // 
@@ -131,6 +119,18 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 24);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "File Name";
+            // 
             // FrmUploadInacbg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,10 +158,10 @@
         #endregion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFileName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
         private Syncfusion.WinForms.Controls.SfButton btnUploadExcel;
         private Syncfusion.WinForms.Controls.SfButton btnSave;
+        private System.Windows.Forms.Label label1;
     }
 }

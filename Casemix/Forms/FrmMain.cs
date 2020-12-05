@@ -1,4 +1,5 @@
 ﻿using Casemix.Forms.Analisa_BPJS;
+using Casemix.Forms.Anti_Fraud;
 using Casemix.Util;
 using System;
 using System.Collections;
@@ -234,6 +235,13 @@ namespace Casemix.Forms
             FrmAnaliasaPerDokter frmAnalisaPerDiagnosa = new FrmAnaliasaPerDokter(); // Instantiate a Form object.
             frmAnalisaPerDiagnosa.ShowDialog(); // Show Form and
             frmAnalisaPerDiagnosa.Close();
+        }
+
+        private void mnu020203010000_Click(object sender, EventArgs e)
+        {
+            FrmVariable1 frmVariable1 = new FrmVariable1();
+            frmVariable1.ShowDialog();
+            frmVariable1.Close();
         }
     }
 }

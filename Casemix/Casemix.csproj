@@ -164,6 +164,18 @@
     <Compile Include="Forms\Analisa BPJS\FrmAnalisaPerDokterDtl.Designer.cs">
       <DependentUpon>FrmAnalisaPerDokterDtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable1.Designer.cs">
+      <DependentUpon>FrmVariable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable2.Designer.cs">
+      <DependentUpon>FrmVariable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Laporan BPJS\FrmPelayananBPJS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Analisa BPJS\FrmAnalisaPerDokterDtl.resx">
       <DependentUpon>FrmAnalisaPerDokterDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable1.resx">
+      <DependentUpon>FrmVariable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable2.resx">
+      <DependentUpon>FrmVariable2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laporan BPJS\FrmPelayananBPJS.resx">
       <DependentUpon>FrmPelayananBPJS.cs</DependentUpon>

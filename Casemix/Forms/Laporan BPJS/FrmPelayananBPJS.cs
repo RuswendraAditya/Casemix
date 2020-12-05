@@ -12,6 +12,7 @@ using System.IO;
 using Syncfusion.WinForms.DataGrid.Events;
 using System.Drawing;
 using Syncfusion.WinForms.DataGridConverter;
+using Casemix.Util;
 
 namespace Casemix.Forms.Analisa_BPJS
 {
@@ -206,7 +207,7 @@ namespace Casemix.Forms.Analisa_BPJS
             {
                 nBiayaGrouper = inacbglib.mainlib.GetBiayaGrouper(Xconsid, SecretKey, url, ref SEP, ref nBiayaGrouper, ref nBiayaRS, ref cStatusKirim, ref cTglKirim, ref cStatusKlaim, ref cBpjs_klaim_status_nm, ref CBG);
             }
-            catch (Exception ex)
+            catch 
             {
                 nBiayaGrouper = 0;
             }
@@ -234,7 +235,7 @@ namespace Casemix.Forms.Analisa_BPJS
                     codeIna = "";
                 }
             }
-            catch (Exception ex)
+            catch 
             {
                 nBiayaGrouper = 0;
             }
@@ -261,9 +262,9 @@ namespace Casemix.Forms.Analisa_BPJS
                     codeIna = "";
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                
+                codeIna = "";
             }
             return codeIna;
           
@@ -395,38 +396,7 @@ namespace Casemix.Forms.Analisa_BPJS
 
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            var options = new ExcelExportingOptions();
-            options.ExcelVersion = ExcelVersion.Excel2013;
-         //   options.CellExporting += CellExportingHandler;
-            var excelEngine = dgPiutang.ExportToExcel(dgPiutang.View, options);
-            var workBook = excelEngine.Excel.Workbooks[0];
-
-            SaveFileDialog saveFilterDialog = new SaveFileDialog
-            {
-                FilterIndex = 2,
-                Filter = "Excel 97 to 2003 Files(*.xls)|*.xls|Excel 2007 to 2010 Files(*.xlsx)|*.xlsx|Excel 2013 File(*.xlsx)|*.xlsx"
-            };
-
-            if (saveFilterDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                using (Stream stream = saveFilterDialog.OpenFile())
-                {
-                    if (saveFilterDialog.FilterIndex == 1)
-                        workBook.Version = ExcelVersion.Excel97to2003;
-                    else if (saveFilterDialog.FilterIndex == 2)
-                        workBook.Version = ExcelVersion.Excel2010;
-                    else
-                        workBook.Version = ExcelVersion.Excel2013;
-                    workBook.SaveAs(stream);
-                }
-
-                if (MessageBox.Show(this.dgPiutang, "Do you want to view the workbook?", "Workbook has been created",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-
-                    System.Diagnostics.Process.Start(saveFilterDialog.FileName);
-                }
-            }
+            ClsUtil.DownloadXLs(dgPiutang);
 
         }
 
