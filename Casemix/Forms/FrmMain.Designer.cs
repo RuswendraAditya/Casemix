@@ -39,10 +39,11 @@
             this.mnu020202030000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203010000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203020000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.mnu020203020000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203030000 = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel1.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo1)).BeginInit();
@@ -136,7 +137,8 @@
             // 
             this.mnu020203000000.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu020203010000,
-            this.mnu020203020000});
+            this.mnu020203020000,
+            this.mnu020203030000});
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
@@ -144,9 +146,16 @@
             // mnu020203010000
             // 
             this.mnu020203010000.Name = "mnu020203010000";
-            this.mnu020203010000.Size = new System.Drawing.Size(354, 26);
+            this.mnu020203010000.Size = new System.Drawing.Size(380, 26);
             this.mnu020203010000.Text = "Variable 1 (Jumlah Kasus Per Bulan)";
             this.mnu020203010000.Click += new System.EventHandler(this.mnu020203010000_Click);
+            // 
+            // mnu020203020000
+            // 
+            this.mnu020203020000.Name = "mnu020203020000";
+            this.mnu020203020000.Size = new System.Drawing.Size(380, 26);
+            this.mnu020203020000.Text = "Variable 2 (Jumlah Tagihan Per Bulan)";
+            this.mnu020203020000.Click += new System.EventHandler(this.mnu020203020000_Click);
             // 
             // mnu020204000000
             // 
@@ -175,12 +184,12 @@
             this.PicLogo.TabStop = false;
             this.PicLogo.Visible = false;
             // 
-            // mnu020203020000
+            // mnu020203030000
             // 
-            this.mnu020203020000.Name = "mnu020203020000";
-            this.mnu020203020000.Size = new System.Drawing.Size(354, 26);
-            this.mnu020203020000.Text = "Variable 2 (Jumlah Tagihan Per Bulan)";
-            this.mnu020203020000.Click += new System.EventHandler(this.mnu020203020000_Click);
+            this.mnu020203030000.Name = "mnu020203030000";
+            this.mnu020203030000.Size = new System.Drawing.Size(380, 26);
+            this.mnu020203030000.Text = "Variable 3 (Jumlah Kasus Ranap per Kelas)";
+            this.mnu020203030000.Click += new System.EventHandler(this.mnu020203030000_Click);
             // 
             // FrmMain
             // 
@@ -220,5 +229,6 @@
         internal System.Windows.Forms.ToolStripMenuItem mnu020203000000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203010000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203020000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020203030000;
     }
 }

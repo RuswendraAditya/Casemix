@@ -1,6 +1,6 @@
 ﻿namespace Casemix.Forms.Anti_Fraud
 {
-    partial class FrmVariable2
+    partial class FrmVariable3
     {
         /// <summary>
         /// Required designer variable.
@@ -33,12 +33,9 @@
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.btnLoad = new Syncfusion.WinForms.Controls.SfButton();
-            this.cmbJenisPel = new Syncfusion.WinForms.ListView.SfComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.label4 = new System.Windows.Forms.Label();
             this.btnExportExcel = new Syncfusion.WinForms.Controls.SfButton();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbJenisPel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +90,7 @@
             this.btnLoad.AccessibleName = "Button";
             this.btnLoad.BackColor = System.Drawing.Color.Bisque;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnLoad.Location = new System.Drawing.Point(525, 64);
+            this.btnLoad.Location = new System.Drawing.Point(466, 25);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(112, 32);
@@ -103,41 +100,16 @@
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // cmbJenisPel
-            // 
-            this.cmbJenisPel.DropDownStyle = Syncfusion.WinForms.ListView.Enums.DropDownStyle.DropDownList;
-            this.cmbJenisPel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cmbJenisPel.Location = new System.Drawing.Point(173, 64);
-            this.cmbJenisPel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbJenisPel.Name = "cmbJenisPel";
-            this.cmbJenisPel.Size = new System.Drawing.Size(337, 32);
-            this.cmbJenisPel.Style.DropDownStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.cmbJenisPel.Style.EditorStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cmbJenisPel.Style.ReadOnlyEditorStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cmbJenisPel.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cmbJenisPel.Style.TokenStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cmbJenisPel.TabIndex = 53;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 20);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Jenis Pelayanan";
-            // 
             // dgPiutang
             // 
             this.dgPiutang.AccessibleName = "Table";
             this.dgPiutang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPiutang.Location = new System.Drawing.Point(16, 162);
+            this.dgPiutang.Location = new System.Drawing.Point(16, 120);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
-            this.dgPiutang.Size = new System.Drawing.Size(1035, 341);
+            this.dgPiutang.Size = new System.Drawing.Size(1035, 383);
             this.dgPiutang.TabIndex = 56;
             this.dgPiutang.Text = "sfDataGrid1";
             this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
@@ -148,11 +120,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(407, 121);
+            this.label4.Location = new System.Drawing.Point(410, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(243, 25);
+            this.label4.Size = new System.Drawing.Size(287, 25);
             this.label4.TabIndex = 55;
-            this.label4.Text = "Jumlah Tagihan Per Bulan";
+            this.label4.Text = "Jumlah Kasus Ranap per Kelas\t\t";
             // 
             // btnExportExcel
             // 
@@ -171,7 +143,7 @@
             this.btnExportExcel.UseVisualStyleBackColor = false;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
-            // FrmVariable2
+            // FrmVariable3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,17 +153,13 @@
             this.Controls.Add(this.dgPiutang);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.cmbJenisPel);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtTo);
             this.Controls.Add(this.dtFrom);
-            this.Name = "FrmVariable2";
+            this.Name = "FrmVariable3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Variable 2 (Jumlah Tagihan Per Bulan)";
-            this.Load += new System.EventHandler(this.FrmVariable2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbJenisPel)).EndInit();
+            this.Text = "Variable 3 (Jumlah Kasus Ranap per Kelas\t\t)";
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,8 +173,6 @@
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;
         private Syncfusion.WinForms.Controls.SfButton btnLoad;
-        private Syncfusion.WinForms.ListView.SfComboBox cmbJenisPel;
-        private System.Windows.Forms.Label label3;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
         private System.Windows.Forms.Label label4;
         private Syncfusion.WinForms.Controls.SfButton btnExportExcel;

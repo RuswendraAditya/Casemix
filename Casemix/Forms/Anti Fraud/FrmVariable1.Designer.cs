@@ -189,7 +189,7 @@
             this.Controls.Add(this.dtFrom);
             this.Name = "FrmVariable1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form Variable 1 (Jumlah Kasus Per Bulan)";
+            this.Text = "Variable 1 (Jumlah Kasus Per Bulan)";
             this.Load += new System.EventHandler(this.FrmVariable1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbJenisPel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).EndInit();

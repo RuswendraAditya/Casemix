@@ -147,6 +147,11 @@ namespace Casemix.Forms.Anti_Fraud
                 e.Column.Visible = false;
             }
         }
+
+        private void FrmVariable2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
