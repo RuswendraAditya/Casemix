@@ -44,7 +44,7 @@ namespace Casemix.Util
                     workBook.SaveAs(stream);
                 }
 
-                if (MessageBox.Show(sfDataGrid, "Do you want to view the workbook?", "Workbook has been created",
+                if (MessageBox.Show(sfDataGrid, "Apakah anda ingin membuka file excel hasil download ?", "Download Sukses!!",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
 

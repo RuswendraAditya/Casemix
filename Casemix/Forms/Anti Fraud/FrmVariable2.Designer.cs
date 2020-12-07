@@ -140,6 +140,7 @@
             this.dgPiutang.Size = new System.Drawing.Size(1035, 341);
             this.dgPiutang.TabIndex = 56;
             this.dgPiutang.Text = "sfDataGrid1";
+            this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
             // 
             // label4
             // 

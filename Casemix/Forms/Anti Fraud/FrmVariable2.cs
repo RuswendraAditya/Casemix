@@ -17,6 +17,19 @@ namespace Casemix.Forms.Anti_Fraud
         public FrmVariable2()
         {
             InitializeComponent();
+            generateComboBox();
+            dgPiutang.AllowEditing = false;
+        }
+        private void generateComboBox()
+
+        {
+            //cmbJenisPel.AutoCompleteMode = AutoCompleteMode.Append;
+            List<string> listJenisPel = new List<string>();
+            listJenisPel.Add("Rawat Jalan");
+            listJenisPel.Add("Rawat Inap");
+            cmbJenisPel.DataSource = listJenisPel;
+            cmbJenisPel.SelectedIndex = 0;
+
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -32,6 +45,7 @@ namespace Casemix.Forms.Anti_Fraud
         private void getData()
         {
             dgPiutang.DataSource = getDataReport(cmbJenisPel.Text);
+          
         }
 
         private DataTable getDataReport(string jenis)
@@ -71,7 +85,8 @@ namespace Casemix.Forms.Anti_Fraud
 	                        'DEC' 
 	                        END AS Bulan,
 	                        YEAR ( dt_tgl_sep ) AS Tahun,
-	                        COUNT ( sep.vc_No_sep ) AS Jumlah 
+	                        SUM(total_tarif) totalGrouper,
+                            SUM(tarif_rs) totalTarifRS
                         FROM
 	                        INACBG_RAW_DATA inacbg
 	                        INNER JOIN bpjs_sep sep ON sep.vc_no_sep = inacbg.sep 
@@ -96,6 +111,41 @@ namespace Casemix.Forms.Anti_Fraud
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
             ClsUtil.DownloadXLs(dgPiutang);
+        }
+
+        private void dgPiutang_AutoGeneratingColumn(object sender, Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnArgs e)
+        {
+            if (e.Column.MappingName == "Bulan")
+            {
+                e.Column.HeaderText = "Bulan";
+                e.Column.Width = 120;
+                e.Column.AllowFiltering = true;
+
+            }
+
+            if (e.Column.MappingName == "Tahun")
+            {
+                e.Column.HeaderText = "Tahun";
+                e.Column.Width = 120;
+                e.Column.AllowFiltering = true;
+            }
+
+            if (e.Column.MappingName == "totalGrouper")
+            {
+                e.Column.HeaderText = "Grouper";
+                e.Column.Width = 180;
+                e.Column.AllowFiltering = true;
+                e.Column.Format = "#,##0.00";
+            }
+
+            if (e.Column.MappingName == "totalTarifRS")
+            {
+                e.Column.HeaderText = "Tarif RS";
+                e.Column.Width = 180;
+                e.Column.AllowFiltering = true;
+                e.Column.Format = "#,##0.00";
+                e.Column.Visible = false;
+            }
         }
     }
 

@@ -16,6 +16,7 @@ namespace Casemix.Forms.Anti_Fraud
         {
             InitializeComponent();
             generateComboBox();
+            this.dgPiutang.AllowEditing = false;
         }
         
         private void FrmVariable1_Load(object sender, EventArgs e)
