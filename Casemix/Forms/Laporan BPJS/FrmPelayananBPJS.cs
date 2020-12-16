@@ -114,9 +114,9 @@ namespace Casemix.Forms.Analisa_BPJS
         {
             pbLoading.Value = 0;
             pbLoading.Visible = true;
-            string Xconsid = getSetting("bpjs_setting", "vc_keterangan", "vc_kode", "KodeInacbgRS");
-            string url = getSetting("bpjs_setting", "vc_keterangan", "vc_kode", "UrlWSInacbg");
-            string SecretKey = getSetting("bpjs_setting", "vc_keterangan", "vc_kode", "keyinacbg");
+            string Xconsid = ClsUtil.GetSetting("bpjs_setting", "vc_keterangan", "vc_kode", "KodeInacbgRS");
+            string url = ClsUtil.GetSetting("bpjs_setting", "vc_keterangan", "vc_kode", "UrlWSInacbg");
+            string SecretKey = ClsUtil.GetSetting("bpjs_setting", "vc_keterangan", "vc_kode", "keyinacbg");
             if (cmbJenisPel.Text.Equals("Rawat Jalan"))
             {
                 dgPiutang.DataSource = getDataRawatJalan();
@@ -271,23 +271,7 @@ namespace Casemix.Forms.Analisa_BPJS
 
 
         }
-        public string getSetting(string table, string column, string where, string param)
-        {
-            string result = "";
-            SqlDataReader dr;
-
-            string SQLText = "SELECT " + column + " as result from " + table + " where " + where + "='" + param + "'";
-            SqlCommand objcommand = new SqlCommand(SQLText, clMain.DBConn.objConnection);
-            dr = objcommand.ExecuteReader();
-            while (dr.Read())
-            {
-                result = (string)dr["result"];
-            }
-
-
-            dr.Close();
-            return result;
-        }
+       
 
 
         private void FrmPelayananBPJS_Load(object sender, EventArgs e)

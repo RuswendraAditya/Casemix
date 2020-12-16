@@ -65,6 +65,7 @@
     <Reference Include="inacbglib">
       <HintPath>..\..\..\Desktop Project\Visual Studio 2005\KeuNew\PiutangNew\PiutangInstansi\Bin\Debug\inacbglib.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Syncfusion.Compression.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Syncfusion\FileFormat\FileFormats\18.2.0.44\Assemblies\4.6\Syncfusion.Compression.Base.dll</HintPath>
@@ -182,6 +183,18 @@
     <Compile Include="Forms\Anti Fraud\FrmVariable3.Designer.cs">
       <DependentUpon>FrmVariable3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable4.Designer.cs">
+      <DependentUpon>FrmVariable4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anti Fraud\FrmVariable5.Designer.cs">
+      <DependentUpon>FrmVariable5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Laporan BPJS\FrmPelayananBPJS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,11 +207,23 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Laporan BPJS\FrmRincianBiayaAKPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laporan BPJS\FrmRincianBiayaAKPN.Designer.cs">
+      <DependentUpon>FrmRincianBiayaAKPN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\AnalisaDokter.cs" />
     <Compile Include="Model\DataLayananBPJS.cs" />
     <Compile Include="Model\DiagnosaBpjs.cs" />
     <Compile Include="Model\Inacbg_Raw_Data.cs" />
     <Compile Include="Util\ClsUtil.cs" />
+    <Compile Include="Util\frmCariData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\frmCariData.Designer.cs">
+      <DependentUpon>frmCariData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\MsgBoxUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,11 +252,20 @@
     <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable3.resx">
       <DependentUpon>FrmVariable3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable4.resx">
+      <DependentUpon>FrmVariable4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable5.resx">
+      <DependentUpon>FrmVariable5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laporan BPJS\FrmPelayananBPJS.resx">
       <DependentUpon>FrmPelayananBPJS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laporan BPJS\FrmRincianBiayaAKPN.resx">
+      <DependentUpon>FrmRincianBiayaAKPN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,6 +277,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Util\frmCariData.resx">
+      <DependentUpon>frmCariData.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

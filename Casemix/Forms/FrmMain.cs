@@ -1,11 +1,13 @@
 ﻿using Casemix.Forms.Analisa_BPJS;
 using Casemix.Forms.Anti_Fraud;
+using Casemix.Forms.Laporan_BPJS;
 using Casemix.Util;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -141,9 +143,29 @@ namespace Casemix.Forms
                 MsgBoxUtil.MsgError("Gagal Akses Database");
                 this.Close();
             }
+            clMain.gKdTaripKamar = GetKdTaripKamar();
             ClsUtil.SetDataTableRightOnMenu(clMain.cUserLogIn, clMain.cIDApps, clMain.cIDModul);
           //  ClsUtil.SetDataTableRightOnMenu("wendra", "0202", "2201");
          //  SetMenuAccess();
+        }
+        public string GetKdTaripKamar()
+        {
+            string GetKdTaripKamarRet = default;
+            string sSQL;
+            SqlDataReader objDataReader;
+            var oCmd1 = new SqlCommand();
+            GetKdTaripKamarRet = "";
+            sSQL = "Select distinct vc_kd_gsklco from RMKamar ";
+            oCmd1 = new SqlCommand(sSQL, clMain.DBConn.objConnection);
+            objDataReader = oCmd1.ExecuteReader();
+            if (objDataReader.HasRows)
+            {
+                objDataReader.Read();
+                GetKdTaripKamarRet = (string)(Convert.IsDBNull(objDataReader["vc_kd_gsklco"]) ? "" : objDataReader["vc_kd_gsklco"]);
+            }
+
+            objDataReader.Close();
+            return GetKdTaripKamarRet;
         }
 
 
@@ -257,6 +279,27 @@ namespace Casemix.Forms
             FrmVariable3 frmVariable3 = new FrmVariable3();
             frmVariable3.ShowDialog();
             frmVariable3.Close();
+        }
+
+        private void mnu020203040000_Click(object sender, EventArgs e)
+        {
+            FrmVariable4 frmVariable4 = new FrmVariable4();
+            frmVariable4.ShowDialog();
+            frmVariable4.Close();
+        }
+
+        private void mnu020201020000_Click(object sender, EventArgs e)
+        {
+            FrmRincianBiayaAKPN frmRincianBiayaAKPN = new FrmRincianBiayaAKPN();
+            frmRincianBiayaAKPN.ShowDialog();
+            frmRincianBiayaAKPN.Close();
+        }
+
+        private void mnu020203050000_Click(object sender, EventArgs e)
+        {
+            FrmVariable5 frmVariable5 = new FrmVariable5();
+            frmVariable5.ShowDialog();
+            frmVariable5.Close();
         }
     }
 }

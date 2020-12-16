@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Casemix.Forms.Anti_Fraud
 {
-    public partial class FrmVariable3 : Form
+    public partial class FrmVariable4 : Form
     {
-        public FrmVariable3()
+        public FrmVariable4()
         {
             InitializeComponent();
             dgPiutang.AllowEditing = false;
@@ -43,7 +43,7 @@ namespace Casemix.Forms.Anti_Fraud
 
             string query = @"SELECT
                             CASE
-	                            bulan 
+	                            { fn MONTH ( dt_tgl_sep ) } 
 	                            WHEN 1 THEN
 	                            'JAN' 
 	                            WHEN 2 THEN
@@ -68,30 +68,19 @@ namespace Casemix.Forms.Anti_Fraud
 	                            'NOV' 
 	                            WHEN 12 THEN
 	                            'DEC' 
-	                            END AS BulanString, * 
-                            FROM
-	                            (
-                            SELECT
-	                            { fn MONTH ( dt_tgl_sep ) } AS Bulan,
+	                            END AS Bulan,
 	                            YEAR ( dt_tgl_sep ) AS Tahun,
-	                            inacbg.KELAS_RAWAT AS kelas,
-	                            COUNT ( kelas_rawat ) total 
+	                            AVG ( inacbg.los ) LOS 
                             FROM
 	                            INACBG_RAW_DATA inacbg
 	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = inacbg.sep 
 	                            AND sep.vc_no_rm = inacbg.mrn 
 	                            AND ISNULL( sep.bt_hapus, 0 ) <> 1 
                             WHERE
-	                            vc_Jenis_perawatan = 'Rawat Inap' 
-	                            AND CONVERT ( DateTime, CONVERT ( VARCHAR, Isnull( sep.dt_tgl_sep, 0 ), 101 ), 101 ) BETWEEN '" + String.Format(dateFrom.ToShortDateString(), "MM/DD/YYY") + "'  and '" + String.Format(dateTo.ToShortDateString(), "MM/DD/YYY") + "' " +
-                                "GROUP BY " +
-                                "{ fn MONTH ( dt_tgl_sep ) }, " +
-                                "YEAR ( dt_tgl_sep ), " +
-                                "KELAS_RAWAT  " +
-                                ") a PIVOT ( SUM ( a.total ) FOR kelas IN ( [1], [2], [3] ) ) AS pivot_table  " +
-                                "ORDER BY  " +
-                                "tahun, " +
-                                "bulan ASC"; 
+	                        vc_Jenis_perawatan = 'Rawat Inap' 
+                            AND Convert(DateTime, Convert(Varchar, Isnull(sep.dt_tgl_sep,0),101),101) between '" + String.Format(dateFrom.ToShortDateString(), "MM/DD/YYY") + "'   and '" + String.Format(dateTo.ToShortDateString(), "MM/DD/YYY") + "' " +
+                            " GROUP BY  { fn MONTH ( dt_tgl_sep ) }, YEAR ( dt_tgl_sep ) " +
+                            " ORDER  BY YEAR ( dt_tgl_sep ),{ fn MONTH ( dt_tgl_sep ) } ASC";
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -111,16 +100,12 @@ namespace Casemix.Forms.Anti_Fraud
         private void dgPiutang_AutoGeneratingColumn(object sender, Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnArgs e)
         {
 
-            if (e.Column.MappingName == "BulanString")
-            {
-                e.Column.HeaderText = "Bulan";
-                e.Column.Width = 120;
-                e.Column.AllowFiltering = true;
-            }
+         
             if (e.Column.MappingName == "Bulan")
             {
-                
-                e.Column.Visible = false;
+
+                e.Column.Width = 120;
+                e.Column.AllowFiltering = true;
             }
 
             if (e.Column.MappingName == "Tahun")
@@ -129,27 +114,13 @@ namespace Casemix.Forms.Anti_Fraud
                 e.Column.Width = 120;
                 e.Column.AllowFiltering = true;
             }
-
-            if (e.Column.MappingName == "1")
+            if (e.Column.MappingName == "LOS")
             {
-                e.Column.HeaderText = "Kelas 1";
+                e.Column.HeaderText = "LOS(AVG)";
                 e.Column.Width = 120;
                 e.Column.AllowFiltering = true;
             }
 
-            if (e.Column.MappingName == "2")
-            {
-                e.Column.HeaderText = "Kelas 2";
-                e.Column.Width = 120;
-                e.Column.AllowFiltering = true;
-            }
-
-            if (e.Column.MappingName == "3")
-            {
-                e.Column.HeaderText = "Kelas 2";
-                e.Column.Width = 120;
-                e.Column.AllowFiltering = true;
-            }
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using Syncfusion.WinForms.DataGrid;
+﻿using Microsoft.VisualBasic;
+using Syncfusion.WinForms.DataGrid;
 using Syncfusion.WinForms.DataGridConverter;
 using Syncfusion.XlsIO;
 using System;
@@ -15,6 +16,86 @@ namespace Casemix.Util
 {
     class ClsUtil
     {
+
+        public static string GetSetting(string table, string column, string where, string param)
+        {
+            string result = "";
+            SqlDataReader dr;
+
+            string SQLText = "SELECT " + column + " as result from " + table + " where " + where + "='" + param + "'";
+            SqlCommand objcommand = new SqlCommand(SQLText, clMain.DBConn.objConnection);
+            dr = objcommand.ExecuteReader();
+            while (dr.Read())
+            {
+                result = (string)dr["result"];
+            }
+
+
+            dr.Close();
+            return result;
+        }
+        public static string Replicate(int n, string cCharacter)
+        {
+            string ReplicateRet = default;
+            int i;
+            ReplicateRet = "";
+            i = 1;
+            while (i <= n)
+            {
+                ReplicateRet = ReplicateRet + cCharacter;
+                i = i + 1;
+            }
+
+            return ReplicateRet;
+        }
+
+        public static string AddSpace(string xVariabel, int xPJ, byte LCR, string CharSpace)
+        {
+            string AddSpaceRet = default;
+            // LCR=left,center,right
+            int Kiri;
+            int Kanan;
+            int Tambahan;
+            AddSpaceRet = "";
+            if (xPJ > Strings.Len(xVariabel))
+            {
+                switch (LCR)
+                {
+                    case 1:
+                        {
+                            AddSpaceRet = xVariabel + Replicate(xPJ - Strings.Len(xVariabel), CharSpace);
+                            break;
+                        }
+
+                    case 2:
+                        {
+                            Tambahan = xPJ - Strings.Len(xVariabel);
+                            Kiri = (int)Math.Round(Tambahan / 2d);
+                            Kanan = Tambahan - Kiri;
+                            if (Kiri > Kanan)
+                            {
+                                Kiri = Kiri - 1;
+                                Kanan = Kanan + 1;
+                            }
+
+                            AddSpaceRet = Replicate(Kiri, CharSpace) + xVariabel + Replicate(Kanan, CharSpace);
+                            break;
+                        }
+
+                    case 3:
+                        {
+                            AddSpaceRet = Replicate(xPJ - Strings.Len(xVariabel), CharSpace) + xVariabel;
+                            break;
+                        }
+                }
+            }
+            else
+            {
+                AddSpaceRet = Strings.Left(xVariabel, xPJ);
+            }
+
+            return AddSpaceRet;
+        }
 
 
         public static void DownloadXLs(SfDataGrid sfDataGrid)
@@ -81,7 +162,19 @@ namespace Casemix.Util
             }
         }
 
+        public static string TglDMY(string Kata)
+        {
+            string TglDMYRet = default;
+            TglDMYRet = Strings.Right(Kata, 2) + "-" + Strings.Mid(Kata, 6, 2) + "-" + Strings.Left(Kata, 4);
+            return TglDMYRet;
+        }
 
+        public static string TglYMD(string Kata)
+        {
+            string TglYMDRet = default;
+            TglYMDRet = Strings.Right(Kata, 4) + "-" + Strings.Mid(Kata, 4, 2) + "-" + Strings.Left(Kata, 2);
+            return TglYMDRet;
+        }
 
         public static bool GetMenuRight(string cKode, byte nType)
         {
@@ -125,6 +218,8 @@ namespace Casemix.Util
         }
 
     }
+   
+
 
     public static class CommonMethod
     {
@@ -143,7 +238,7 @@ namespace Casemix.Util
                             pro.SetValue(objT, row[pro.Name]);
                         }
                         catch (Exception ex) {
-                        
+                                
                         }
                     }
                 }
@@ -151,4 +246,7 @@ namespace Casemix.Util
             }).ToList();
         }
     }
+
+ 
+
 }

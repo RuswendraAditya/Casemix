@@ -1,6 +1,6 @@
 ﻿namespace Casemix.Forms.Anti_Fraud
 {
-    partial class FrmVariable3
+    partial class FrmVariable4
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(185, 23);
+            this.label2.Location = new System.Drawing.Point(194, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 24);
             this.label2.TabIndex = 51;
@@ -69,7 +69,7 @@
             this.dtTo.CustomFormat = "MM/yyyy";
             this.dtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(232, 20);
+            this.dtTo.Location = new System.Drawing.Point(241, 25);
             this.dtTo.Name = "dtTo";
             this.dtTo.Size = new System.Drawing.Size(109, 27);
             this.dtTo.TabIndex = 49;
@@ -80,7 +80,7 @@
             this.dtFrom.CustomFormat = "MM/yyyy";
             this.dtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(70, 20);
+            this.dtFrom.Location = new System.Drawing.Point(79, 25);
             this.dtFrom.Name = "dtFrom";
             this.dtFrom.Size = new System.Drawing.Size(109, 27);
             this.dtFrom.TabIndex = 48;
@@ -90,7 +90,7 @@
             this.btnLoad.AccessibleName = "Button";
             this.btnLoad.BackColor = System.Drawing.Color.Bisque;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnLoad.Location = new System.Drawing.Point(363, 20);
+            this.btnLoad.Location = new System.Drawing.Point(356, 20);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(112, 32);
@@ -120,11 +120,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(410, 78);
+            this.label4.Location = new System.Drawing.Point(446, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 25);
+            this.label4.Size = new System.Drawing.Size(148, 25);
             this.label4.TabIndex = 55;
-            this.label4.Text = "Jumlah Kasus Ranap per Kelas\t\t";
+            this.label4.Text = "Rata Rata LOS ";
             // 
             // btnExportExcel
             // 
@@ -143,7 +143,7 @@
             this.btnExportExcel.UseVisualStyleBackColor = false;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
-            // FrmVariable3
+            // FrmVariable4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,9 +157,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtTo);
             this.Controls.Add(this.dtFrom);
-            this.Name = "FrmVariable3";
+            this.Name = "FrmVariable4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Variable 3 (Jumlah Kasus Ranap per Kelas\t\t)";
+            this.Text = "Variable 4 (Rata-Rata LOS)\t\t)";
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -179,3 +179,7 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.pdb
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable1.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable2.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable3.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable4.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmRincianBiayaAKPN.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Util.frmCariData.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable5.resources

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Casemix.Forms.Anti_Fraud
 {
-    public partial class FrmVariable3 : Form
+    public partial class FrmVariable5 : Form
     {
-        public FrmVariable3()
+        public FrmVariable5()
         {
             InitializeComponent();
             dgPiutang.AllowEditing = false;
@@ -74,24 +74,23 @@ namespace Casemix.Forms.Anti_Fraud
                             SELECT
 	                            { fn MONTH ( dt_tgl_sep ) } AS Bulan,
 	                            YEAR ( dt_tgl_sep ) AS Tahun,
-	                            inacbg.KELAS_RAWAT AS kelas,
-	                            COUNT ( kelas_rawat ) total 
+	                            inacbg.DISCHARGE_STATUS AS kelas,
+	                            COUNT ( DISCHARGE_STATUS ) total 
                             FROM
 	                            INACBG_RAW_DATA inacbg
 	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = inacbg.sep 
 	                            AND sep.vc_no_rm = inacbg.mrn 
 	                            AND ISNULL( sep.bt_hapus, 0 ) <> 1 
                             WHERE
-	                            vc_Jenis_perawatan = 'Rawat Inap' 
-	                            AND CONVERT ( DateTime, CONVERT ( VARCHAR, Isnull( sep.dt_tgl_sep, 0 ), 101 ), 101 ) BETWEEN '" + String.Format(dateFrom.ToShortDateString(), "MM/DD/YYY") + "'  and '" + String.Format(dateTo.ToShortDateString(), "MM/DD/YYY") + "' " +
-                                "GROUP BY " +
+	                             CONVERT ( DateTime, CONVERT ( VARCHAR, Isnull( sep.dt_tgl_sep, 0 ), 101 ), 101 ) BETWEEN '" + String.Format(dateFrom.ToShortDateString(), "MM/DD/YYY") + "'  and '" + String.Format(dateTo.ToShortDateString(), "MM/DD/YYY") + "' " +
+                               "GROUP BY " +
                                 "{ fn MONTH ( dt_tgl_sep ) }, " +
                                 "YEAR ( dt_tgl_sep ), " +
-                                "KELAS_RAWAT  " +
-                                ") a PIVOT ( SUM ( a.total ) FOR kelas IN ( [1], [2], [3] ) ) AS pivot_table  " +
-                                "ORDER BY  " +
-                                "tahun, " +
-                                "bulan ASC"; 
+                                "DISCHARGE_STATUS  " +  
+                                ") a PIVOT ( SUM ( a.total ) FOR kelas IN ( [1], [2], [3],[4] ) ) AS pivot_table   " + 
+                                "ORDER BY    " +
+                                "tahun,    " +
+                               "bulan ASC";
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -111,6 +110,8 @@ namespace Casemix.Forms.Anti_Fraud
         private void dgPiutang_AutoGeneratingColumn(object sender, Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnArgs e)
         {
 
+
+
             if (e.Column.MappingName == "BulanString")
             {
                 e.Column.HeaderText = "Bulan";
@@ -119,7 +120,7 @@ namespace Casemix.Forms.Anti_Fraud
             }
             if (e.Column.MappingName == "Bulan")
             {
-                
+
                 e.Column.Visible = false;
             }
 
@@ -132,21 +133,27 @@ namespace Casemix.Forms.Anti_Fraud
 
             if (e.Column.MappingName == "1")
             {
-                e.Column.HeaderText = "Kelas 1";
-                e.Column.Width = 120;
+                e.Column.HeaderText = "Sembuh(Atas Persetujuan Dokter)";
+                e.Column.Width = 190;
                 e.Column.AllowFiltering = true;
             }
 
             if (e.Column.MappingName == "2")
             {
-                e.Column.HeaderText = "Kelas 2";
+                e.Column.HeaderText = "Dirujuk";
                 e.Column.Width = 120;
                 e.Column.AllowFiltering = true;
             }
 
             if (e.Column.MappingName == "3")
             {
-                e.Column.HeaderText = "Kelas 2";
+                e.Column.HeaderText = "Pulang Paksa(Atas Permintaan Sendiri)";
+                e.Column.Width = 190;
+                e.Column.AllowFiltering = true;
+            }
+            if (e.Column.MappingName == "4")
+            {
+                e.Column.HeaderText = "Meninggal";
                 e.Column.Width = 120;
                 e.Column.AllowFiltering = true;
             }

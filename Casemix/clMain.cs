@@ -18,9 +18,10 @@ namespace Casemix
         public static string cModulName, cSubModulName, cHeaderMsg;
         public static string cAlamatRS, cKotaRS, cKodePosRS, cTelpRS, cFaxRS, cEmailRS;
         public static int nUserLevel = 1;
-        public static String cUserLogIn = "";
+        public static string cUserLogIn = "";
         // Public Shared nUserLevel As Integer = 0
-        
+        public static string gKdTaripKamar = "";
+        public static string gKd_KomponenDokter ="" ;
         public static MemoryStream xLogo1 = new MemoryStream();
         public static MemoryStream xLogo2 = new MemoryStream();
         public static DataTable dtAccess;
@@ -56,12 +57,14 @@ namespace Casemix
             cNamaDatabase = clMain.DBConn.ConvertPass(clMain.DBConn.ReadValueINIFile("Connection", "DBName_", cINIFileName), "D");
             cNamaUser = clMain.DBConn.ConvertPass(clMain.DBConn.ReadValueINIFile("Connection", "UN_", cINIFileName), "D");
             cPassUser = clMain.DBConn.ConvertPass(clMain.DBConn.ReadValueINIFile("Connection", "Pwd_", cINIFileName), "D");
+            clMain.gKd_KomponenDokter = "21";
 
-          
+
             DBConn.NamaServer = cNamaServer;
             DBConn.NamaDatabase = cNamaDatabase;
             DBConn.NamaUser = cNamaUser;
             DBConn.PassUser = cPassUser;
+
         }
     }
 }
