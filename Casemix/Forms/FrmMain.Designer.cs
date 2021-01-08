@@ -34,6 +34,7 @@
             this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.mnu020201010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020201020000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rincianBiayaJKNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202020000 = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,10 +44,11 @@
             this.mnu020203020000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203030000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203040000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203050000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203060000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.mnu020203050000 = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel1.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo1)).BeginInit();
@@ -88,7 +90,8 @@
             this.mnu020201000000.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem4,
             this.mnu020201010000,
-            this.mnu020201020000});
+            this.mnu020201020000,
+            this.rincianBiayaJKNToolStripMenuItem});
             this.mnu020201000000.Name = "mnu020201000000";
             this.mnu020201000000.Size = new System.Drawing.Size(136, 22);
             this.mnu020201000000.Text = "Monitoring BPJS";
@@ -110,8 +113,13 @@
             this.mnu020201020000.Name = "mnu020201020000";
             this.mnu020201020000.Size = new System.Drawing.Size(278, 26);
             this.mnu020201020000.Text = "Rincian Biaya AKPN";
-            this.mnu020201020000.Visible = false;
             this.mnu020201020000.Click += new System.EventHandler(this.mnu020201020000_Click);
+            // 
+            // rincianBiayaJKNToolStripMenuItem
+            // 
+            this.rincianBiayaJKNToolStripMenuItem.Name = "rincianBiayaJKNToolStripMenuItem";
+            this.rincianBiayaJKNToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.rincianBiayaJKNToolStripMenuItem.Text = "Rincian Biaya JKN ";
             // 
             // mnu020202000000
             // 
@@ -152,7 +160,8 @@
             this.mnu020203020000,
             this.mnu020203030000,
             this.mnu020203040000,
-            this.mnu020203050000});
+            this.mnu020203050000,
+            this.mnu020203060000});
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
@@ -185,6 +194,20 @@
             this.mnu020203040000.Text = "Variable 4 (Jumlah Rata-Rata LOS)";
             this.mnu020203040000.Click += new System.EventHandler(this.mnu020203040000_Click);
             // 
+            // mnu020203050000
+            // 
+            this.mnu020203050000.Name = "mnu020203050000";
+            this.mnu020203050000.Size = new System.Drawing.Size(380, 26);
+            this.mnu020203050000.Text = "Variable 5 (Jumlah Cara Pulang)";
+            this.mnu020203050000.Click += new System.EventHandler(this.mnu020203050000_Click);
+            // 
+            // mnu020203060000
+            // 
+            this.mnu020203060000.Name = "mnu020203060000";
+            this.mnu020203060000.Size = new System.Drawing.Size(380, 26);
+            this.mnu020203060000.Text = "Variable 6 (Total Tarif Rill RS)";
+            this.mnu020203060000.Click += new System.EventHandler(this.mnu020203060000_Click);
+            // 
             // mnu020204000000
             // 
             this.mnu020204000000.Name = "mnu020204000000";
@@ -211,13 +234,6 @@
             this.PicLogo.TabIndex = 2;
             this.PicLogo.TabStop = false;
             this.PicLogo.Visible = false;
-            // 
-            // mnu020203050000
-            // 
-            this.mnu020203050000.Name = "mnu020203050000";
-            this.mnu020203050000.Size = new System.Drawing.Size(380, 26);
-            this.mnu020203050000.Text = "Variable 5 (Jumlah Cara Pulang)";
-            this.mnu020203050000.Click += new System.EventHandler(this.mnu020203050000_Click);
             // 
             // FrmMain
             // 
@@ -261,5 +277,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020203040000;
         private System.Windows.Forms.ToolStripMenuItem mnu020201020000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203050000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020203060000;
+        private System.Windows.Forms.ToolStripMenuItem rincianBiayaJKNToolStripMenuItem;
     }
 }

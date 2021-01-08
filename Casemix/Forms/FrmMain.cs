@@ -301,5 +301,12 @@ namespace Casemix.Forms
             frmVariable5.ShowDialog();
             frmVariable5.Close();
         }
+
+        private void mnu020203060000_Click(object sender, EventArgs e)
+        {
+            FrmVariable6 frmVariable6 = new FrmVariable6();
+            frmVariable6.ShowDialog();
+            frmVariable6.Close();
+        }
     }
 }

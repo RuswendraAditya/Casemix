@@ -144,7 +144,6 @@ namespace Casemix.Forms.Anti_Fraud
                 e.Column.Width = 120;
                 e.Column.AllowFiltering = true;
             }
-
             if (e.Column.MappingName == "3")
             {
                 e.Column.HeaderText = "Pulang Paksa(Atas Permintaan Sendiri)";

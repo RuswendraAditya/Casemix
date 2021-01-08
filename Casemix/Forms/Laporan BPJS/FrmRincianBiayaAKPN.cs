@@ -187,7 +187,7 @@ namespace Casemix.Forms.Laporan_BPJS
                     {
                         m_Hak_AKPN = false;
                     }
-                    else if ((bool) ObjReader["bt_hak_akpn"] == true)
+                    else if ((bool)ObjReader["bt_hak_akpn"] == true)
                     {
                         m_Hak_AKPN = true;
                     }
@@ -213,7 +213,7 @@ namespace Casemix.Forms.Laporan_BPJS
                     {
                         m_KuitPrinted = false;
                     }
-                    else if ((bool) ObjReader["bt_print_pulang"] == true)
+                    else if ((bool)ObjReader["bt_print_pulang"] == true)
                     {
                         m_KuitPrinted = true;
                     }
@@ -222,7 +222,7 @@ namespace Casemix.Forms.Laporan_BPJS
                         m_KuitPrinted = false;
                     }
                     // Mengambil Data Keubayar
-                
+
                 }
                 else
                 {
@@ -238,14 +238,49 @@ namespace Casemix.Forms.Laporan_BPJS
             {
                 m_Bayar = GetKuitansiBayar(txtNoReg.Text);
                 FillGridRincian();
-                //HitungTotal();
+                HitungTotal();
             }
         }
 
         private void HitungTotal()
         {
-            throw new NotImplementedException();
+            int I = 0;
+            double TotBiaya = 0d;
+            double TotTitipan = 0d;
+            var loopTo = lstItem.RowCount - 1;
+            for (I = 0; I <= loopTo; I++)
+            {
+              
+                if ((bool) lstItem["bt_detil", I].Value == false)
+                {
+                    switch (lstItem["vc_index", I].Value)
+                    {
+                        case 3:
+                            {
+                                TotTitipan += double.Parse(lstItem["dc_nominal", I].Value.ToString());
+                                break;
+                            }
+
+                        default:
+                            {
+                                TotBiaya += double.Parse(lstItem["dc_nominal", I].Value.ToString());
+                                break;
+                            }
+                    }
+                }
+            }
+
+            this.txtNTotBiaya.Text = Strings.Format(TotBiaya, "standard");
+            this.txtNPembulatan.Text = Strings.Format(clMain.DBConn.Bulat50(Math.Ceiling(TotBiaya)), "###,##0.00");
+            this.txtNTotTitipan.Text = Strings.Format(TotTitipan, "standard");
+            double total = double.Parse(txtNPembulatan.Text) - double.Parse(txtNTotTitipan.Text);
+            this.txtNTotBayar.Text = Strings.Format(total, "standard");
+            if (m_Pulang == true)
+            {
+                this.txtNTotBayar.Text = Strings.Format(double.Parse(txtNTotBayar.Text) - m_Bayar, "standard");
+            }
         }
+
         private void TambahBaris(ref DataGridView xGrid, string xKeterangan, double xNominal, bool xDetil, byte xIndex, string xKdBagian)
 
         {
@@ -283,7 +318,7 @@ namespace Casemix.Forms.Laporan_BPJS
             sSQL = " SELECT	1 as urut,dd.vc_kd_bagian,vc_nm_bagian," +
                     "sum(aa.dc_qty * aa.dc_rupiah) dc_tarip  " + " FROM	KeuRinciInapKomponen aa " + "       " +
                     " Left Join KeuRincian cc ON cc.vc_no_bukti = aa.vc_no_bukti " + "        " +
-                    "Left Join PubBagian dd On substring(cc.vc_no_bukti,7,2) = dd.vc_kd_bagian " + 
+                    "Left Join PubBagian dd On substring(cc.vc_no_bukti,7,2) = dd.vc_kd_bagian " +
                     " WHERE	cc.vc_no_reg ='" + vNoReg + " ' " + "    AND aa.vc_kd_Gsklco  <> '" +
                     clMain.gKdTaripKamar + "' " + "    and aa.vc_kd_sub_komponen <> '" + clMain.gKd_KomponenDokter + " ' " + " GROUP BY vc_nm_bagian, dd.vc_kd_bagian  " + " UNION ALL " + " SELECT	2 as urut, " + "       " +
                     " isnull(bb.vc_nik1,'') as vc_kd_bagian, " + "        isnull(vc_nama_kry,'') as vc_nm_bagian,sum(aa.dc_qty * aa.dc_rupiah) dc_tarip " + " FROM	KeuRinciInapKomponen aa " + "        " +
@@ -346,13 +381,14 @@ namespace Casemix.Forms.Laporan_BPJS
             xHariRawat = 0;
             foreach (DataRow r in dtPembebanan.Rows)
             {
-                TambahBaris(ref lstItem, "       " + r["tgl_awal"] + " -- " + r["tgl_akhir"] + " = " + r["jml_hari"] + " Hari @ " + r["dc_harga"], (double) r["dc_rupiah"], true, 1, "");
+
+                TambahBaris(ref lstItem, "       " + r["tgl_awal"] + " -- " + r["tgl_akhir"] + " = " + r["jml_hari"] + " Hari @ " + r["dc_harga"], Convert.ToDouble(r["dc_rupiah"]), true, 1, "");
                 vBarisRuangD = lstItem.RowCount - 1;
                 lstItem["dc_nominal", vBarisRuangD].Value = Strings.Format(r["dc_rupiah"], "standard");
                 lstItem["dt_tgl_detil", vBarisRuangD].Value = r["tgl_awal"]; // Format(r("tgl_awal"), "dd-MM-yyyy HH:mm")
                 lstItem["vc_hide_ket", vBarisRuangD].Value = r["vc_nama"]; // oReader("vc_nama")
-                vTotalRuang =vTotalRuang +  (double)r["dc_rupiah"];
-                xHariRawat = xHariRawat +  (int) r["jml_hari"];
+                vTotalRuang = vTotalRuang + Convert.ToDouble(r["dc_rupiah"]);
+                xHariRawat = xHariRawat + Convert.ToInt32(r["jml_hari"]);
             }
 
             lstItem["dc_nominal", vBarisRuangH].Value = vTotalRuang;
@@ -379,14 +415,14 @@ namespace Casemix.Forms.Laporan_BPJS
                 {
                     if (oReader["vc_kd_bagian"].ToString() != "02")
                     {
-                        TambahBaris(ref lstItem, "       " + oReader["vc_kd_bagian"].ToString() + "   " + oReader["vc_nm_bagian"], (double) oReader["dc_tarip"], true, 2, oReader["vc_kd_bagian"].ToString());
+                        TambahBaris(ref lstItem, "       " + oReader["vc_kd_bagian"].ToString() + "   " + oReader["vc_nm_bagian"], Convert.ToDouble(oReader["dc_tarip"]), true, 2, oReader["vc_kd_bagian"].ToString());
                     }
                     else
                     {
-                        TambahBaris(ref lstItem, "       " + oReader["vc_kd_bagian"].ToString() + "   " + "KONSUL DOKTER / ELEKTRODIAGNOSTIK", (double)oReader["dc_tarip"], true, 2, oReader["vc_kd_bagian"].ToString());
+                        TambahBaris(ref lstItem, "       " + oReader["vc_kd_bagian"].ToString() + "   " + "KONSUL DOKTER / ELEKTRODIAGNOSTIK", Convert.ToDouble(oReader["dc_tarip"]), true, 2, oReader["vc_kd_bagian"].ToString());
                     }
 
-                    vTotalRawat += (double)oReader["dc_tarip"];
+                    vTotalRawat += Convert.ToDouble(oReader["dc_tarip"]);
                 }
 
                 lstItem["dc_nominal", vBarisRawat].Value = Strings.Format(vTotalRawat, "standard");
@@ -416,12 +452,12 @@ namespace Casemix.Forms.Laporan_BPJS
             {
                 while (oReader.Read())
                 {
-                    double rupiah = (double)oReader["mo_rupiah"];
+                    double rupiah = Convert.ToDouble(oReader["mo_rupiah"]);
                     string rupiahString = rupiah.ToString();
                     TambahBaris(ref lstItem, ClsUtil.Replicate(5, " ") + "  " + ClsUtil.AddSpace(Strings.Format(oReader["dt_tgl_bayar"].ToString(), "dd-MM-yyyy"), 10, 2, " ") +
                         ClsUtil.AddSpace(" No. Bukti : " + oReader["vc_no_kwit"], 24, 1, " "),
                         rupiah, true, 3, "");
-                    vTotalTitipan = (double)oReader["tot_titipan"];
+                    vTotalTitipan = Convert.ToDouble(oReader["tot_titipan"]);
                     lstItem["dt_tgl_detil", lstItem.RowCount - 1].Value = oReader["dt_tgl_bayar"];
                     lstItem["vc_kd_detil", lstItem.RowCount - 1].Value = oReader["vc_no_bukti"];
                 }
@@ -436,25 +472,25 @@ namespace Casemix.Forms.Laporan_BPJS
             double rupiah = 0;
 
             SqlDataReader oReader;
-                string vSQL;
-                SqlCommand oCmd = default;
-                vSQL = " SELECT vc_no_reg,sum(mo_rupiah) as mo_rupiah " + " FROM   KeuBayar " + " WHERE  vc_no_reg ='" + xNoReg + "'" + "    And vc_k_bayar ='1' " + "    And bt_validasi =1 " + " GROUP BY vc_no_reg ";
+            string vSQL;
+            SqlCommand oCmd = default;
+            vSQL = " SELECT vc_no_reg,sum(mo_rupiah) as mo_rupiah " + " FROM   KeuBayar " + " WHERE  vc_no_reg ='" + xNoReg + "'" + "    And vc_k_bayar ='1' " + "    And bt_validasi =1 " + " GROUP BY vc_no_reg ";
 
-                oCmd = new SqlCommand(vSQL, clMain.DBConn.objConnection);
+            oCmd = new SqlCommand(vSQL, clMain.DBConn.objConnection);
 
-                oReader =  oCmd.ExecuteReader(); // clMain.clUtama.GeneralQuery(SQL)
-                if (oReader.HasRows)
-                {
-                    oReader.Read();
-                    rupiah = (double)oReader["mo_rupiah"];
-                }
-                else
-                {
-                   rupiah = 0;
-                }
+            oReader = oCmd.ExecuteReader(); // clMain.clUtama.GeneralQuery(SQL)
+            if (oReader.HasRows)
+            {
+                oReader.Read();
+                rupiah = Convert.ToDouble(oReader["mo_rupiah"]);
+            }
+            else
+            {
+                rupiah = 0;
+            }
 
-                oReader.Close();
-            
+            oReader.Close();
+
             return rupiah;
 
         }
@@ -471,35 +507,35 @@ namespace Casemix.Forms.Laporan_BPJS
                         {
                             // Pulang Lunas
                             lblKondisiP.Text = "PASIEN SUDAH DIPULANGKAN (LUNAS)";
-                           
+
                         }
                         else
                         {
                             lblKondisiP.Text = "PASIEN AKAN PULANG (SUDAH CETAK KUITANSI)";
-                      
+
                         }
                     }
                     else if (m_Pulang) // pasien piutang
                     {
                         lblKondisiP.Text = "PASIEN SUDAH DIPULANGKAN (PIUTANG)";
-                       
+
                     }
                     else
                     {
                         lblKondisiP.Text = "PASIEN AKAN PULANG";
-                    
+
                     }
                 }
                 else
                 {
                     lblKondisiP.Text = "";
-                  
+
                 }
             }
             else
             {
                 lblKondisiP.Text = "";
-              
+
             }
         }
 
@@ -593,7 +629,7 @@ namespace Casemix.Forms.Laporan_BPJS
                                 vJmlRupiah = 0;
                                 vHarga = 0;
                             }
-                            
+
                             vTglAkhir = (DateTime)oReader["dt_tgl_trans"];
                             vJmlKamar = (byte)(vJmlKamar + 1);
                             vJmlRupiah = vJmlRupiah + (decimal)oReader["dc_rupiah"];
