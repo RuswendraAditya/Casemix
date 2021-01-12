@@ -357,13 +357,14 @@ namespace Casemix.Forms.Analisa_BPJS
                                 WHERE
 	                                ISNULL( sep.bt_hapus, '0' ) <> 1 
 									AND ISNULL(kartuPiutang.dc_umbal,'0') <> 0
-	                                AND htagih.vc_k_png = '4ye' 
+	                                AND htagih.vc_k_png = @pngJKN  
                                     AND Convert(DateTime, Convert(Varchar,Isnull(sep.dt_tgl_sep,0),101),101) between '" + dtFrom.Value.ToShortDateString() + "'   and '" + dtTo.Value.ToShortDateString() + "' ";
 
             string queryAll = query + " UNION ALL " + query_cob;
 
             using (SqlCommand cmd = new SqlCommand(queryAll, clMain.DBConn.objConnection))
             {
+                cmd.Parameters.AddWithValue("@pngJKN", FrmMain.kdJKN);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     da.Fill(dt);

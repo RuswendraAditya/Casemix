@@ -34,7 +34,7 @@
             this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.mnu020201010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020201020000 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rincianBiayaJKNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020201030000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202020000 = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +91,7 @@
             this.ToolStripMenuItem4,
             this.mnu020201010000,
             this.mnu020201020000,
-            this.rincianBiayaJKNToolStripMenuItem});
+            this.mnu020201030000});
             this.mnu020201000000.Name = "mnu020201000000";
             this.mnu020201000000.Size = new System.Drawing.Size(136, 22);
             this.mnu020201000000.Text = "Monitoring BPJS";
@@ -115,11 +115,12 @@
             this.mnu020201020000.Text = "Rincian Biaya AKPN";
             this.mnu020201020000.Click += new System.EventHandler(this.mnu020201020000_Click);
             // 
-            // rincianBiayaJKNToolStripMenuItem
+            // mnu020201030000
             // 
-            this.rincianBiayaJKNToolStripMenuItem.Name = "rincianBiayaJKNToolStripMenuItem";
-            this.rincianBiayaJKNToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
-            this.rincianBiayaJKNToolStripMenuItem.Text = "Rincian Biaya JKN ";
+            this.mnu020201030000.Name = "mnu020201030000";
+            this.mnu020201030000.Size = new System.Drawing.Size(278, 26);
+            this.mnu020201030000.Text = "Rincian Biaya JKN ";
+            this.mnu020201030000.Click += new System.EventHandler(this.mnu020201030000_Click);
             // 
             // mnu020202000000
             // 
@@ -278,6 +279,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020201020000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203050000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203060000;
-        private System.Windows.Forms.ToolStripMenuItem rincianBiayaJKNToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu020201030000;
     }
 }

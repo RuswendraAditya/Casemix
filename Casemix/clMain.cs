@@ -35,7 +35,7 @@ namespace Casemix
         public static string cAppNameToUpdate = "";
         public static string cAppVersionToUpdate = "";
         public static string cUpdateLink = "";
-        
+     
 
         public static void ReadValuesINIFiles()
         {

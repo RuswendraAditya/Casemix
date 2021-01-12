@@ -22,7 +22,7 @@ namespace Casemix.Forms
 
 
         private string cStatus;
-
+        public static string kdJKN = "";
         public string SetAppNameToUpdate
         {
             get
@@ -145,8 +145,9 @@ namespace Casemix.Forms
             }
             clMain.gKdTaripKamar = GetKdTaripKamar();
             ClsUtil.SetDataTableRightOnMenu(clMain.cUserLogIn, clMain.cIDApps, clMain.cIDModul);
-          //  ClsUtil.SetDataTableRightOnMenu("wendra", "0202", "2201");
-         //  SetMenuAccess();
+            //  ClsUtil.SetDataTableRightOnMenu("wendra", "0202", "2201");
+            //  SetMenuAccess();
+            kdJKN = ClsUtil.GetSetting("Keu_piut_lookup", "vc_value", "vc_code", "KodeJKN");
         }
         public string GetKdTaripKamar()
         {
@@ -305,6 +306,14 @@ namespace Casemix.Forms
         private void mnu020203060000_Click(object sender, EventArgs e)
         {
             FrmVariable6 frmVariable6 = new FrmVariable6();
+            frmVariable6.ShowDialog();
+            frmVariable6.Close();
+        }
+
+        private void mnu020201030000_Click(object sender, EventArgs e)
+        {
+
+            FrmRincianJKN frmVariable6 = new FrmRincianJKN();
             frmVariable6.ShowDialog();
             frmVariable6.Close();
         }

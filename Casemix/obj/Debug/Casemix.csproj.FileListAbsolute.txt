@@ -184,3 +184,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.La
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Util.frmCariData.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable5.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable6.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmRincianJKN.resources

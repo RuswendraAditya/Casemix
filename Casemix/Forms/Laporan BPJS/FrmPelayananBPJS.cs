@@ -39,14 +39,16 @@ namespace Casemix.Forms.Analisa_BPJS
                             inner join RMPasien pasien on
                             pasien.vc_no_rm = akprj.vc_no_rm
                             LEFT JOIN SDMDokter dokter on dokter.vc_nid = akprj.vc_nid_dpjp
-                            where  akprj.vc_k_png = '4ye'
+                            where  akprj.vc_k_png =  @pngJKN
                             and ISNULL(sep.bt_hapus,0) <> 1 
                             AND Convert(DateTime, Convert(Varchar,Isnull(sep.dt_tgl_sep,0),101),101) = '" + dtFrom.Value.ToShortDateString() + "' ";
 
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
+                cmd.Parameters.AddWithValue("@pngJKN", FrmMain.kdJKN);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
+                   
                     da.Fill(dt);
                 }
             }
@@ -76,13 +78,14 @@ namespace Casemix.Forms.Analisa_BPJS
                             inner join RMPasien pasien on
                             pasien.vc_no_rm = inap.vc_no_rm
                             LEFT JOIN SDMDokter dokter on dokter.vc_nid = inap.vc_nid
-                            where  (inap.vc_k_png = '4ye' or exists(SELECT 1 from KeuPngLain lain where lain.vc_No_Reg = inap.vc_no_reg and lain.vc_Kd_Png = '4ye'))
+                            where  (inap.vc_k_png = @pngJKN or exists(SELECT 1 from KeuPngLain lain where lain.vc_No_Reg = inap.vc_no_reg and lain.vc_Kd_Png = @pngJKN))
                             and ISNULL(sep.bt_hapus,0) <> 1 
                             AND ISNULL(inap.dt_tgl_pul,'') <> ''
                             AND Convert(DateTime, Convert(Varchar,Isnull(sep.dt_tgl_sep,0),101),101) = '" + dtFrom.Value.ToShortDateString() + "'   ";
 
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
+                cmd.Parameters.AddWithValue("@pngJKN", FrmMain.kdJKN);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     da.Fill(dt);
