@@ -48,6 +48,28 @@
             this.lblJudul = new System.Windows.Forms.Label();
             this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.cmbJenisPel = new System.Windows.Forms.ComboBox();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.txtTotalSaldo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSatuEpisode = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTotalUnklaim = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTotalSelisih = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTotalUmbal = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTotalGrouper = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTotalPiutangRS = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTotalCOB = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTotalPotongan = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTotalIuranPasien = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTotalBiayaRS = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,6 +285,9 @@
             this.dgPiutang.Size = new System.Drawing.Size(1803, 332);
             this.dgPiutang.TabIndex = 376;
             this.dgPiutang.Text = "sfDataGrid1";
+            this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
+            this.dgPiutang.DrawCell += new Syncfusion.WinForms.DataGrid.Events.DrawCellEventHandler(this.dgPiutang_DrawCell);
+            this.dgPiutang.FilterChanged += new Syncfusion.WinForms.DataGrid.Events.FilterChangedEventHandler(this.dgPiutang_FilterChanged);
             // 
             // cmbJenisPel
             // 
@@ -275,12 +300,321 @@
             this.cmbJenisPel.TabIndex = 377;
             this.cmbJenisPel.SelectedIndexChanged += new System.EventHandler(this.cmbJenisPel_SelectedIndexChanged);
             // 
+            // Label13
+            // 
+            this.Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label13.AutoSize = true;
+            this.Label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.Label13.Location = new System.Drawing.Point(1482, 610);
+            this.Label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label13.Name = "Label13";
+            this.Label13.Size = new System.Drawing.Size(46, 18);
+            this.Label13.TabIndex = 379;
+            this.Label13.Text = "Saldo";
+            // 
+            // txtTotalSaldo
+            // 
+            this.txtTotalSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalSaldo.Location = new System.Drawing.Point(1440, 633);
+            this.txtTotalSaldo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalSaldo.Name = "txtTotalSaldo";
+            this.txtTotalSaldo.ReadOnly = true;
+            this.txtTotalSaldo.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalSaldo.TabIndex = 378;
+            this.txtTotalSaldo.TabStop = false;
+            this.txtTotalSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(1317, 610);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 381;
+            this.label2.Text = "Satu Episode";
+            // 
+            // txtSatuEpisode
+            // 
+            this.txtSatuEpisode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSatuEpisode.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSatuEpisode.Location = new System.Drawing.Point(1300, 633);
+            this.txtSatuEpisode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSatuEpisode.Name = "txtSatuEpisode";
+            this.txtSatuEpisode.ReadOnly = true;
+            this.txtSatuEpisode.Size = new System.Drawing.Size(129, 20);
+            this.txtSatuEpisode.TabIndex = 380;
+            this.txtSatuEpisode.TabStop = false;
+            this.txtSatuEpisode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(1190, 610);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.TabIndex = 383;
+            this.label4.Text = "Unklaim";
+            // 
+            // txtTotalUnklaim
+            // 
+            this.txtTotalUnklaim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalUnklaim.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalUnklaim.Location = new System.Drawing.Point(1160, 633);
+            this.txtTotalUnklaim.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalUnklaim.Name = "txtTotalUnklaim";
+            this.txtTotalUnklaim.ReadOnly = true;
+            this.txtTotalUnklaim.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalUnklaim.TabIndex = 382;
+            this.txtTotalUnklaim.TabStop = false;
+            this.txtTotalUnklaim.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkRed;
+            this.label5.Location = new System.Drawing.Point(1046, 610);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 18);
+            this.label5.TabIndex = 385;
+            this.label5.Text = "Selisih";
+            // 
+            // txtTotalSelisih
+            // 
+            this.txtTotalSelisih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalSelisih.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalSelisih.Location = new System.Drawing.Point(1016, 633);
+            this.txtTotalSelisih.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalSelisih.Name = "txtTotalSelisih";
+            this.txtTotalSelisih.ReadOnly = true;
+            this.txtTotalSelisih.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalSelisih.TabIndex = 384;
+            this.txtTotalSelisih.TabStop = false;
+            this.txtTotalSelisih.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
+            this.label6.Location = new System.Drawing.Point(909, 610);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 18);
+            this.label6.TabIndex = 387;
+            this.label6.Text = "Umbal";
+            // 
+            // txtTotalUmbal
+            // 
+            this.txtTotalUmbal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalUmbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalUmbal.Location = new System.Drawing.Point(879, 633);
+            this.txtTotalUmbal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalUmbal.Name = "txtTotalUmbal";
+            this.txtTotalUmbal.ReadOnly = true;
+            this.txtTotalUmbal.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalUmbal.TabIndex = 386;
+            this.txtTotalUmbal.TabStop = false;
+            this.txtTotalUmbal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(767, 610);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 18);
+            this.label7.TabIndex = 389;
+            this.label7.Text = "Grouper";
+            // 
+            // txtTotalGrouper
+            // 
+            this.txtTotalGrouper.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalGrouper.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalGrouper.Location = new System.Drawing.Point(737, 633);
+            this.txtTotalGrouper.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalGrouper.Name = "txtTotalGrouper";
+            this.txtTotalGrouper.ReadOnly = true;
+            this.txtTotalGrouper.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalGrouper.TabIndex = 388;
+            this.txtTotalGrouper.TabStop = false;
+            this.txtTotalGrouper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkRed;
+            this.label8.Location = new System.Drawing.Point(623, 610);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 18);
+            this.label8.TabIndex = 391;
+            this.label8.Text = "Piutang RS";
+            // 
+            // txtTotalPiutangRS
+            // 
+            this.txtTotalPiutangRS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalPiutangRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPiutangRS.Location = new System.Drawing.Point(593, 633);
+            this.txtTotalPiutangRS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalPiutangRS.Name = "txtTotalPiutangRS";
+            this.txtTotalPiutangRS.ReadOnly = true;
+            this.txtTotalPiutangRS.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalPiutangRS.TabIndex = 390;
+            this.txtTotalPiutangRS.TabStop = false;
+            this.txtTotalPiutangRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkRed;
+            this.label9.Location = new System.Drawing.Point(477, 610);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 18);
+            this.label9.TabIndex = 393;
+            this.label9.Text = "COB";
+            // 
+            // txtTotalCOB
+            // 
+            this.txtTotalCOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalCOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalCOB.Location = new System.Drawing.Point(447, 633);
+            this.txtTotalCOB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalCOB.Name = "txtTotalCOB";
+            this.txtTotalCOB.ReadOnly = true;
+            this.txtTotalCOB.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalCOB.TabIndex = 392;
+            this.txtTotalCOB.TabStop = false;
+            this.txtTotalCOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkRed;
+            this.label11.Location = new System.Drawing.Point(334, 610);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 18);
+            this.label11.TabIndex = 395;
+            this.label11.Text = "Potongan";
+            // 
+            // txtTotalPotongan
+            // 
+            this.txtTotalPotongan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalPotongan.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPotongan.Location = new System.Drawing.Point(304, 633);
+            this.txtTotalPotongan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalPotongan.Name = "txtTotalPotongan";
+            this.txtTotalPotongan.ReadOnly = true;
+            this.txtTotalPotongan.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalPotongan.TabIndex = 394;
+            this.txtTotalPotongan.TabStop = false;
+            this.txtTotalPotongan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(195, 610);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 18);
+            this.label12.TabIndex = 397;
+            this.label12.Text = "Iur Pasien";
+            // 
+            // txtTotalIuranPasien
+            // 
+            this.txtTotalIuranPasien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalIuranPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalIuranPasien.Location = new System.Drawing.Point(165, 633);
+            this.txtTotalIuranPasien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalIuranPasien.Name = "txtTotalIuranPasien";
+            this.txtTotalIuranPasien.ReadOnly = true;
+            this.txtTotalIuranPasien.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalIuranPasien.TabIndex = 396;
+            this.txtTotalIuranPasien.TabStop = false;
+            this.txtTotalIuranPasien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label16
+            // 
+            this.label16.AllowDrop = true;
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DarkRed;
+            this.label16.Location = new System.Drawing.Point(55, 610);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 18);
+            this.label16.TabIndex = 399;
+            this.label16.Text = "Biaya RS";
+            // 
+            // txtTotalBiayaRS
+            // 
+            this.txtTotalBiayaRS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalBiayaRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalBiayaRS.Location = new System.Drawing.Point(25, 633);
+            this.txtTotalBiayaRS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalBiayaRS.Name = "txtTotalBiayaRS";
+            this.txtTotalBiayaRS.ReadOnly = true;
+            this.txtTotalBiayaRS.Size = new System.Drawing.Size(129, 20);
+            this.txtTotalBiayaRS.TabIndex = 398;
+            this.txtTotalBiayaRS.TabStop = false;
+            this.txtTotalBiayaRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FrmRincianJKN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1827, 672);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtTotalBiayaRS);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtTotalIuranPasien);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtTotalPotongan);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTotalCOB);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtTotalPiutangRS);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtTotalGrouper);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTotalUmbal);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTotalSelisih);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTotalUnklaim);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSatuEpisode);
+            this.Controls.Add(this.Label13);
+            this.Controls.Add(this.txtTotalSaldo);
             this.Controls.Add(this.cmbJenisPel);
             this.Controls.Add(this.dgPiutang);
             this.Controls.Add(this.lblJudul);
@@ -334,5 +668,27 @@
         internal System.Windows.Forms.Label lblJudul;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
         internal System.Windows.Forms.ComboBox cmbJenisPel;
+        internal System.Windows.Forms.Label Label13;
+        internal System.Windows.Forms.TextBox txtTotalSaldo;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.TextBox txtSatuEpisode;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.TextBox txtTotalUnklaim;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.TextBox txtTotalSelisih;
+        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.TextBox txtTotalUmbal;
+        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.TextBox txtTotalGrouper;
+        internal System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.TextBox txtTotalPiutangRS;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.TextBox txtTotalCOB;
+        internal System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.TextBox txtTotalPotongan;
+        internal System.Windows.Forms.Label label12;
+        internal System.Windows.Forms.TextBox txtTotalIuranPasien;
+        internal System.Windows.Forms.Label label16;
+        internal System.Windows.Forms.TextBox txtTotalBiayaRS;
     }
 }
