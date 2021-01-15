@@ -1,4 +1,5 @@
 ﻿
+using Casemix.Util;
 using Syncfusion.Data;
 using System;
 using System.Collections.Generic;
@@ -460,6 +461,11 @@ namespace Casemix.Forms.Laporan_BPJS
         private void dgPiutang_FilterChanged(object sender, Syncfusion.WinForms.DataGrid.Events.FilterChangedEventArgs e)
         {
             getSaldoTOtal();
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ClsUtil.DownloadXLs(dgPiutang);
         }
     }
 }
