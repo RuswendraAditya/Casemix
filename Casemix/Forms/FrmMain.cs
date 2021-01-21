@@ -313,9 +313,17 @@ namespace Casemix.Forms
         private void mnu020201030000_Click(object sender, EventArgs e)
         {
 
-            FrmRincianJKN frmVariable6 = new FrmRincianJKN();
-            frmVariable6.ShowDialog();
-            frmVariable6.Close();
+            FrmRincianJKN frmRincianJKN = new FrmRincianJKN();
+            frmRincianJKN.ShowDialog();
+            frmRincianJKN.Close();
+        }
+
+        private void mnu020203070000_Click(object sender, EventArgs e)
+        {
+
+            FrmVariable7 frmVariable7 = new FrmVariable7();
+            frmVariable7.ShowDialog();
+            frmVariable7.Close();
         }
     }
 }
