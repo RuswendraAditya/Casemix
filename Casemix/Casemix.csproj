@@ -235,6 +235,7 @@
     <Compile Include="Model\DataLayananBPJS.cs" />
     <Compile Include="Model\DiagnosaBpjs.cs" />
     <Compile Include="Model\Inacbg_Raw_Data.cs" />
+    <Compile Include="Model\Variable19.cs" />
     <Compile Include="Util\ClsUtil.cs" />
     <Compile Include="Util\frmCariData.cs">
       <SubType>Form</SubType>

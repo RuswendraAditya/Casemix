@@ -46,10 +46,11 @@
             this.mnu020203040000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203050000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203060000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203070000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.mnu020203070000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203100000 = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel1.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo1)).BeginInit();
@@ -164,7 +165,8 @@
             this.mnu020203040000,
             this.mnu020203050000,
             this.mnu020203060000,
-            this.mnu020203070000});
+            this.mnu020203070000,
+            this.mnu020203100000});
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
@@ -211,6 +213,13 @@
             this.mnu020203060000.Text = "Variable 6 (Total Tarif Rill RS)";
             this.mnu020203060000.Click += new System.EventHandler(this.mnu020203060000_Click);
             // 
+            // mnu020203070000
+            // 
+            this.mnu020203070000.Name = "mnu020203070000";
+            this.mnu020203070000.Size = new System.Drawing.Size(389, 26);
+            this.mnu020203070000.Text = "Variable 7 (Jumlah Kasus per Severity Level)";
+            this.mnu020203070000.Click += new System.EventHandler(this.mnu020203070000_Click);
+            // 
             // mnu020204000000
             // 
             this.mnu020204000000.Name = "mnu020204000000";
@@ -238,12 +247,12 @@
             this.PicLogo.TabStop = false;
             this.PicLogo.Visible = false;
             // 
-            // mnu020203070000
+            // mnu020203100000
             // 
-            this.mnu020203070000.Name = "mnu020203070000";
-            this.mnu020203070000.Size = new System.Drawing.Size(389, 26);
-            this.mnu020203070000.Text = "Variable 7 (Jumlah Kasus per Severity Level)";
-            this.mnu020203070000.Click += new System.EventHandler(this.mnu020203070000_Click);
+            this.mnu020203100000.Name = "mnu020203100000";
+            this.mnu020203100000.Size = new System.Drawing.Size(389, 26);
+            this.mnu020203100000.Text = "Variable 19";
+            this.mnu020203100000.Click += new System.EventHandler(this.mnu020203100000_Click);
             // 
             // FrmMain
             // 
@@ -290,5 +299,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020203060000;
         private System.Windows.Forms.ToolStripMenuItem mnu020201030000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203070000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020203100000;
     }
 }

@@ -51,7 +51,7 @@ namespace Casemix.Forms.Anti_Fraud
             string query = @"SELECT
                             CASE
 	                            bulan 
-	                            WHEN 1 THEN
+	                            WHEN 1 TH
 	                            'JAN' 
 	                            WHEN 2 THEN
 	                            'FEB' 
