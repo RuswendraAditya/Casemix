@@ -35,6 +35,7 @@
             this.mnu020201010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020201020000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020201030000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020201040000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202020000 = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +48,10 @@
             this.mnu020203050000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203060000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203070000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020203100000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.mnu020203100000 = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel1.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo1)).BeginInit();
@@ -93,7 +94,8 @@
             this.ToolStripMenuItem4,
             this.mnu020201010000,
             this.mnu020201020000,
-            this.mnu020201030000});
+            this.mnu020201030000,
+            this.mnu020201040000});
             this.mnu020201000000.Name = "mnu020201000000";
             this.mnu020201000000.Size = new System.Drawing.Size(136, 22);
             this.mnu020201000000.Text = "Monitoring BPJS";
@@ -115,6 +117,7 @@
             this.mnu020201020000.Name = "mnu020201020000";
             this.mnu020201020000.Size = new System.Drawing.Size(278, 26);
             this.mnu020201020000.Text = "Rincian Biaya AKPN";
+            this.mnu020201020000.Visible = false;
             this.mnu020201020000.Click += new System.EventHandler(this.mnu020201020000_Click);
             // 
             // mnu020201030000
@@ -123,6 +126,13 @@
             this.mnu020201030000.Size = new System.Drawing.Size(278, 26);
             this.mnu020201030000.Text = "Rincian Biaya JKN ";
             this.mnu020201030000.Click += new System.EventHandler(this.mnu020201030000_Click);
+            // 
+            // mnu020201040000
+            // 
+            this.mnu020201040000.Name = "mnu020201040000";
+            this.mnu020201040000.Size = new System.Drawing.Size(278, 26);
+            this.mnu020201040000.Text = "Monitoring Status SEP";
+            this.mnu020201040000.Click += new System.EventHandler(this.mnu020201040000_Click);
             // 
             // mnu020202000000
             // 
@@ -170,6 +180,7 @@
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
+            this.mnu020203000000.Visible = false;
             // 
             // mnu020203010000
             // 
@@ -220,6 +231,13 @@
             this.mnu020203070000.Text = "Variable 7 (Jumlah Kasus per Severity Level)";
             this.mnu020203070000.Click += new System.EventHandler(this.mnu020203070000_Click);
             // 
+            // mnu020203100000
+            // 
+            this.mnu020203100000.Name = "mnu020203100000";
+            this.mnu020203100000.Size = new System.Drawing.Size(389, 26);
+            this.mnu020203100000.Text = "Variable 19";
+            this.mnu020203100000.Click += new System.EventHandler(this.mnu020203100000_Click);
+            // 
             // mnu020204000000
             // 
             this.mnu020204000000.Name = "mnu020204000000";
@@ -246,13 +264,6 @@
             this.PicLogo.TabIndex = 2;
             this.PicLogo.TabStop = false;
             this.PicLogo.Visible = false;
-            // 
-            // mnu020203100000
-            // 
-            this.mnu020203100000.Name = "mnu020203100000";
-            this.mnu020203100000.Size = new System.Drawing.Size(389, 26);
-            this.mnu020203100000.Text = "Variable 19";
-            this.mnu020203100000.Click += new System.EventHandler(this.mnu020203100000_Click);
             // 
             // FrmMain
             // 
@@ -300,5 +311,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020201030000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203070000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203100000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020201040000;
     }
 }

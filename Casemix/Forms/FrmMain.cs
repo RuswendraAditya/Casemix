@@ -330,5 +330,12 @@ namespace Casemix.Forms
         {
             
         }
+
+        private void mnu020201040000_Click(object sender, EventArgs e)
+        {
+            FrmMonitoringSEP frmMonitoringSEP = new FrmMonitoringSEP();
+            frmMonitoringSEP.ShowDialog();
+            frmMonitoringSEP.Close();
+        }
     }
 }

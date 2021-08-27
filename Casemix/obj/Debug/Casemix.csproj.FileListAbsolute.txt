@@ -186,3 +186,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.An
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable6.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmRincianJKN.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable7.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmMonitoringSEP.resources

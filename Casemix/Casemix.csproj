@@ -207,6 +207,12 @@
     <Compile Include="Forms\Anti Fraud\FrmVariable7.Designer.cs">
       <DependentUpon>FrmVariable7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Laporan BPJS\FrmMonitoringSEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laporan BPJS\FrmMonitoringSEP.Designer.cs">
+      <DependentUpon>FrmMonitoringSEP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Laporan BPJS\FrmPelayananBPJS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable7.resx">
       <DependentUpon>FrmVariable7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laporan BPJS\FrmMonitoringSEP.resx">
+      <DependentUpon>FrmMonitoringSEP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laporan BPJS\FrmPelayananBPJS.resx">
       <DependentUpon>FrmPelayananBPJS.cs</DependentUpon>
