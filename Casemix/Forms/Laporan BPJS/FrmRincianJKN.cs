@@ -173,7 +173,7 @@ namespace Casemix.Forms.Laporan_BPJS
 	                        iSNULL( sep.vc_kd_status_sep, 0 ) as kodeSEP,
 	                        ISNULL( status.vc_nm_status_sep, '' ) Status 
                         FROM
-	                        akprj_kartu_piutang_JKN kartu
+	                        akprj_kartu_piutang_JKN_V kartu
 	                        INNER JOIN RMPasien pasien ON pasien.vc_no_rm = kartu.vc_no_rm
 	                        INNER JOIN bpjs_sep sep ON sep.vc_no_regj = kartu.vc_no_regj 
 	                        AND ISNULL( bt_hapus, '0' ) = '0'
@@ -256,7 +256,7 @@ namespace Casemix.Forms.Laporan_BPJS
 	                    iSNULL( sep.vc_kd_status_sep, 0 ) as kodeSEP,
 	                    ISNULL( status.vc_nm_status_sep, '' ) StatusSEP 
                     FROM
-	                    akpri_kartu_piutang_JKN kartu
+	                    akpri_kartu_piutang_JKN_V kartu
 	                    INNER JOIN RMPasien pasien ON pasien.vc_no_rm = kartu.vc_no_rm
 	                    INNER JOIN bpjs_sep sep ON sep.vc_no_regj = kartu.vc_no_reg 
 	                    AND ISNULL( bt_hapus, '0' ) = '0'
@@ -365,7 +365,7 @@ namespace Casemix.Forms.Laporan_BPJS
 
             if (e.Column.MappingName == "dc_biaya_rs")
             {
-                e.Column.HeaderText = "Piutang RS";
+                e.Column.HeaderText = "Biaya RS";
                 e.Column.Format = "#,##0.00";
                 e.Column.AllowFiltering = true;
                 e.Column.Width = 100;

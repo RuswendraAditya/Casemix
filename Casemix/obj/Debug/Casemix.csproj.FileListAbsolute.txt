@@ -161,7 +161,6 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\bin\Debug\Syncfusion.Chart
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\bin\Debug\Syncfusion.OfficeChart.Base.xml
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\bin\Debug\Syncfusion.Grid.Grouping.Windows.XmlSerializers.dll
-D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.csprojAssemblyReference.cache
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.exe.config
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_BPJS.FrmUploadInacbg.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_BPJS.FrmAnaliasaPerDokter.resources
@@ -187,3 +186,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.An
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmRincianJKN.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable7.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmMonitoringSEP.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.csproj.AssemblyReference.cache

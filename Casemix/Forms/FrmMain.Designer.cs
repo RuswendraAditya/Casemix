@@ -180,7 +180,6 @@
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
-            this.mnu020203000000.Visible = false;
             // 
             // mnu020203010000
             // 
