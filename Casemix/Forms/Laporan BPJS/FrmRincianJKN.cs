@@ -152,6 +152,7 @@ namespace Casemix.Forms.Laporan_BPJS
             DataTable dt = new DataTable();
             string query = @"SELECT DISTINCT
 	                        0 AS nomer,
+                            sep.vc_no_peserta,
 	                        kartu.vc_no_rm ,
 	                        kartu.vc_no_regj as noReg,
 	                        pasien.vc_nama_p,
@@ -171,7 +172,7 @@ namespace Casemix.Forms.Laporan_BPJS
 	                        dc_satu_episode,
 	                        dc_saldo,
 	                        iSNULL( sep.vc_kd_status_sep, 0 ) as kodeSEP,
-	                        ISNULL( status.vc_nm_status_sep, '' ) Status 
+	                        ISNULL( status.vc_nm_status_sep, '' ) StatusSEP ,vc_ket_status_sep
                         FROM
 	                        akprj_kartu_piutang_JKN_V kartu
 	                        INNER JOIN RMPasien pasien ON pasien.vc_no_rm = kartu.vc_no_rm
@@ -232,36 +233,17 @@ namespace Casemix.Forms.Laporan_BPJS
         private DataTable getKartuPiutangJKN_RI()
         {
             DataTable dt = new DataTable();
-            string query = @"SELECT DISTINCT
-	                    0 AS nomer,
-	                    kartu.vc_no_rm,
-	                    kartu.vc_no_reg as noReg,
-	                    pasien.vc_nama_p,
-	                    sep.vc_no_sep,
-	                    kartu.dc_biaya_rs,
-	                    dc_iur_pasien,
-	                    dc_potongan,
-	                    dc_nominal_instansi_lain as cob,
-	                    kartu.dc_piutang_rs,
-	                    dc_grouper,
-	                    dc_umbal,
-                    CASE
-	
-	                    WHEN dc_umbal > 0 THEN
-	                    dc_umbal - dc_piutang_rs ELSE 0 
-	                    END selisih,
-	                    dc_unklaim,
-	                    dc_satu_episode,
-	                    dc_saldo,
-	                    iSNULL( sep.vc_kd_status_sep, 0 ) as kodeSEP,
-	                    ISNULL( status.vc_nm_status_sep, '' ) StatusSEP 
-                    FROM
-	                    akpri_kartu_piutang_JKN_V kartu
-	                    INNER JOIN RMPasien pasien ON pasien.vc_no_rm = kartu.vc_no_rm
-	                    INNER JOIN bpjs_sep sep ON sep.vc_no_regj = kartu.vc_no_reg 
-	                    AND ISNULL( bt_hapus, '0' ) = '0'
-	                    INNER JOIN rmP_inap inap ON inap.vc_no_reg = kartu.vc_no_reg
-                    INNER JOIN BPJS_Status_SEP status ON status.vc_kd_status_sep = ISNULL( sep.vc_kd_status_sep, 0 ) ";
+            string query = @" SELECT DISTINCT 0 as nomer,sep.vc_no_peserta,kartu.vc_no_rm,kartu.vc_no_reg as noReg,pasien.vc_nama_p,sep.vc_no_sep,kartu.dc_biaya_rs,dc_iur_pasien,dc_potongan,dc_nominal_instansi_lain   
+                    ,kartu.dc_piutang_rs,dc_grouper,dc_umbal,    
+                    case when dc_umbal >0 then dc_umbal-dc_piutang_rs else 0 end  selisih,dc_unklaim, dc_satu_episode, dc_saldo ,iSNULL(sep.vc_kd_status_sep,0)  kodeSEP, 	ISNULL( status.vc_nm_status_sep, '' ) StatusSEP  ,vc_ket_status_sep
+                    FROM akpri_kartu_piutang_JKN_V kartu    
+                    inner join RMPasien pasien    
+                    on pasien.vc_no_rm = kartu.vc_no_rm    
+                    inner join bpjs_sep sep    
+                    on sep.vc_no_regj = kartu.vc_no_reg  and ISNULL(bt_hapus,'0') = '0'  
+                  	inner join rmP_inap inap   
+                  	on inap.vc_no_reg = kartu.vc_no_reg   
+                   	INNER JOIN BPJS_Status_SEP status ON status.vc_kd_status_sep = ISNULL(sep.vc_kd_status_sep,0)  ";
             if (rbTglClose.Checked)
             {
                 query = query + " where Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_pul,0),101),101) between  '" + DTAwal.Value.ToShortDateString() + "' and  '" + DTAkhir.Value.ToShortDateString() + "'  ";
@@ -312,7 +294,7 @@ namespace Casemix.Forms.Laporan_BPJS
                 query = query + " and inap.vc_png_lain = 'COB' ";
             }
 
-            query = query + "	order by vc_nama_p asc ";
+            query = query + " AND kartu.vc_k_png = '" + FrmMain.kdJKN + "' " + "	order by vc_nama_p asc ";
 
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
@@ -334,6 +316,11 @@ namespace Casemix.Forms.Laporan_BPJS
                 e.Column.Width = 40;
               
 
+            }
+            if(e.Column.MappingName== "vc_no_peserta")
+            {
+                e.Column.HeaderText = "No Kartu BPJS";
+                e.Column.Width = 100;
             }
             if (e.Column.MappingName == "vc_no_rm")
             {
@@ -386,7 +373,7 @@ namespace Casemix.Forms.Laporan_BPJS
                 e.Column.Width = 100;
             }
 
-            if (e.Column.MappingName == "cob")
+            if (e.Column.MappingName == "dc_nominal_instansi_lain")
             {
                 e.Column.HeaderText = "COB";
                 e.Column.Format = "#,##0.00";
@@ -451,6 +438,12 @@ namespace Casemix.Forms.Laporan_BPJS
             {
                 e.Column.HeaderText = "Status SEP";
             }
+            if (e.Column.MappingName == "vc_ket_status_sep")
+            {
+                e.Column.HeaderText = "Keterangan";
+                e.Column.Width = 170;
+            }
+            
         }
 
         private void dgPiutang_DrawCell(object sender, Syncfusion.WinForms.DataGrid.Events.DrawCellEventArgs e)

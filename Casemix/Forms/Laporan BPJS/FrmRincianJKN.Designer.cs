@@ -71,6 +71,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtTotalBiayaRS = new System.Windows.Forms.TextBox();
             this.btnExportExcel = new Syncfusion.WinForms.Controls.SfButton();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -605,12 +606,24 @@
             this.btnExportExcel.UseVisualStyleBackColor = false;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(12, 252);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(607, 20);
+            this.label18.TabIndex = 401;
+            this.label18.Text = "* Data Yang tampil adalah pasien yang sudah close AKPRJ / Dipulangkan AKPN";
+            // 
             // FrmRincianJKN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1827, 672);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtTotalBiayaRS);
@@ -710,5 +723,6 @@
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.TextBox txtTotalBiayaRS;
         private Syncfusion.WinForms.Controls.SfButton btnExportExcel;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -150,6 +150,7 @@
             this.mnu020202010000.Name = "mnu020202010000";
             this.mnu020202010000.Size = new System.Drawing.Size(266, 26);
             this.mnu020202010000.Text = "Upload Data From Inacbg";
+            this.mnu020202010000.Visible = false;
             this.mnu020202010000.Click += new System.EventHandler(this.mnu020202010000_Click);
             // 
             // mnu020202020000
@@ -180,6 +181,7 @@
             this.mnu020203000000.Name = "mnu020203000000";
             this.mnu020203000000.Size = new System.Drawing.Size(94, 22);
             this.mnu020203000000.Text = "Anti Fraud";
+            this.mnu020203000000.Visible = false;
             // 
             // mnu020203010000
             // 

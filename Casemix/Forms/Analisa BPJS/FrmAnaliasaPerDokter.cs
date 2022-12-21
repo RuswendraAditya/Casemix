@@ -231,7 +231,7 @@ namespace Casemix.Forms.Analisa_BPJS
 	                            LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = tagihan.vc_nid_dpjp
                                 INNER JOIN RMKunjung kunjung on kunjung.vc_no_regj = tagihan.vc_no_regj
                                 INNER JOIN RMpasien pasien on pasien.vc_no_rm = kunjung.vc_no_rm
-	                            INNER JOIN AKPRJ_Kartu_piutang_JKN kartuPiutang ON kartuPiutang.vc_no_regj = tagihan.vc_no_regj 
+	                            INNER JOIN AKPRJ_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_regj = tagihan.vc_no_regj 
 								left join SDMJ_Pend spesialis on spesialis.vc_k_jpend = dokter.vc_k_jpend
                             WHERE
 	                            ISNULL( sep.bt_hapus, '0' ) <> 1
@@ -306,7 +306,7 @@ namespace Casemix.Forms.Analisa_BPJS
 	                            AKPRI_DTagihan tagihan
 	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = tagihan.vc_no_sep
 	                            LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = tagihan.vc_nid_dpjp
-	                            INNER JOIN AKPRI_Kartu_piutang_JKN kartuPiutang ON kartuPiutang.vc_no_reg = tagihan.vc_no_reg
+	                            INNER JOIN AKPRI_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_reg = tagihan.vc_no_reg
 	                            left join SDMJ_Pend spesialis ON spesialis.vc_k_jpend = dokter.vc_k_jpend
 	                            INNER JOIN RMP_inap inap ON inap.vc_no_reg = tagihan.vc_no_reg 
                                 INNER JOIN RMpasien pasien on pasien.vc_no_rm = inap.vc_no_rm
