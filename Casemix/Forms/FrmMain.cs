@@ -1,4 +1,5 @@
 ﻿using Casemix.Forms.Analisa_BPJS;
+using Casemix.Forms.Analisa_Non_BPJS;
 using Casemix.Forms.Anti_Fraud;
 using Casemix.Forms.Laporan_BPJS;
 using Casemix.Util;
@@ -245,6 +246,7 @@ namespace Casemix.Forms
             FrmAnalisaPerCoding frmAnalisaPerDiagnosa = new FrmAnalisaPerCoding(); // Instantiate a Form object.
             frmAnalisaPerDiagnosa.ShowDialog(); // Show Form and
             frmAnalisaPerDiagnosa.Close();
+
         }
 
         private void mnu020201010000_Click(object sender, EventArgs e)
@@ -337,6 +339,13 @@ namespace Casemix.Forms
             FrmMonitoringSEP frmMonitoringSEP = new FrmMonitoringSEP();
             frmMonitoringSEP.ShowDialog();
             frmMonitoringSEP.Close();
+        }
+
+        private void mnu020202040000_Click(object sender, EventArgs e)
+        {
+            FrmAnalisaICD10 frmAnalisaICD10 = new FrmAnalisaICD10();
+            frmAnalisaICD10.ShowDialog();
+            frmAnalisaICD10.Close();
         }
     }
 }

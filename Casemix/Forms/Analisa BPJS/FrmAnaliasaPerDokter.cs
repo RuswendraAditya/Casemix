@@ -560,6 +560,9 @@ namespace Casemix.Forms.Analisa_BPJS
 
         }
 
+        private void chkBoxSort_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

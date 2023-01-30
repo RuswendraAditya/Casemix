@@ -40,6 +40,7 @@
             this.mnu020202010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202020000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020202030000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020202040000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu020203020000 = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,10 +140,11 @@
             this.mnu020202000000.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu020202010000,
             this.mnu020202020000,
-            this.mnu020202030000});
+            this.mnu020202030000,
+            this.mnu020202040000});
             this.mnu020202000000.Name = "mnu020202000000";
-            this.mnu020202000000.Size = new System.Drawing.Size(110, 22);
-            this.mnu020202000000.Text = "Analisa BPJS";
+            this.mnu020202000000.Size = new System.Drawing.Size(113, 22);
+            this.mnu020202000000.Text = "Analisa Biaya";
             this.mnu020202000000.Click += new System.EventHandler(this.mnu020202000000_Click);
             // 
             // mnu020202010000
@@ -157,15 +159,22 @@
             // 
             this.mnu020202020000.Name = "mnu020202020000";
             this.mnu020202020000.Size = new System.Drawing.Size(266, 26);
-            this.mnu020202020000.Text = "Per Coding Inacbg";
+            this.mnu020202020000.Text = "By Coding Inacbg (BPJS)";
             this.mnu020202020000.Click += new System.EventHandler(this.mnu020202020000_Click);
             // 
             // mnu020202030000
             // 
             this.mnu020202030000.Name = "mnu020202030000";
             this.mnu020202030000.Size = new System.Drawing.Size(266, 26);
-            this.mnu020202030000.Text = "Per Dokter DPJP";
+            this.mnu020202030000.Text = "By Dokter DPJP (BPJS)";
             this.mnu020202030000.Click += new System.EventHandler(this.mnu020202030000_Click);
+            // 
+            // mnu020202040000
+            // 
+            this.mnu020202040000.Name = "mnu020202040000";
+            this.mnu020202040000.Size = new System.Drawing.Size(266, 26);
+            this.mnu020202040000.Text = "By ICD 10";
+            this.mnu020202040000.Click += new System.EventHandler(this.mnu020202040000_Click);
             // 
             // mnu020203000000
             // 
@@ -313,5 +322,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020203070000;
         private System.Windows.Forms.ToolStripMenuItem mnu020203100000;
         private System.Windows.Forms.ToolStripMenuItem mnu020201040000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020202040000;
     }
 }

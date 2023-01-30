@@ -152,6 +152,7 @@
             this.chkBoxSort.TabIndex = 38;
             this.chkBoxSort.Text = "Can Sorting";
             this.chkBoxSort.UseVisualStyleBackColor = true;
+            this.chkBoxSort.CheckedChanged += new System.EventHandler(this.chkBoxSort_CheckedChanged);
             // 
             // label4
             // 

@@ -187,3 +187,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.La
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Anti_Fraud.FrmVariable7.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Laporan_BPJS.FrmMonitoringSEP.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.csproj.AssemblyReference.cache
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_Non_BPJS.FrmAnalisaICD10.resources

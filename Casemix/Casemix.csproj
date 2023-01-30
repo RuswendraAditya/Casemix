@@ -165,6 +165,12 @@
     <Compile Include="Forms\Analisa BPJS\FrmAnalisaPerDokterDtl.Designer.cs">
       <DependentUpon>FrmAnalisaPerDokterDtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Analisa Non BPJS\FrmAnalisaICD10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analisa Non BPJS\FrmAnalisaICD10.Designer.cs">
+      <DependentUpon>FrmAnalisaICD10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Anti Fraud\FrmVariable1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,7 @@
       <DependentUpon>FrmRincianJKN.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AnalisaDokter.cs" />
+    <Compile Include="Model\AnalisaICD10.cs" />
     <Compile Include="Model\DataLayananBPJS.cs" />
     <Compile Include="Model\DiagnosaBpjs.cs" />
     <Compile Include="Model\Inacbg_Raw_Data.cs" />
@@ -267,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Analisa BPJS\FrmAnalisaPerDokterDtl.resx">
       <DependentUpon>FrmAnalisaPerDokterDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analisa Non BPJS\FrmAnalisaICD10.resx">
+      <DependentUpon>FrmAnalisaICD10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable1.resx">
       <DependentUpon>FrmVariable1.cs</DependentUpon>

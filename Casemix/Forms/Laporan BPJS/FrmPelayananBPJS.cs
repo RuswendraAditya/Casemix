@@ -231,7 +231,7 @@ namespace Casemix.Forms.Analisa_BPJS
             try
             {
                 string hasil = inacbglib.mainlib.GetDataInacbg(Xconsid, SecretKey, url, ref SEP, ref nBiayaGrouper, ref nBiayaRS, ref cStatusKirim, ref cTglKirim, ref cStatusKlaim, ref cBpjs_klaim_status_nm, ref CBG);
-                hasil = inacbglib.mainlib.GetValueRange(hasil, "grouper");
+                hasil = inacbglib.mainlib.GetValueRange(hasil, "cbg");
                 codeIna = inacbglib.mainlib.GetValue(hasil, "code");
                 if (codeIna.Equals("Null"))
                 {
@@ -258,7 +258,7 @@ namespace Casemix.Forms.Analisa_BPJS
             try
             {
                 string hasil = inacbglib.mainlib.GetDataInacbg(Xconsid, SecretKey, url, ref SEP, ref nBiayaGrouper, ref nBiayaRS, ref cStatusKirim, ref cTglKirim, ref cStatusKlaim, ref cBpjs_klaim_status_nm, ref CBG);
-                hasil = inacbglib.mainlib.GetValueRange(hasil, "grouper");
+                hasil = inacbglib.mainlib.GetValueRange(hasil, "cbg");
                 codeIna = inacbglib.mainlib.GetValue(hasil, "description");
                 if (codeIna.Equals("Null"))
                 {
