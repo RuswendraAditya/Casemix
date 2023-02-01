@@ -61,17 +61,20 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             pivotGridControl1.TableControl.WantTabKey = false;
             this.pivotGridControl1.GridVisualStyles = GridVisualStyles.Metro;
 
-            this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", FieldHeader = "ICD 10", AllowSort = true });
+            
             if (chkBoxSort.Checked)
             {
                 this.pivotGridControl1.RowPivotsOnly = true;
+                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Diagnosa", AllowSort = true });
             }
             else
             {
                 this.pivotGridControl1.RowPivotsOnly = false;
+                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", FieldHeader = "ICD 10", AllowSort = true });
                 this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Diagnosa", AllowSort = true });
 
             }
+
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "noReg", FieldHeader = "Total", AllowSort = true });
 
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biayaRS", FieldHeader = "Total Biaya RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
