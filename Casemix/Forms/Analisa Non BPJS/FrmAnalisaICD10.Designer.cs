@@ -119,6 +119,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnExportExcel.TabIndex = 43;
             this.btnExportExcel.Text = "Excel";
             this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // cmbExportXls
             // 
@@ -147,6 +148,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnExportWord.TabIndex = 41;
             this.btnExportWord.Text = "Word";
             this.btnExportWord.UseVisualStyleBackColor = false;
+            this.btnExportWord.Click += new System.EventHandler(this.btnExportWord_Click);
             // 
             // btnExportPdf
             // 
@@ -163,6 +165,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnExportPdf.TabIndex = 40;
             this.btnExportPdf.Text = "PDF";
             this.btnExportPdf.UseVisualStyleBackColor = false;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
             // label4
             // 
@@ -234,6 +237,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.Name = "FrmAnalisaICD10";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAnalisaICD10";
+            this.Load += new System.EventHandler(this.FrmAnalisaICD10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbExportXls)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

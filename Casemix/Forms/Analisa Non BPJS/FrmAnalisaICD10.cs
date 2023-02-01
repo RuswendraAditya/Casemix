@@ -1,13 +1,16 @@
 ﻿using Casemix.Model;
 using Syncfusion.PivotAnalysis.Base;
+using Syncfusion.PivotConverter;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Forms.PivotAnalysis;
+using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +21,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 {
     public partial class FrmAnalisaICD10 : Form
     {
+        FrmAnalisaICD10Dtl FrmAnalisaICD10Dtl;
         public FrmAnalisaICD10()
         {
             InitializeComponent();
@@ -33,130 +37,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             listJenisExportXls.Add("Cell");
             cmbExportXls.DataSource = listJenisExportXls;
         }
-        private List<AnalisaDokter> getDataRawatInap()
-        {
-            DataTable dt = new DataTable();
-            //non cob            
-            string query = @"SELECT
-	                            dokter.vc_nama_kry,
-	                            spesialis.vc_n_jpend,
-	                            tagihan.vc_no_sep,
-                                tagihan.vc_no_rm,
-                                tagihan.vc_no_reg,
-                                pasien.vc_nama_p,
-	                            kartuPiutang.dc_biaya_rs,
-								kartuPiutang.dc_iur_pasien,
-	                            kartuPiutang.dc_potongan,
-								kartuPiutang.dc_nominal_instansi_lain,
-                                kartuPiutang.dc_piutang_rs,
-                                ISNULL(tagihan.dc_umbal,0) as dc_umbal,
-                                ISNULL(tagihan.dc_umbal,0)-kartuPiutang.dc_piutang_rs as selisihUmbal,
-                            CASE
-	
-	                            WHEN DATEDIFF(
-	                            DAY,
-	                            (
-                            SELECT CONVERT
-	                            ( VARCHAR, inap.dt_tgl_msk, 23 )),
-	                            ( SELECT CONVERT ( VARCHAR, inap.dt_tgl_pul, 23 ) )) = 0 THEN
-	                            1 ELSE DATEDIFF(
-	                            DAY,
-	                            (
-                            SELECT CONVERT
-	                            ( VARCHAR, inap.dt_tgl_msk, 23 )),
-	                            ( SELECT CONVERT ( VARCHAR, inap.dt_tgl_pul, 23 ) )) 
-	                            END AS LOS 
-                            FROM
-	                            AKPRI_DTagihan tagihan
-	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = tagihan.vc_no_sep
-	                            LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = tagihan.vc_nid_dpjp
-	                            INNER JOIN AKPRI_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_reg = tagihan.vc_no_reg
-	                            left join SDMJ_Pend spesialis ON spesialis.vc_k_jpend = dokter.vc_k_jpend
-	                            INNER JOIN RMP_inap inap ON inap.vc_no_reg = tagihan.vc_no_reg 
-                                INNER JOIN RMpasien pasien on pasien.vc_no_rm = inap.vc_no_rm
-                            WHERE
-	                            ISNULL( sep.bt_hapus, '0' ) <> 1
-								AND ISNULL(kartuPiutang.dc_umbal,'0') <> 0
-                                AND Convert(DateTime, Convert(Varchar,Isnull(sep.dt_tgl_sep,0),101),101) between '" + dtFrom.Value.ToShortDateString() + "'   and '" + dtTo.Value.ToShortDateString() + "' ";
-
-            //cob
-            string query_cob = @"SELECT
-	                                dokter.vc_nama_kry,
-	                                spesialis.vc_n_jpend,
-	                                dtagih.vc_no_sep,
-                                    dtagih.vc_no_rm,
-                                    dtagih.vc_no_reg,
-                                    pasien.vc_nama_p,
-	                            kartuPiutang.dc_biaya_rs,
-								kartuPiutang.dc_iur_pasien,
-	                            kartuPiutang.dc_potongan,
-								kartuPiutang.dc_nominal_instansi_lain,
-                                kartuPiutang.dc_piutang_rs,
-                                ISNULL(dtagih.dc_umbal,0) as dc_umbal,
-                                ISNULL(dtagih.dc_umbal,0)-kartuPiutang.dc_piutang_rs as selisihUmbal,
-                                CASE
-	
-	                                WHEN DATEDIFF(
-	                                DAY,
-	                                (
-                                SELECT CONVERT
-	                                ( VARCHAR, inap.dt_tgl_msk, 23 )),
-	                                ( SELECT CONVERT ( VARCHAR, inap.dt_tgl_pul, 23 ) )) = 0 THEN
-	                                1 ELSE DATEDIFF(
-	                                DAY,
-	                                (
-                                SELECT CONVERT
-	                                ( VARCHAR, inap.dt_tgl_msk, 23 )),
-	                                ( SELECT CONVERT ( VARCHAR, inap.dt_tgl_pul, 23 ) )) 
-	                                END AS LOS
-                                FROM
-	                                AKPRI_COB_HTagihan htagih
-	                                INNER JOIN AKPRI_COB_DTagihan dtagih ON htagih.vc_kd_tagihan = dtagih.vc_kd_tagihan
-	                                INNER JOIN bpjs_sep sep ON sep.vc_no_sep = dtagih.vc_no_sep
-	                                INNER JOIN AKPRI_Kartu_piutang_JKN kartuPiutang ON kartuPiutang.vc_no_reg = dtagih.vc_no_reg
-	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = dtagih.vc_no_reg
-                                    INNER JOIN RMpasien pasien on pasien.vc_no_rm = dtagih.vc_no_rm
-	                                LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = inap.vc_nid
-	                               left join  SDMJ_Pend spesialis ON spesialis.vc_k_jpend = dokter.vc_k_jpend 
-                                WHERE
-	                                ISNULL( sep.bt_hapus, '0' ) <> 1 
-									AND ISNULL(kartuPiutang.dc_umbal,'0') <> 0
-	                                AND htagih.vc_k_png = @pngJKN  
-                                    AND Convert(DateTime, Convert(Varchar,Isnull(sep.dt_tgl_sep,0),101),101) between '" + dtFrom.Value.ToShortDateString() + "'   and '" + dtTo.Value.ToShortDateString() + "' ";
-
-            string queryAll = query + " UNION ALL " + query_cob;
-
-            using (SqlCommand cmd = new SqlCommand(queryAll, clMain.DBConn.objConnection))
-            {
-                cmd.Parameters.AddWithValue("@pngJKN", FrmMain.kdJKN);
-                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                {
-                    da.Fill(dt);
-                }
-            }
-
-            List<AnalisaDokter> diagnosaBpjsList = new List<AnalisaDokter>();
-            diagnosaBpjsList = (from System.Data.DataRow dr in dt.Rows
-                                select new AnalisaDokter()
-                                {
-                                    namaDokter = dr["vc_nama_kry"].ToString(),
-                                    spesialisasi = dr["vc_n_jpend"].ToString(),
-                                    no_sep = dr["vc_no_sep"].ToString(),
-                                    noRM = dr["vc_no_rm"].ToString(),
-                                    noReg = dr["vc_no_reg"].ToString(),
-                                    namaPasien = dr["vc_nama_p"].ToString(),
-                                    biaya_rs = (decimal)dr["dc_biaya_rs"],
-                                    iurPasien = (decimal)dr["dc_iur_pasien"],
-                                    potongan = (decimal)dr["dc_potongan"],
-                                    COB = (decimal)dr["dc_nominal_instansi_lain"],
-                                    piutangRS = (decimal)dr["dc_piutang_rs"],
-                                    umbal = (decimal)dr["dc_umbal"],
-                                    selisihUmbal = (decimal)dr["selisihUmbal"],
-                                    los = (int)dr["los"]
-                                }).ToList();
-            return diagnosaBpjsList;
-
-        }
+       
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
@@ -169,7 +50,8 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         private void genarateData()
         {
-            this.pivotGridControl1.ItemSource = getDataRawatInapOld();
+            DataTable dt = new DataTable();
+            this.pivotGridControl1.ItemSource = getDataRawatInapTest();
 
             this.pivotGridControl1.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
 
@@ -187,12 +69,12 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             else
             {
                 this.pivotGridControl1.RowPivotsOnly = false;
-                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Deskripsi", AllowSort = true });
+                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Diagnosa", AllowSort = true });
 
             }
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "noReg", FieldHeader = "Total", AllowSort = true });
 
-            this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biayaRS", FieldHeader = "Biaya RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
+            this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biayaRS", FieldHeader = "Total Biaya RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
 
             this.pivotGridControl1.ShowSubTotals = false;
             this.pivotGridControl1.ShowPivotValueChooser = true;
@@ -213,15 +95,160 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         private void TableControl_CellClick(object sender, GridCellClickEventArgs e)
         {
-            //  throw new NotImplementedException();
+            PivotGridControlBase pivotGridControlBase = sender as PivotGridControlBase;
+            if (pivotGridControlBase != null)
+            {
+                int row = pivotGridControlBase.CurrentCell.RowIndex - 1;
+                int col = pivotGridControlBase.CurrentCell.ColIndex - 1;
+                if (row != 0)
+                {
+                    var rawItems = this.pivotGridControl1.PivotEngine.GetRawItemsFor(row, col);
+
+
+                    //frmAnalisaPerDokterDtl.jenisPerawatan = cmbJenisPel.Text;
+                    if (FrmAnalisaICD10Dtl == null)
+                    {
+                        FrmAnalisaICD10Dtl = new FrmAnalisaICD10Dtl();
+                        FrmAnalisaICD10Dtl.rawValue = rawItems;
+                        FrmAnalisaICD10Dtl.Show();
+                        FrmAnalisaICD10Dtl.Closed += (s, ea) => FrmAnalisaICD10Dtl = null;
+                    }
+
+                    // frmAnalisaPerDokterDtl.Close();
+                }
+
+            }
         }
 
-        private void TableModel_QueryCellInfo(object sender, GridQueryCellInfoEventArgs e)
+        private void FrmAnalisaICD10_Load(object sender, EventArgs e)
         {
-            // throw new NotImplementedException();
+
+        }
+    
+
+    private void TableModel_QueryCellInfo(object sender, GridQueryCellInfoEventArgs e)
+        {
+            if (e.RowIndex > this.pivotGridControl1.PivotColumns.Count + (this.pivotGridControl1.PivotCalculations.Count > 1 && this.pivotGridControl1.PivotEngine.ShowCalculationsAsColumns ? 1 : 0) && e.ColIndex > this.pivotGridControl1.PivotRows.Count + (this.pivotGridControl1.PivotEngine.ShowCalculationsAsColumns ? 0 : 1) && e.Style.CellValue != null)
+            {
+                e.Style.CellType = "HyperlinkCell";
+                e.Style.Tag = null;
+            }
         }
 
-        private List<AnalisaICD10> getDataRawatInapOld()
+
+        private DataTable getDataRawatInapTest()
+        {
+            string query = @"DECLARE @cols AS NVARCHAR ( MAX ),
+                            @colsNotNULL AS NVARCHAR ( MAX ),
+                                @query AS NVARCHAR ( MAX );
+                            SET @cols = STUFF(
+	                            (
+		                            SELECT  DISTINCT
+			                            ',' + QUOTENAME( bagian ) 
+		                                FROM
+			                                (
+			                                SELECT DISTINCT(x.vc_nm_bagian) bagian  FROM KeuRincian  cc
+				                                INNER JOIN pubbagian x
+				                                on x.vc_kd_bagian = SUBSTRING ( cc.vc_no_bukti, 7, 2 )
+				                                and DT_Tgl_Trans >= '2020-01-01 00:00:00.000'
+			                                ) AS c FOR XML PATH ( '' ),
+			                                TYPE 
+		                                ).value ( '.', 'NVARCHAR(MAX)' ),
+		                                1,
+		                                1,		'' 
+	                                ) 
+
+                                SET @colsNotNULL = STUFF(
+	                                (
+		                                SELECT  DISTINCT
+			                                ', ISNULL(' + QUOTENAME( c.bagian ) + ',0) AS ' + QUOTENAME( c.bagian ) 
+		                                FROM
+			                                (
+			                                SELECT DISTINCT(x.vc_nm_bagian) bagian  FROM KeuRincian  cc
+				                                INNER JOIN pubbagian x
+				                                on x.vc_kd_bagian = SUBSTRING ( cc.vc_no_bukti, 7, 2 )
+					                                and DT_Tgl_Trans >= '2020-01-01 00:00:00.000'
+			                                ) AS c FOR XML PATH ( '' ),
+			                                TYPE 
+		                                ).value ( '.', 'NVARCHAR(MAX)' ),
+		                                1,
+		                                1,		'' 
+	                                ) 
+
+	                                SET @query = 'SELECT vc_no_reg as noReg,
+                                        vc_no_rm as noRM,
+                                        vc_nama_p as namaPasien,
+                                        vc_kode_icd as kodeICD10,
+                                        vc_nama_icd as deskripsiIcd,
+                                        vc_k_png as kdPng,
+                                        vc_n_png as namaPng, 
+                                        dt_tgl_msk,
+                                        dt_tgl_pul,
+                                        ' + @colsNotNULL + ' ,
+                                        totalBiayaRS as biayaRS FROM (SELECT
+                                inap.vc_no_reg,
+	                                inap.vc_no_rm,
+	                                pasien.vc_nama_p,
+	                                kamus.vc_kode_icd,
+	                                kamus.vc_nama_icd,
+	                                png.vc_k_png,
+	                                png.vc_n_png,
+	                                inap.dt_tgl_msk,
+	                                inap.dt_tgl_pul,
+	                                ISNULL((
+                                SELECT CAST
+	                                (
+	                                floor( ceiling( SUM ( nu_Sub_total ) + 49 ) / 50 ) * 50 AS DECIMAL ( 18, 2 )) 
+                                FROM
+	                                KeuRincian 
+                                WHERE
+	                                VC_no_reg = inap.vc_no_reg 
+	                                ),
+	                                0 
+	                                ) AS totalBiayaRS,
+	                                dd.vc_nm_bagian,
+	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip 
+                                FROM
+	                                KeuRinciInapKomponen aa
+	                                LEFT JOIN KeuRincian cc ON cc.vc_no_bukti = aa.vc_no_bukti
+	                                LEFT JOIN PubBagian dd ON SUBSTRING ( cc.vc_no_bukti, 7, 2 ) = dd.vc_kd_bagian
+	                                INNER JOIN RMRanap ranap ON ranap.vc_No_Reg = cc.VC_No_Reg
+	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = ranap.vc_No_Reg
+	                                INNER JOIN RMIcdKamus kamus ON kamus.vc_kode_icd = ranap.VC_DiagnosaAkhir
+	                                INNER JOIN RMPasien pasien ON pasien.vc_no_rm = inap.vc_no_rm
+	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png 
+                                WHERE
+	                                Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_msk,0),101),101) between''@dateFrom''   and  ''@dateTo''
+                                GROUP BY
+	                                inap.vc_no_reg,	inap.vc_no_rm,
+		                                pasien.vc_nama_p,
+                                vc_kode_icd,vc_nama_icd,
+	                                vc_nm_bagian,
+	                                dd.vc_kd_bagian,	png.vc_k_png,
+	                                png.vc_n_png,
+	                                inap.dt_tgl_msk,
+	                                inap.dt_tgl_pul ) hasil
+	                                PIVOT
+                                (
+                                  SUM(dc_tarip)
+                                  FOR vc_nm_bagian IN ( ' + @cols + ') 
+                                ) AS p;' 
+                                EXECUTE ( @query )
+                         ";
+
+            query = query.Replace("@dateFrom", dtFrom.Value.ToShortDateString());
+            query = query.Replace("@dateTo", dtTo.Value.ToShortDateString());
+            DataTable dt = new DataTable();
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            return dt;
+        }
+        private List<AnalisaICD10> getDataRawatInap()
         {
             DataTable dt = new DataTable();
 
@@ -251,7 +278,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                                        INNER JOIN RMPasien pasien ON pasien.vc_no_rm = inap.vc_no_rm 
                                         INNER JOIN PubPng png on png.vc_k_png = inap.vc_k_png
                                         AND ISNULL(inap.Dt_tgl_pul,'') <> '' ) a  where a.totalBiayaRS  <> 0.00
-  AND Convert(DateTime, Convert(Varchar,Isnull(dt_tgl_msk,0),101),101) between '" + dtFrom.Value.ToShortDateString() + "'   and '" + dtTo.Value.ToShortDateString() + "' ";
+                                 AND Convert(DateTime, Convert(Varchar,Isnull(dt_tgl_msk,0),101),101) between '" + dtFrom.Value.ToShortDateString() + "'   and '" + dtTo.Value.ToShortDateString() + "' ";
 
    
 
@@ -284,5 +311,152 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         }
 
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            var ExportAsPivotTable = (cmbExportXls.SelectedIndex == 0);
+
+
+
+            SaveFileDialog savedialog = new SaveFileDialog();
+
+            savedialog.AddExtension = true;
+
+            savedialog.FileName = "AnalisaICD10";
+
+            savedialog.DefaultExt = "xlsx";
+
+            savedialog.Filter = @"Excel file (.xlsx)|*.xlsx";
+
+
+
+            if (savedialog.ShowDialog() == DialogResult.OK)
+
+            {
+
+                ExcelExport excelExport = new ExcelExport(pivotGridControl1, ExcelVersion.Excel2010);
+
+                excelExport.ExportMode = (ExportAsPivotTable) ? ExportModes.PivotTable : ExportModes.Cell;
+
+                excelExport.Export(savedialog.FileName);
+
+
+
+                if (MessageBox.Show(@"Export Success! Do you want to open the exported file?", Text, MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+                {
+
+                    var p = new Process();
+
+                    p.StartInfo = new ProcessStartInfo(savedialog.FileName)
+
+                    {
+
+                        UseShellExecute = true
+
+                    };
+
+                    p.Start();
+
+                }
+
+
+
+            }
+        }
+
+        private void btnExportWord_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savedialog = new SaveFileDialog();
+
+            savedialog.AddExtension = true;
+
+            savedialog.FileName = "AnalisaIcd10";
+
+            savedialog.DefaultExt = "Doc";
+
+            savedialog.Filter = @"Word file (.Doc)|*.Doc";
+
+            if (savedialog.ShowDialog() == DialogResult.OK)
+
+            {
+
+                PivotWordExport wordExport = new PivotWordExport(pivotGridControl1);
+
+                wordExport.pivotGridToWord(savedialog.FileName);
+
+
+
+                if (MessageBox.Show(@"Export Success! Do you want to open the exported file?", Text, MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+
+
+                {
+
+                    var p = new Process();
+
+                    p.StartInfo = new ProcessStartInfo(savedialog.FileName)
+
+                    {
+
+                        UseShellExecute = true
+
+                    };
+
+                    p.Start();
+
+                }
+
+
+
+            }
+        }
+
+        private void btnExportPdf_Click(object sender, EventArgs e)
+        {
+
+
+            SaveFileDialog savedialog = new SaveFileDialog();
+
+            savedialog.AddExtension = true;
+
+            savedialog.FileName = "AnalisaICD10";
+
+            savedialog.DefaultExt = "pdf";
+
+            savedialog.Filter = @"Pdf file (.pdf)|*.pdf";
+
+            if (savedialog.ShowDialog() == DialogResult.OK)
+
+            {
+
+                PivotPdfExport pdfExport = new PivotPdfExport(pivotGridControl1);
+
+                pdfExport.Export(savedialog.FileName);
+
+                if (MessageBox.Show(@"Export Success! Do you want to open the exported file?", Text, MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+
+
+                {
+
+                    var p = new Process();
+
+                    p.StartInfo = new ProcessStartInfo(savedialog.FileName)
+
+                    {
+
+                        UseShellExecute = true
+
+                    };
+
+                    p.Start();
+
+                }
+
+
+
+
+            }
+        }
     }
 }

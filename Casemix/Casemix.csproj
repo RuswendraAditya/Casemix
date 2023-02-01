@@ -171,6 +171,12 @@
     <Compile Include="Forms\Analisa Non BPJS\FrmAnalisaICD10.Designer.cs">
       <DependentUpon>FrmAnalisaICD10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Analisa Non BPJS\FrmAnalisaICD10Dtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analisa Non BPJS\FrmAnalisaICD10Dtl.Designer.cs">
+      <DependentUpon>FrmAnalisaICD10Dtl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Anti Fraud\FrmVariable1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Analisa Non BPJS\FrmAnalisaICD10.resx">
       <DependentUpon>FrmAnalisaICD10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analisa Non BPJS\FrmAnalisaICD10Dtl.resx">
+      <DependentUpon>FrmAnalisaICD10Dtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Anti Fraud\FrmVariable1.resx">
       <DependentUpon>FrmVariable1.cs</DependentUpon>
