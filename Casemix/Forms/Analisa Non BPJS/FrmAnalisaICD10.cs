@@ -51,7 +51,14 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         private void genarateData()
         {
             DataTable dt = new DataTable();
-            this.pivotGridControl1.ItemSource = getDataRawatInapTest();
+            if(txtKdPng.Text.Length > 0)
+            {
+                this.pivotGridControl1.ItemSource = getDataRawatInapWithPng(txtKdPng.Text);
+            }
+            else
+            {
+                this.pivotGridControl1.ItemSource = getDataRawatInapTest();
+            }
 
             this.pivotGridControl1.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
 
@@ -61,19 +68,24 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             pivotGridControl1.TableControl.WantTabKey = false;
             this.pivotGridControl1.GridVisualStyles = GridVisualStyles.Metro;
 
-            
-            if (chkBoxSort.Checked)
-            {
-                this.pivotGridControl1.RowPivotsOnly = true;
-                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Diagnosa", AllowSort = true });
-            }
-            else
-            {
-                this.pivotGridControl1.RowPivotsOnly = false;
-                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", FieldHeader = "ICD 10", AllowSort = true });
-                this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", FieldHeader = "Diagnosa", AllowSort = true });
 
-            }
+            //if (chkBoxSort.Checked)
+            //{
+            //    this.pivotGridControl1.RowPivotsOnly = true;
+            //    this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", TotalHeader = "Total", FieldHeader = "ICD 10", AllowSort = true });
+
+            //    this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", TotalHeader = "Total" ,FieldHeader = "Diagnosa", AllowSort = true });
+
+            //}
+            //else
+            //{
+            //    this.pivotGridControl1.RowPivotsOnly = false;
+            //    this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", TotalHeader = "Total" ,FieldHeader = "ICD 10", AllowSort = true });
+            //    this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", TotalHeader = "Total" , FieldHeader = "Diagnosa", AllowSort = true });
+
+            //}
+            pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", TotalHeader = "ICD" });
+            pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", TotalHeader = "ICD" });
 
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "noReg", FieldHeader = "Total", AllowSort = true });
 
@@ -84,16 +96,16 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.pivotGridControl1.TableControl.AllowRowPivotFiltering = true;
             this.pivotGridControl1.TableControl.AllowRowResizeUsingCellBoundaries = true;
             this.pivotGridControl1.TableControl.AllowColumnResizeUsingCellBoundaries = true;
-
+            this.pivotGridControl1.RowPivotsOnly = true;
 
             this.pivotGridControl1.Refresh();
             this.pivotGridControl1.ShowPivotTableFieldList = true;
             this.pivotGridControl1.ShowGroupBar = true;
 
             this.pivotGridControl1.PivotSchemaDesigner.RefreshGridSchemaLayout();
-            pivotGridControl1.TableModel.Model.ColWidths[1] = 80;
-            pivotGridControl1.TableModel.Model.ColWidths[2] = 500;
-
+            pivotGridControl1.TableModel.Model.ColWidths[1] = 100;
+            pivotGridControl1.TableModel.Model.ColWidths[2] = 150;
+     
         }
 
         private void TableControl_CellClick(object sender, GridCellClickEventArgs e)
@@ -201,7 +213,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                ISNULL((
                                 SELECT CAST
 	                                (
-	                                floor( ceiling( SUM ( nu_Sub_total ) + 49 ) / 50 ) * 50 AS DECIMAL ( 18, 2 )) 
+	                                SUM ( nu_Sub_total ) AS DECIMAL ( 18, 2 )) 
                                 FROM
 	                                KeuRincian 
                                 WHERE
@@ -251,7 +263,122 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             }
             return dt;
         }
-        private List<AnalisaICD10> getDataRawatInap()
+
+        private DataTable getDataRawatInapWithPng(string kdPng)
+        {
+            string query = @"DECLARE @cols AS NVARCHAR ( MAX ),
+                            @colsNotNULL AS NVARCHAR ( MAX ),
+                                @query AS NVARCHAR ( MAX );
+                            SET @cols = STUFF(
+	                            (
+		                            SELECT  DISTINCT
+			                            ',' + QUOTENAME( bagian ) 
+		                                FROM
+			                                (
+			                                SELECT DISTINCT(x.vc_nm_bagian) bagian  FROM KeuRincian  cc
+				                                INNER JOIN pubbagian x
+				                                on x.vc_kd_bagian = SUBSTRING ( cc.vc_no_bukti, 7, 2 )
+				                                and DT_Tgl_Trans >= '2020-01-01 00:00:00.000'
+			                                ) AS c FOR XML PATH ( '' ),
+			                                TYPE 
+		                                ).value ( '.', 'NVARCHAR(MAX)' ),
+		                                1,
+		                                1,		'' 
+	                                ) 
+
+                                SET @colsNotNULL = STUFF(
+	                                (
+		                                SELECT  DISTINCT
+			                                ', ISNULL(' + QUOTENAME( c.bagian ) + ',0) AS ' + QUOTENAME( c.bagian ) 
+		                                FROM
+			                                (
+			                                SELECT DISTINCT(x.vc_nm_bagian) bagian  FROM KeuRincian  cc
+				                                INNER JOIN pubbagian x
+				                                on x.vc_kd_bagian = SUBSTRING ( cc.vc_no_bukti, 7, 2 )
+					                                and DT_Tgl_Trans >= '2020-01-01 00:00:00.000'
+			                                ) AS c FOR XML PATH ( '' ),
+			                                TYPE 
+		                                ).value ( '.', 'NVARCHAR(MAX)' ),
+		                                1,
+		                                1,		'' 
+	                                ) 
+
+	                                SET @query = 'SELECT vc_no_reg as noReg,
+                                        vc_no_rm as noRM,
+                                        vc_nama_p as namaPasien,
+                                        vc_kode_icd as kodeICD10,
+                                        vc_nama_icd as deskripsiIcd,
+                                        vc_k_png as kdPng,
+                                        vc_n_png as namaPng, 
+                                        dt_tgl_msk,
+                                        dt_tgl_pul,
+                                        ' + @colsNotNULL + ' ,
+                                        totalBiayaRS as biayaRS FROM (SELECT
+                                inap.vc_no_reg,
+	                                inap.vc_no_rm,
+	                                pasien.vc_nama_p,
+	                                kamus.vc_kode_icd,
+	                                kamus.vc_nama_icd,
+	                                png.vc_k_png,
+	                                png.vc_n_png,
+	                                inap.dt_tgl_msk,
+	                                inap.dt_tgl_pul,
+	                                ISNULL((
+                                SELECT CAST
+	                                (
+	                                SUM ( nu_Sub_total ) AS DECIMAL ( 18, 2 )) 
+                                FROM
+	                                KeuRincian 
+                                WHERE
+	                                VC_no_reg = inap.vc_no_reg 
+	                                ),
+	                                0 
+	                                ) AS totalBiayaRS,
+	                                dd.vc_nm_bagian,
+	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip 
+                                FROM
+	                                KeuRinciInapKomponen aa
+	                                LEFT JOIN KeuRincian cc ON cc.vc_no_bukti = aa.vc_no_bukti
+	                                LEFT JOIN PubBagian dd ON SUBSTRING ( cc.vc_no_bukti, 7, 2 ) = dd.vc_kd_bagian
+	                                INNER JOIN RMRanap ranap ON ranap.vc_No_Reg = cc.VC_No_Reg
+	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = ranap.vc_No_Reg
+	                                INNER JOIN RMIcdKamus kamus ON kamus.vc_kode_icd = ranap.VC_DiagnosaAkhir
+	                                INNER JOIN RMPasien pasien ON pasien.vc_no_rm = inap.vc_no_rm
+	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png 
+                                WHERE
+	                                Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_msk,0),101),101) between''@dateFrom''   and  ''@dateTo''
+                                    and inap.vc_k_png = ''@kdPng''
+                                GROUP BY
+	                                inap.vc_no_reg,	inap.vc_no_rm,
+		                                pasien.vc_nama_p,
+                                vc_kode_icd,vc_nama_icd,
+	                                vc_nm_bagian,
+	                                dd.vc_kd_bagian,	png.vc_k_png,
+	                                png.vc_n_png,
+	                                inap.dt_tgl_msk,
+	                                inap.dt_tgl_pul ) hasil
+	                                PIVOT
+                                (
+                                  SUM(dc_tarip)
+                                  FOR vc_nm_bagian IN ( ' + @cols + ') 
+                                ) AS p;' 
+                                EXECUTE ( @query )
+                         ";
+
+            query = query.Replace("@dateFrom", dtFrom.Value.ToShortDateString());
+            query = query.Replace("@dateTo", dtTo.Value.ToShortDateString());
+            query = query.Replace("@kdPng", kdPng);
+            DataTable dt = new DataTable();
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            return dt;
+        }
+        private List<AnalisaICD10> getDataRawatInapOld()
         {
             DataTable dt = new DataTable();
 
@@ -459,6 +586,22 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
 
 
+            }
+        }
+
+        private void btnLookup_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmLookup())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txtKdPng.Text = form.value;
+                    txtNamaPng.Text = form.texts;
+                 //   gridTagihan.DataSource = null;
+                  //  gridTagihan.Columns.Clear();
+                }
+                form.Close();
             }
         }
     }

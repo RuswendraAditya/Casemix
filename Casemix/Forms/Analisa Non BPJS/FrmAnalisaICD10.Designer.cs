@@ -43,6 +43,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.label3 = new System.Windows.Forms.Label();
             this.pivotGridControl1 = new Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl(this.components);
             this.chkBoxSort = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNamaPng = new System.Windows.Forms.TextBox();
+            this.txtKdPng = new System.Windows.Forms.TextBox();
+            this.btnLookup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cmbExportXls)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +65,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnLoad.AccessibleName = "Button";
             this.btnLoad.BackColor = System.Drawing.Color.Bisque;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnLoad.Location = new System.Drawing.Point(593, 13);
+            this.btnLoad.Location = new System.Drawing.Point(650, 55);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(112, 32);
@@ -76,7 +80,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.dtFrom.CustomFormat = "dd/MM/yyyy";
             this.dtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(140, 18);
+            this.dtFrom.Location = new System.Drawing.Point(188, 18);
             this.dtFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtFrom.Name = "dtFrom";
             this.dtFrom.Size = new System.Drawing.Size(143, 27);
@@ -88,7 +92,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.dtTo.CustomFormat = "dd/MM/yyyy";
             this.dtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(334, 18);
+            this.dtTo.Location = new System.Drawing.Point(382, 18);
             this.dtTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtTo.Name = "dtTo";
             this.dtTo.Size = new System.Drawing.Size(143, 27);
@@ -98,7 +102,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(288, 21);
+            this.label2.Location = new System.Drawing.Point(336, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 37;
@@ -173,7 +177,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(759, 84);
+            this.label4.Location = new System.Drawing.Point(755, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(281, 25);
             this.label4.TabIndex = 45;
@@ -185,11 +189,12 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(12, 59);
+            this.label3.Location = new System.Drawing.Point(12, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(622, 20);
+            this.label3.Size = new System.Drawing.Size(744, 20);
             this.label3.TabIndex = 47;
-            this.label3.Text = "* Data Yang tampil adalah pasien yang sudah Dipulangkan AKPN dan diisi ICD 10 ";
+            this.label3.Text = "* Data Yang tampil adalah pasien yang sudah Dipulangkan AKPN dan diisi Diagnosa A" +
+    "khir(ICD-10)";
             // 
             // pivotGridControl1
             // 
@@ -197,10 +202,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pivotGridControl1.EditManager = null;
-            this.pivotGridControl1.Location = new System.Drawing.Point(13, 127);
+            this.pivotGridControl1.Location = new System.Drawing.Point(13, 160);
             this.pivotGridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(1512, 510);
+            this.pivotGridControl1.Size = new System.Drawing.Size(1512, 477);
             this.pivotGridControl1.TabIndex = 48;
             this.pivotGridControl1.Text = "pivotGridControl1";
             this.pivotGridControl1.UpdateManager = null;
@@ -208,12 +213,53 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // chkBoxSort
             // 
             this.chkBoxSort.AutoSize = true;
-            this.chkBoxSort.Location = new System.Drawing.Point(483, 18);
+            this.chkBoxSort.Location = new System.Drawing.Point(562, 18);
             this.chkBoxSort.Name = "chkBoxSort";
             this.chkBoxSort.Size = new System.Drawing.Size(104, 21);
             this.chkBoxSort.TabIndex = 50;
             this.chkBoxSort.Text = "Can Sorting";
             this.chkBoxSort.UseVisualStyleBackColor = true;
+            this.chkBoxSort.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 20);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Penanggung";
+            // 
+            // txtNamaPng
+            // 
+            this.txtNamaPng.Location = new System.Drawing.Point(257, 59);
+            this.txtNamaPng.Name = "txtNamaPng";
+            this.txtNamaPng.ReadOnly = true;
+            this.txtNamaPng.Size = new System.Drawing.Size(347, 22);
+            this.txtNamaPng.TabIndex = 52;
+            // 
+            // txtKdPng
+            // 
+            this.txtKdPng.Location = new System.Drawing.Point(188, 59);
+            this.txtKdPng.Name = "txtKdPng";
+            this.txtKdPng.ReadOnly = true;
+            this.txtKdPng.Size = new System.Drawing.Size(63, 22);
+            this.txtKdPng.TabIndex = 53;
+            // 
+            // btnLookup
+            // 
+            this.btnLookup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLookup.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLookup.Location = new System.Drawing.Point(608, 59);
+            this.btnLookup.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLookup.Name = "btnLookup";
+            this.btnLookup.Size = new System.Drawing.Size(35, 22);
+            this.btnLookup.TabIndex = 307;
+            this.btnLookup.Text = "...";
+            this.btnLookup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLookup.UseVisualStyleBackColor = true;
+            this.btnLookup.Click += new System.EventHandler(this.btnLookup_Click);
             // 
             // FrmAnalisaICD10
             // 
@@ -221,6 +267,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1563, 750);
+            this.Controls.Add(this.btnLookup);
+            this.Controls.Add(this.txtKdPng);
+            this.Controls.Add(this.txtNamaPng);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.chkBoxSort);
             this.Controls.Add(this.pivotGridControl1);
             this.Controls.Add(this.label3);
@@ -258,5 +308,9 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         private System.Windows.Forms.Label label3;
         private Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl pivotGridControl1;
         private System.Windows.Forms.CheckBox chkBoxSort;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNamaPng;
+        private System.Windows.Forms.TextBox txtKdPng;
+        private System.Windows.Forms.Button btnLookup;
     }
 }
