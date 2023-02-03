@@ -16,10 +16,34 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         public string value { get; set; }
         public string texts { get; set; }
         DataTable dt;
+        private string _source;
+
         public FrmLookup()
         {
             InitializeComponent();
-            gridLookup.DataSource = getDataPenanggung("");
+           
+        }
+
+        public FrmLookup(string source)
+        {
+            InitializeComponent();
+            this._source = source;
+            switch (this._source)
+            {
+                case "Penanggung":
+
+                    gridLookup.DataSource = getDataPenanggung("");
+                    break;
+
+                case "Diagnosa":
+                    gridLookup.DataSource = getDataICD("");
+                    break;
+
+                default:
+                    break;
+            }
+          
+              
         }
 
         private DataTable getDataPenanggung(string param)
@@ -40,7 +64,24 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
             return dt;
         }
+        private DataTable getDataICD(string param)
+        {
+            dt = new DataTable();
 
+            string query = @"SELECT vc_kode_icd,vc_nama_icd FROM RMICDKamus  where vc_nama_icd like '%" + param + "%' order by vc_kode_icd asc";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+
+                cmd.CommandTimeout = 0;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+
+
+            return dt;
+        }
         private void FrmLookup_Load(object sender, EventArgs e)
         {
          
@@ -48,11 +89,22 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         private void btnPilih_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            var selectedItem = this.gridLookup.CurrentItem as DataRowView;
-            var dataRow = (selectedItem as DataRowView).Row;
-            this.value = dataRow["vc_k_png"].ToString();
-            this.texts = dataRow["vc_n_png"].ToString();
+            if (_source == "Penanggung")
+            {
+                this.DialogResult = DialogResult.OK;
+                var selectedItem = this.gridLookup.CurrentItem as DataRowView;
+                var dataRow = (selectedItem as DataRowView).Row;
+                this.value = dataRow["vc_k_png"].ToString();
+                this.texts = dataRow["vc_n_png"].ToString();
+            }
+            if (_source == "Diagnosa")
+            {
+                this.DialogResult = DialogResult.OK;
+                var selectedItem = this.gridLookup.CurrentItem as DataRowView;
+                var dataRow = (selectedItem as DataRowView).Row;
+                this.value = dataRow["vc_kode_icd"].ToString();
+                this.texts = dataRow["vc_nama_icd"].ToString();
+            }
         }
 
         private void btnTutup_Click(object sender, EventArgs e)
@@ -62,26 +114,58 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         private void gridLookup_AutoGeneratingColumn(object sender, Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnArgs e)
         {
-
-            if (e.Column.MappingName == "vc_k_png")
+            if (_source == "Penanggung")
             {
-                e.Column.HeaderText = "Kode Penanggung";
-                e.Column.Width = 100;
-                e.Column.AllowFiltering = true;
+                if (e.Column.MappingName == "vc_k_png")
+                {
+                    e.Column.HeaderText = "Kode Penanggung";
+                    e.Column.Width = 100;
+                    e.Column.AllowFiltering = true;
 
+                }
+                if (e.Column.MappingName == "vc_n_png")
+                {
+                    e.Column.HeaderText = "Nama Penanggung";
+                    e.Column.Width = 400;
+                    e.Column.AllowFiltering = true;
+
+                }
             }
-            if (e.Column.MappingName == "vc_n_png")
+            if (_source == "Diagnosa")
             {
-                e.Column.HeaderText = "Nama Penanggung";
-                e.Column.Width = 400;
-                e.Column.AllowFiltering = true;
+                if (e.Column.MappingName == "vc_kode_icd")
+                {
+                    e.Column.HeaderText = "ICD 10";
+                    e.Column.Width = 100;
+                    e.Column.AllowFiltering = true;
 
+                }
+                if (e.Column.MappingName == "vc_nama_icd")
+                {
+                    e.Column.HeaderText = "Diagnosa";
+                    e.Column.Width = 400;
+                    e.Column.AllowFiltering = true;
+
+                }
             }
         }
 
         private void txtCari_TextChanged(object sender, EventArgs e)
         {
-            gridLookup.DataSource = getDataPenanggung(txtCari.Text);
+            switch (this._source)
+            {
+                case "Penanggung":
+
+                    gridLookup.DataSource = getDataPenanggung(txtCari.Text);
+                    break;
+
+                case "Diagnosa":
+                    gridLookup.DataSource = getDataICD(txtCari.Text);
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }

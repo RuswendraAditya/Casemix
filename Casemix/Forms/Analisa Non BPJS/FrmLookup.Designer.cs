@@ -108,7 +108,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.Controls.Add(this.gridLookup);
             this.Name = "FrmLookup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cari Penanggung";
+            this.Text = "Lookup Data";
             this.Load += new System.EventHandler(this.FrmLookup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridLookup)).EndInit();
             this.ResumeLayout(false);

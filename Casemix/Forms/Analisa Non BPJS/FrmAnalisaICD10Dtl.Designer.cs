@@ -37,12 +37,15 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // dgPiutang
             // 
             this.dgPiutang.AccessibleName = "Table";
+            this.dgPiutang.AllowEditing = false;
+            this.dgPiutang.AllowFiltering = true;
+            this.dgPiutang.AllowResizingColumns = true;
             this.dgPiutang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPiutang.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgPiutang.Location = new System.Drawing.Point(24, 37);
-            this.dgPiutang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgPiutang.Margin = new System.Windows.Forms.Padding(4);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
             this.dgPiutang.Size = new System.Drawing.Size(1493, 514);
@@ -57,7 +60,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnExportExcel.BackColor = System.Drawing.Color.Lavender;
             this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.btnExportExcel.Location = new System.Drawing.Point(1388, 569);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(128, 34);
             this.btnExportExcel.Style.BackColor = System.Drawing.Color.Lavender;
@@ -75,7 +78,8 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.ClientSize = new System.Drawing.Size(1748, 636);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.dgPiutang);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "FrmAnalisaICD10Dtl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAnalisaICD10Dtl";

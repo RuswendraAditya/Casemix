@@ -41,12 +41,16 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnExportPdf = new Syncfusion.WinForms.Controls.SfButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pivotGridControl1 = new Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl(this.components);
+            this.pivotAnalisa = new Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl(this.components);
             this.chkBoxSort = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNamaPng = new System.Windows.Forms.TextBox();
             this.txtKdPng = new System.Windows.Forms.TextBox();
             this.btnLookup = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIcd = new System.Windows.Forms.TextBox();
+            this.txtDiagnosa = new System.Windows.Forms.TextBox();
+            this.btnPilihDiagnosa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cmbExportXls)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +69,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnLoad.AccessibleName = "Button";
             this.btnLoad.BackColor = System.Drawing.Color.Bisque;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnLoad.Location = new System.Drawing.Point(650, 55);
+            this.btnLoad.Location = new System.Drawing.Point(143, 162);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(112, 32);
@@ -177,7 +181,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(755, 121);
+            this.label4.Location = new System.Drawing.Point(751, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(281, 25);
             this.label4.TabIndex = 45;
@@ -185,41 +189,39 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(12, 89);
+            this.label3.Location = new System.Drawing.Point(12, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(744, 20);
             this.label3.TabIndex = 47;
             this.label3.Text = "* Data Yang tampil adalah pasien yang sudah Dipulangkan AKPN dan diisi Diagnosa A" +
     "khir(ICD-10)";
             // 
-            // pivotGridControl1
+            // pivotAnalisa
             // 
-            this.pivotGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pivotAnalisa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pivotGridControl1.EditManager = null;
-            this.pivotGridControl1.Location = new System.Drawing.Point(13, 160);
-            this.pivotGridControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(1512, 477);
-            this.pivotGridControl1.TabIndex = 48;
-            this.pivotGridControl1.Text = "pivotGridControl1";
-            this.pivotGridControl1.UpdateManager = null;
+            this.pivotAnalisa.EditManager = null;
+            this.pivotAnalisa.Location = new System.Drawing.Point(9, 200);
+            this.pivotAnalisa.Margin = new System.Windows.Forms.Padding(4);
+            this.pivotAnalisa.Name = "pivotAnalisa";
+            this.pivotAnalisa.Size = new System.Drawing.Size(1512, 477);
+            this.pivotAnalisa.TabIndex = 48;
+            this.pivotAnalisa.Text = "pivotGridControl1";
+            this.pivotAnalisa.UpdateManager = null;
             // 
             // chkBoxSort
             // 
             this.chkBoxSort.AutoSize = true;
-            this.chkBoxSort.Location = new System.Drawing.Point(562, 18);
+            this.chkBoxSort.Location = new System.Drawing.Point(12, 172);
             this.chkBoxSort.Name = "chkBoxSort";
-            this.chkBoxSort.Size = new System.Drawing.Size(104, 21);
+            this.chkBoxSort.Size = new System.Drawing.Size(125, 21);
             this.chkBoxSort.TabIndex = 50;
-            this.chkBoxSort.Text = "Can Sorting";
+            this.chkBoxSort.Text = "Row Pivot Only";
             this.chkBoxSort.UseVisualStyleBackColor = true;
-            this.chkBoxSort.Visible = false;
             // 
             // label5
             // 
@@ -261,18 +263,61 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnLookup.UseVisualStyleBackColor = true;
             this.btnLookup.Click += new System.EventHandler(this.btnLookup_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 308;
+            this.label6.Text = "Diagnosa";
+            // 
+            // txtIcd
+            // 
+            this.txtIcd.Location = new System.Drawing.Point(188, 89);
+            this.txtIcd.Name = "txtIcd";
+            this.txtIcd.ReadOnly = true;
+            this.txtIcd.Size = new System.Drawing.Size(63, 22);
+            this.txtIcd.TabIndex = 309;
+            // 
+            // txtDiagnosa
+            // 
+            this.txtDiagnosa.Location = new System.Drawing.Point(257, 89);
+            this.txtDiagnosa.Name = "txtDiagnosa";
+            this.txtDiagnosa.ReadOnly = true;
+            this.txtDiagnosa.Size = new System.Drawing.Size(597, 22);
+            this.txtDiagnosa.TabIndex = 310;
+            // 
+            // btnPilihDiagnosa
+            // 
+            this.btnPilihDiagnosa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPilihDiagnosa.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPilihDiagnosa.Location = new System.Drawing.Point(861, 89);
+            this.btnPilihDiagnosa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPilihDiagnosa.Name = "btnPilihDiagnosa";
+            this.btnPilihDiagnosa.Size = new System.Drawing.Size(35, 22);
+            this.btnPilihDiagnosa.TabIndex = 311;
+            this.btnPilihDiagnosa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPilihDiagnosa.UseVisualStyleBackColor = true;
+            this.btnPilihDiagnosa.Click += new System.EventHandler(this.btnPilihDiagnosa_Click);
+            // 
             // FrmAnalisaICD10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1563, 750);
+            this.Controls.Add(this.btnPilihDiagnosa);
+            this.Controls.Add(this.txtDiagnosa);
+            this.Controls.Add(this.txtIcd);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLookup);
             this.Controls.Add(this.txtKdPng);
             this.Controls.Add(this.txtNamaPng);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.chkBoxSort);
-            this.Controls.Add(this.pivotGridControl1);
+            this.Controls.Add(this.pivotAnalisa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExportExcel);
@@ -306,11 +351,15 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         private Syncfusion.WinForms.Controls.SfButton btnExportPdf;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl pivotGridControl1;
+        private Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl pivotAnalisa;
         private System.Windows.Forms.CheckBox chkBoxSort;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNamaPng;
         private System.Windows.Forms.TextBox txtKdPng;
         private System.Windows.Forms.Button btnLookup;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIcd;
+        private System.Windows.Forms.TextBox txtDiagnosa;
+        private System.Windows.Forms.Button btnPilihDiagnosa;
     }
 }

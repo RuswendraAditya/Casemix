@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using Syncfusion.Data;
 using Syncfusion.WinForms.DataGrid;
 using Syncfusion.WinForms.DataGridConverter;
 using Syncfusion.XlsIO;
@@ -33,6 +34,13 @@ namespace Casemix.Util
 
             dr.Close();
             return result;
+        }
+
+        public static string getValueFromGridEvent(SfDataGrid dataGrid, int rowIndex, string model)
+        {
+            var record = dataGrid.View.Records[dataGrid.TableControl.ResolveToRecordIndex(rowIndex)];
+            var value = dataGrid.View.GetPropertyAccessProvider().GetValue((record as RecordEntry).Data, model);
+            return value.ToString();
         }
         public static string Replicate(int n, string cCharacter)
         {

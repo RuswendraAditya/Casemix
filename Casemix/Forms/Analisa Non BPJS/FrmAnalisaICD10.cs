@@ -42,10 +42,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         private void btnLoad_Click(object sender, EventArgs e)
         {
 
-            pivotGridControl1.ItemSource = null;
+            pivotAnalisa.ItemSource = null;
             genarateData();
-            pivotGridControl1.TableModel.Refresh();
-            pivotGridControl1.Refresh();
+            pivotAnalisa.TableModel.Refresh();
+            pivotAnalisa.Refresh();
         }
 
         private void genarateData()
@@ -53,22 +53,30 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             DataTable dt = new DataTable();
             if(txtKdPng.Text.Length > 0)
             {
-                this.pivotGridControl1.ItemSource = getDataRawatInapWithPng(txtKdPng.Text);
+                this.pivotAnalisa.ItemSource = getDataRawatInapWithPng(txtKdPng.Text,txtIcd.Text);
+            }
+            if(txtIcd.Text.Length > 0)
+            {
+                this.pivotAnalisa.ItemSource = getDataRawatInapWithPng(txtKdPng.Text, txtIcd.Text);
             }
             else
             {
-                this.pivotGridControl1.ItemSource = getDataRawatInapTest();
+                this.pivotAnalisa.ItemSource = getDataRawatInapTest();
             }
 
-            this.pivotGridControl1.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
+            this.pivotAnalisa.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
 
-            this.pivotGridControl1.TableControl.CellClick += TableControl_CellClick;
+            this.pivotAnalisa.TableControl.CellClick += TableControl_CellClick;
 
             //tab key navigation set as false to move the next control
-            pivotGridControl1.TableControl.WantTabKey = false;
-            this.pivotGridControl1.GridVisualStyles = GridVisualStyles.Metro;
+            pivotAnalisa.TableControl.WantTabKey = false;
+            this.pivotAnalisa.GridVisualStyles = GridVisualStyles.Metro;
 
-
+            this.pivotAnalisa.AllowFiltering = true;
+            if (chkBoxSort.Checked)
+            {
+                 this.pivotAnalisa.RowPivotsOnly = true;
+            }
             //if (chkBoxSort.Checked)
             //{
             //    this.pivotGridControl1.RowPivotsOnly = true;
@@ -84,27 +92,27 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             //    this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", TotalHeader = "Total" , FieldHeader = "Diagnosa", AllowSort = true });
 
             //}
-            pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "kodeICD10", TotalHeader = "ICD" });
-            pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsiIcd", TotalHeader = "ICD" });
+            pivotAnalisa.PivotRows.Add(new PivotItem { FieldMappingName = "ICD10", TotalHeader = "ICD",AllowFilter = true });
+            pivotAnalisa.PivotRows.Add(new PivotItem { FieldMappingName = "Diagnosa", TotalHeader = "ICD" ,AllowFilter = true });
 
-            this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "noReg", FieldHeader = "Total", AllowSort = true });
+            this.pivotAnalisa.PivotCalculations.Add(new PivotComputationInfo { FieldName = "NoReg", FieldHeader = "Total", AllowSort = true });
 
-            this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biayaRS", FieldHeader = "Total Biaya RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
+            this.pivotAnalisa.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biayaRS", FieldHeader = "Total Biaya RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
 
-            this.pivotGridControl1.ShowSubTotals = false;
-            this.pivotGridControl1.ShowPivotValueChooser = true;
-            this.pivotGridControl1.TableControl.AllowRowPivotFiltering = true;
-            this.pivotGridControl1.TableControl.AllowRowResizeUsingCellBoundaries = true;
-            this.pivotGridControl1.TableControl.AllowColumnResizeUsingCellBoundaries = true;
-            this.pivotGridControl1.RowPivotsOnly = true;
+            this.pivotAnalisa.ShowSubTotals = false;
+            this.pivotAnalisa.ShowPivotValueChooser = true;
+            this.pivotAnalisa.TableControl.AllowRowPivotFiltering = true;
+            this.pivotAnalisa.TableControl.AllowRowResizeUsingCellBoundaries = true;
+            this.pivotAnalisa.TableControl.AllowColumnResizeUsingCellBoundaries = true;
+          
 
-            this.pivotGridControl1.Refresh();
-            this.pivotGridControl1.ShowPivotTableFieldList = true;
-            this.pivotGridControl1.ShowGroupBar = true;
+            this.pivotAnalisa.Refresh();
+            this.pivotAnalisa.ShowPivotTableFieldList = true;
+            this.pivotAnalisa.ShowGroupBar = true;
 
-            this.pivotGridControl1.PivotSchemaDesigner.RefreshGridSchemaLayout();
-            pivotGridControl1.TableModel.Model.ColWidths[1] = 100;
-            pivotGridControl1.TableModel.Model.ColWidths[2] = 150;
+            this.pivotAnalisa.PivotSchemaDesigner.RefreshGridSchemaLayout();
+            pivotAnalisa.TableModel.Model.ColWidths[1] = 100;
+            pivotAnalisa.TableModel.Model.ColWidths[2] = 250;
      
         }
 
@@ -117,7 +125,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                 int col = pivotGridControlBase.CurrentCell.ColIndex - 1;
                 if (row != 0)
                 {
-                    var rawItems = this.pivotGridControl1.PivotEngine.GetRawItemsFor(row, col);
+                    var rawItems = this.pivotAnalisa.PivotEngine.GetRawItemsFor(row, col);
 
 
                     //frmAnalisaPerDokterDtl.jenisPerawatan = cmbJenisPel.Text;
@@ -143,7 +151,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
     private void TableModel_QueryCellInfo(object sender, GridQueryCellInfoEventArgs e)
         {
-            if (e.RowIndex > this.pivotGridControl1.PivotColumns.Count + (this.pivotGridControl1.PivotCalculations.Count > 1 && this.pivotGridControl1.PivotEngine.ShowCalculationsAsColumns ? 1 : 0) && e.ColIndex > this.pivotGridControl1.PivotRows.Count + (this.pivotGridControl1.PivotEngine.ShowCalculationsAsColumns ? 0 : 1) && e.Style.CellValue != null)
+            if (e.RowIndex > this.pivotAnalisa.PivotColumns.Count + (this.pivotAnalisa.PivotCalculations.Count > 1 && this.pivotAnalisa.PivotEngine.ShowCalculationsAsColumns ? 1 : 0) && e.ColIndex > this.pivotAnalisa.PivotRows.Count + (this.pivotAnalisa.PivotEngine.ShowCalculationsAsColumns ? 0 : 1) && e.Style.CellValue != null)
             {
                 e.Style.CellType = "HyperlinkCell";
                 e.Style.Tag = null;
@@ -190,15 +198,15 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 		                                1,		'' 
 	                                ) 
 
-	                                SET @query = 'SELECT vc_no_reg as noReg,
-                                        vc_no_rm as noRM,
-                                        vc_nama_p as namaPasien,
-                                        vc_kode_icd as kodeICD10,
-                                        vc_nama_icd as deskripsiIcd,
-                                        vc_k_png as kdPng,
-                                        vc_n_png as namaPng, 
-                                        dt_tgl_msk,
-                                        dt_tgl_pul,
+	                                SET @query = 'SELECT vc_no_reg as NoReg,
+                                        vc_no_rm as NoRM,
+                                        vc_nama_p as NamaPasien,
+                                        vc_kode_icd as ICD10,
+                                        vc_nama_icd as Diagnosa,
+                                        vc_k_png as KodePenanggung,
+                                        vc_n_png as Penanggung, Dokter,vc_n_kelas as KelasKamar,
+                                        dt_tgl_msk Tgl_Masuk,
+                                        dt_tgl_pul Tgl_Pulang,
                                         ' + @colsNotNULL + ' ,
                                         totalBiayaRS as biayaRS FROM (SELECT
                                 inap.vc_no_reg,
@@ -210,6 +218,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                png.vc_n_png,
 	                                inap.dt_tgl_msk,
 	                                inap.dt_tgl_pul,
+                                    dokter.vc_nama_kry dokter,
 	                                ISNULL((
                                 SELECT CAST
 	                                (
@@ -222,7 +231,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                0 
 	                                ) AS totalBiayaRS,
 	                                dd.vc_nm_bagian,
-	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip 
+	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip,kelas.vc_n_kelas
                                 FROM
 	                                KeuRinciInapKomponen aa
 	                                LEFT JOIN KeuRincian cc ON cc.vc_no_bukti = aa.vc_no_bukti
@@ -231,7 +240,9 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = ranap.vc_No_Reg
 	                                INNER JOIN RMIcdKamus kamus ON kamus.vc_kode_icd = ranap.VC_DiagnosaAkhir
 	                                INNER JOIN RMPasien pasien ON pasien.vc_no_rm = inap.vc_no_rm
-	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png 
+	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png
+                                    INNER JOIN SDMDOKTER dokter on dokter.vc_nid = inap.vc_nid
+                                    INNER JOIN rmkelas kelas on kelas.vc_k_kelas = (case when isnull(vc_kd_klas_mutasi,'''')='''' then vc_kd_klas_masuk else vc_kd_klas_mutasi end )
                                 WHERE
 	                                Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_msk,0),101),101) between''@dateFrom''   and  ''@dateTo''
                                 GROUP BY
@@ -240,7 +251,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                                 vc_kode_icd,vc_nama_icd,
 	                                vc_nm_bagian,
 	                                dd.vc_kd_bagian,	png.vc_k_png,
-	                                png.vc_n_png,
+	                                png.vc_n_png, dokter.vc_nama_kry,vc_n_kelas,
 	                                inap.dt_tgl_msk,
 	                                inap.dt_tgl_pul ) hasil
 	                                PIVOT
@@ -248,8 +259,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                                   SUM(dc_tarip)
                                   FOR vc_nm_bagian IN ( ' + @cols + ') 
                                 ) AS p;' 
-                                EXECUTE ( @query )
-                         ";
+                                EXECUTE ( @query )";
 
             query = query.Replace("@dateFrom", dtFrom.Value.ToShortDateString());
             query = query.Replace("@dateTo", dtTo.Value.ToShortDateString());
@@ -264,7 +274,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             return dt;
         }
 
-        private DataTable getDataRawatInapWithPng(string kdPng)
+        private DataTable getDataRawatInapWithPng(string kdPng,string kdIcd)
         {
             string query = @"DECLARE @cols AS NVARCHAR ( MAX ),
                             @colsNotNULL AS NVARCHAR ( MAX ),
@@ -303,15 +313,15 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 		                                1,		'' 
 	                                ) 
 
-	                                SET @query = 'SELECT vc_no_reg as noReg,
-                                        vc_no_rm as noRM,
-                                        vc_nama_p as namaPasien,
-                                        vc_kode_icd as kodeICD10,
-                                        vc_nama_icd as deskripsiIcd,
-                                        vc_k_png as kdPng,
-                                        vc_n_png as namaPng, 
-                                        dt_tgl_msk,
-                                        dt_tgl_pul,
+	                                SET @query = 'SELECT vc_no_reg as NoReg,
+                                        vc_no_rm as NoRM,
+                                        vc_nama_p as NamaPasien,
+                                        vc_kode_icd as ICD10,
+                                        vc_nama_icd as Diagnosa,
+                                        vc_k_png as KodePenanggung,
+                                        vc_n_png as Penanggung, Dokter,vc_n_kelas as KelasKamar,
+                                        dt_tgl_msk Tgl_Masuk,
+                                        dt_tgl_pul Tgl_Pulang,
                                         ' + @colsNotNULL + ' ,
                                         totalBiayaRS as biayaRS FROM (SELECT
                                 inap.vc_no_reg,
@@ -323,6 +333,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                png.vc_n_png,
 	                                inap.dt_tgl_msk,
 	                                inap.dt_tgl_pul,
+                                    dokter.vc_nama_kry as dokter,
 	                                ISNULL((
                                 SELECT CAST
 	                                (
@@ -335,7 +346,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                0 
 	                                ) AS totalBiayaRS,
 	                                dd.vc_nm_bagian,
-	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip 
+	                                ISNULL(SUM ( aa.dc_qty * aa.dc_rupiah ),0) AS dc_tarip,kelas.vc_n_kelas
                                 FROM
 	                                KeuRinciInapKomponen aa
 	                                LEFT JOIN KeuRincian cc ON cc.vc_no_bukti = aa.vc_no_bukti
@@ -344,17 +355,29 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = ranap.vc_No_Reg
 	                                INNER JOIN RMIcdKamus kamus ON kamus.vc_kode_icd = ranap.VC_DiagnosaAkhir
 	                                INNER JOIN RMPasien pasien ON pasien.vc_no_rm = inap.vc_no_rm
-	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png 
+	                                INNER JOIN PubPng png ON png.vc_k_png = inap.vc_k_png
+                                    INNER JOIN SDMDOKTER dokter on dokter.vc_nid = inap.vc_nid
+                                    INNER JOIN rmkelas kelas on kelas.vc_k_kelas = (case when isnull(vc_kd_klas_mutasi,'''')='''' then vc_kd_klas_masuk else vc_kd_klas_mutasi end )
                                 WHERE
-	                                Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_msk,0),101),101) between''@dateFrom''   and  ''@dateTo''
-                                    and inap.vc_k_png = ''@kdPng''
-                                GROUP BY
+	                                Convert(DateTime, Convert(Varchar,Isnull(inap.dt_tgl_msk,0),101),101) between''@dateFrom''   and  ''@dateTo''";
+
+            if(kdPng.Length > 0)
+            {
+                query = query + @" AND inap.vc_k_png = ''@kdPng''";
+
+            }
+            if (kdIcd.Length > 0)
+            {
+                query = query + @" AND ranap.VC_DiagnosaAkhir = ''@icd10''";
+
+            }
+            query = query + @" GROUP BY
 	                                inap.vc_no_reg,	inap.vc_no_rm,
 		                                pasien.vc_nama_p,
                                 vc_kode_icd,vc_nama_icd,
 	                                vc_nm_bagian,
 	                                dd.vc_kd_bagian,	png.vc_k_png,
-	                                png.vc_n_png,
+	                                png.vc_n_png, dokter.vc_nama_kry,vc_n_kelas,
 	                                inap.dt_tgl_msk,
 	                                inap.dt_tgl_pul ) hasil
 	                                PIVOT
@@ -362,12 +385,19 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                                   SUM(dc_tarip)
                                   FOR vc_nm_bagian IN ( ' + @cols + ') 
                                 ) AS p;' 
-                                EXECUTE ( @query )
-                         ";
+                                EXECUTE ( @query )"; 
+                              
 
             query = query.Replace("@dateFrom", dtFrom.Value.ToShortDateString());
             query = query.Replace("@dateTo", dtTo.Value.ToShortDateString());
-            query = query.Replace("@kdPng", kdPng);
+            if (kdPng.Length > 0)
+            {
+                query = query.Replace("@kdPng", kdPng);
+            }
+            if (kdIcd.Length > 0)
+            {
+                query = query.Replace("@icd10", kdIcd);
+            } 
             DataTable dt = new DataTable();
             using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
             {
@@ -463,7 +493,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
             {
 
-                ExcelExport excelExport = new ExcelExport(pivotGridControl1, ExcelVersion.Excel2010);
+                ExcelExport excelExport = new ExcelExport(pivotAnalisa, ExcelVersion.Excel2010);
 
                 excelExport.ExportMode = (ExportAsPivotTable) ? ExportModes.PivotTable : ExportModes.Cell;
 
@@ -471,7 +501,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
 
 
-                if (MessageBox.Show(@"Export Success! Do you want to open the exported file?", Text, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(@"Apakah Anda Ingin Membuka File Export?", Text, MessageBoxButtons.YesNo) == DialogResult.Yes)
 
                 {
 
@@ -510,7 +540,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
             {
 
-                PivotWordExport wordExport = new PivotWordExport(pivotGridControl1);
+                PivotWordExport wordExport = new PivotWordExport(pivotAnalisa);
 
                 wordExport.pivotGridToWord(savedialog.FileName);
 
@@ -559,7 +589,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
             {
 
-                PivotPdfExport pdfExport = new PivotPdfExport(pivotGridControl1);
+                PivotPdfExport pdfExport = new PivotPdfExport(pivotAnalisa);
 
                 pdfExport.Export(savedialog.FileName);
 
@@ -591,7 +621,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
         private void btnLookup_Click(object sender, EventArgs e)
         {
-            using (var form = new FrmLookup())
+            using (var form = new FrmLookup("Penanggung"))
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
@@ -600,6 +630,22 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                     txtNamaPng.Text = form.texts;
                  //   gridTagihan.DataSource = null;
                   //  gridTagihan.Columns.Clear();
+                }
+                form.Close();
+            }
+        }
+
+        private void btnPilihDiagnosa_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmLookup("Diagnosa"))
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txtIcd.Text = form.value;
+                    txtDiagnosa.Text = form.texts;
+                    //   gridTagihan.DataSource = null;
+                    //  gridTagihan.Columns.Clear();
                 }
                 form.Close();
             }
