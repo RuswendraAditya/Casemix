@@ -69,7 +69,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.btnLoad.AccessibleName = "Button";
             this.btnLoad.BackColor = System.Drawing.Color.Bisque;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnLoad.Location = new System.Drawing.Point(143, 162);
+            this.btnLoad.Location = new System.Drawing.Point(198, 160);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(112, 32);
@@ -218,9 +218,9 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.chkBoxSort.AutoSize = true;
             this.chkBoxSort.Location = new System.Drawing.Point(12, 172);
             this.chkBoxSort.Name = "chkBoxSort";
-            this.chkBoxSort.Size = new System.Drawing.Size(125, 21);
+            this.chkBoxSort.Size = new System.Drawing.Size(180, 21);
             this.chkBoxSort.TabIndex = 50;
-            this.chkBoxSort.Text = "Row Pivot Only";
+            this.chkBoxSort.Text = "Can Sorting(Row Mode)";
             this.chkBoxSort.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -331,7 +331,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.Controls.Add(this.btnLoad);
             this.Name = "FrmAnalisaICD10";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAnalisaICD10";
+            this.Text = "Analisa ICD 10";
             this.Load += new System.EventHandler(this.FrmAnalisaICD10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbExportXls)).EndInit();
             this.ResumeLayout(false);
