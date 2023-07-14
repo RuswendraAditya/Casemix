@@ -146,7 +146,7 @@ namespace Casemix.Forms
             }
             clMain.gKdTaripKamar = GetKdTaripKamar();
             ClsUtil.SetDataTableRightOnMenu(clMain.cUserLogIn, clMain.cIDApps, clMain.cIDModul);
-            this.Text = "Casemix 17 Des 2022";
+            this.Text = "Casemix 13 Juli 2023";
             //  ClsUtil.SetDataTableRightOnMenu("wendra", "0202", "2201");
             //  SetMenuAccess();
             kdJKN = ClsUtil.GetSetting("Keu_piut_lookup", "vc_value", "vc_code", "KodeJKN");

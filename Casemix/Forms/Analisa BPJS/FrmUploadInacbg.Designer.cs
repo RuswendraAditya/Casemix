@@ -58,7 +58,7 @@
             this.txtFileName.Location = new System.Drawing.Point(123, 80);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
-            this.txtFileName.Size = new System.Drawing.Size(567, 28);
+            this.txtFileName.Size = new System.Drawing.Size(524, 28);
             this.txtFileName.TabIndex = 44;
             // 
             // label5
@@ -67,7 +67,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(530, 115);
+            this.label5.Location = new System.Drawing.Point(487, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 18);
             this.label5.TabIndex = 49;
@@ -82,7 +82,7 @@
             this.dgPiutang.Location = new System.Drawing.Point(24, 143);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
-            this.dgPiutang.Size = new System.Drawing.Size(1680, 537);
+            this.dgPiutang.Size = new System.Drawing.Size(1637, 537);
             this.dgPiutang.TabIndex = 0;
             // 
             // btnUploadExcel
@@ -91,7 +91,7 @@
             this.btnUploadExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUploadExcel.BackColor = System.Drawing.Color.Lavender;
             this.btnUploadExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnUploadExcel.Location = new System.Drawing.Point(697, 80);
+            this.btnUploadExcel.Location = new System.Drawing.Point(654, 80);
             this.btnUploadExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnUploadExcel.Name = "btnUploadExcel";
             this.btnUploadExcel.Size = new System.Drawing.Size(128, 34);
@@ -108,7 +108,7 @@
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSave.BackColor = System.Drawing.Color.Lavender;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnSave.Location = new System.Drawing.Point(830, 698);
+            this.btnSave.Location = new System.Drawing.Point(809, 698);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(128, 34);
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1755, 762);
+            this.ClientSize = new System.Drawing.Size(1712, 762);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnUploadExcel);
             this.Controls.Add(this.label5);

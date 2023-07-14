@@ -29,10 +29,27 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.btnExportExcel = new Syncfusion.WinForms.Controls.SfButton();
+            this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.AccessibleName = "Button";
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportExcel.BackColor = System.Drawing.Color.Lavender;
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.btnExportExcel.Location = new System.Drawing.Point(13, 477);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(128, 34);
+            this.btnExportExcel.Style.BackColor = System.Drawing.Color.Lavender;
+            this.btnExportExcel.Style.Image = global::Casemix.Properties.Resources.excel;
+            this.btnExportExcel.TabIndex = 41;
+            this.btnExportExcel.Text = "Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // dgPiutang
             // 
@@ -44,38 +61,21 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPiutang.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgPiutang.Location = new System.Drawing.Point(24, 37);
+            this.dgPiutang.Location = new System.Drawing.Point(13, 13);
             this.dgPiutang.Margin = new System.Windows.Forms.Padding(4);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
-            this.dgPiutang.Size = new System.Drawing.Size(1493, 514);
+            this.dgPiutang.Size = new System.Drawing.Size(1280, 456);
             this.dgPiutang.TabIndex = 40;
             this.dgPiutang.Text = "sfDataGrid1";
             this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.AccessibleName = "Button";
-            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportExcel.BackColor = System.Drawing.Color.Lavender;
-            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnExportExcel.Location = new System.Drawing.Point(1388, 569);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(128, 34);
-            this.btnExportExcel.Style.BackColor = System.Drawing.Color.Lavender;
-            this.btnExportExcel.Style.Image = global::Casemix.Properties.Resources.excel;
-            this.btnExportExcel.TabIndex = 41;
-            this.btnExportExcel.Text = "Excel";
-            this.btnExportExcel.UseVisualStyleBackColor = false;
-            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // FrmAnalisaICD10Dtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1748, 636);
+            this.ClientSize = new System.Drawing.Size(1306, 524);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.dgPiutang);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -90,8 +90,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
         }
 
         #endregion
-
-        private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
         private Syncfusion.WinForms.Controls.SfButton btnExportExcel;
+        private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
     }
 }

@@ -109,6 +109,7 @@ namespace Casemix.Util
         public static void DownloadXLs(SfDataGrid sfDataGrid)
         {
             var options = new ExcelExportingOptions();
+            options.AllowOutlining = true;
             options.ExcelVersion = ExcelVersion.Excel2013;
             //   options.CellExporting += CellExportingHandler;
             var excelEngine = sfDataGrid.ExportToExcel(sfDataGrid.View, options);

@@ -48,10 +48,11 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             // txtCari
             // 
+            this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtCari.Location = new System.Drawing.Point(91, 26);
             this.txtCari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(712, 22);
+            this.txtCari.Size = new System.Drawing.Size(712, 27);
             this.txtCari.TabIndex = 7;
             this.txtCari.TextChanged += new System.EventHandler(this.txtCari_TextChanged);
             // 
@@ -61,11 +62,13 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.gridLookup.AllowEditing = false;
             this.gridLookup.AllowFiltering = true;
             this.gridLookup.AllowGrouping = false;
+            this.gridLookup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridLookup.Location = new System.Drawing.Point(21, 59);
             this.gridLookup.Margin = new System.Windows.Forms.Padding(4);
             this.gridLookup.Name = "gridLookup";
             this.gridLookup.PreviewRowHeight = 35;
-            this.gridLookup.Size = new System.Drawing.Size(782, 356);
+            this.gridLookup.Size = new System.Drawing.Size(1014, 356);
+            this.gridLookup.Style.CellStyle.Font.Size = 10F;
             this.gridLookup.TabIndex = 8;
             this.gridLookup.Text = "sfDataGrid1";
             this.gridLookup.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.gridLookup_AutoGeneratingColumn);
@@ -100,7 +103,7 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 480);
+            this.ClientSize = new System.Drawing.Size(1048, 480);
             this.Controls.Add(this.btnTutup);
             this.Controls.Add(this.btnPilih);
             this.Controls.Add(this.label2);

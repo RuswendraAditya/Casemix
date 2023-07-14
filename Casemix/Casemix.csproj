@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Casemix</RootNamespace>
     <AssemblyName>Casemix</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -135,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clMain.cs" />
+    <Compile Include="Forms\Analisa BPJS\FrmAnalisaPerCodingRincian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analisa BPJS\FrmAnalisaPerCodingRincian.Designer.cs">
+      <DependentUpon>FrmAnalisaPerCodingRincian.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Analisa BPJS\FrmUploadInacbg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,7 @@
     </Compile>
     <Compile Include="Model\AnalisaDokter.cs" />
     <Compile Include="Model\AnalisaICD10.cs" />
+    <Compile Include="Model\AnalisaTarif.cs" />
     <Compile Include="Model\DataLayananBPJS.cs" />
     <Compile Include="Model\DiagnosaBpjs.cs" />
     <Compile Include="Model\Inacbg_Raw_Data.cs" />
@@ -278,6 +285,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ReverseOrderComparer.cs" />
+    <EmbeddedResource Include="Forms\Analisa BPJS\FrmAnalisaPerCodingRincian.resx">
+      <DependentUpon>FrmAnalisaPerCodingRincian.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Analisa BPJS\FrmUploadInacbg.resx">
       <DependentUpon>FrmUploadInacbg.cs</DependentUpon>
     </EmbeddedResource>

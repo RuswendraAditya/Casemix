@@ -349,7 +349,7 @@ namespace Casemix.Forms.Analisa_BPJS
 	                                AKPRI_COB_HTagihan htagih
 	                                INNER JOIN AKPRI_COB_DTagihan dtagih ON htagih.vc_kd_tagihan = dtagih.vc_kd_tagihan
 	                                INNER JOIN bpjs_sep sep ON sep.vc_no_sep = dtagih.vc_no_sep
-	                                INNER JOIN AKPRI_Kartu_piutang_JKN kartuPiutang ON kartuPiutang.vc_no_reg = dtagih.vc_no_reg
+	                                INNER JOIN AKPRI_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_reg = dtagih.vc_no_reg
 	                                INNER JOIN RMP_inap inap ON inap.vc_no_reg = dtagih.vc_no_reg
                                     INNER JOIN RMpasien pasien on pasien.vc_no_rm = dtagih.vc_no_rm
 	                                LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = inap.vc_nid

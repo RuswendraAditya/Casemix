@@ -650,5 +650,11 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                 form.Close();
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtIcd.Text = "";
+            txtDiagnosa.Text = "";
+        }
     }
 }

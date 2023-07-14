@@ -32,5 +32,9 @@ namespace Casemix.Model
 
         public string namaDokter { get; set; }
         public int los { get; set; }
+        public List<AnalisaTarif> analisaTarifs { get; set; }
+
+
+
     }
 }

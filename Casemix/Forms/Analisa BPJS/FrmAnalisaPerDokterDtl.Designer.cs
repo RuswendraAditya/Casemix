@@ -42,7 +42,7 @@
             this.dgPiutang.Location = new System.Drawing.Point(21, 32);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
-            this.dgPiutang.Size = new System.Drawing.Size(1473, 500);
+            this.dgPiutang.Size = new System.Drawing.Size(1422, 500);
             this.dgPiutang.TabIndex = 38;
             this.dgPiutang.Text = "sfDataGrid1";
             this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn_1);
@@ -53,7 +53,7 @@
             this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportExcel.BackColor = System.Drawing.Color.Lavender;
             this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.btnExportExcel.Location = new System.Drawing.Point(1366, 548);
+            this.btnExportExcel.Location = new System.Drawing.Point(1315, 548);
             this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(128, 34);
@@ -69,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1763, 637);
+            this.ClientSize = new System.Drawing.Size(1712, 637);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.dgPiutang);
             this.Name = "FrmAnalisaPerDokterDtl";

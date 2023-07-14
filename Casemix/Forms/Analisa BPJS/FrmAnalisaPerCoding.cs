@@ -73,6 +73,7 @@ namespace Casemix.Forms.Analisa_BPJS
         }
         private void genarateData()
         {
+
             if (cmbJenisPel.Text.Equals("Rawat Jalan"))
             {
                 this.pivotGridControl1.ItemSource = getDataRawatJalan();
@@ -83,6 +84,12 @@ namespace Casemix.Forms.Analisa_BPJS
                 this.pivotGridControl1.ItemSource = getDataRawatInap();
             }
 
+            this.pivotGridControl1.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
+
+            this.pivotGridControl1.TableControl.CellClick += TableControl_CellClick;
+            pivotGridControl1.TableControl.WantTabKey = false;
+            this.pivotGridControl1.GridVisualStyles = GridVisualStyles.Metro;
+          
             if (chkBoxSort.Checked)
             {
                 this.pivotGridControl1.RowPivotsOnly = true;
@@ -94,8 +101,8 @@ namespace Casemix.Forms.Analisa_BPJS
 
             }
 
-            this.pivotGridControl1.GridVisualStyles = GridVisualStyles.Metro;
             this.pivotGridControl1.PivotRows.Add(new PivotItem { FieldMappingName = "deskripsi", FieldHeader = "Deskripsi", AllowSort = true });
+
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "no_sep", FieldHeader = "Total Kasus(SEP)", AllowSort = true });
 
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "biaya_rs", FieldHeader = "Biaya RS(", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
@@ -122,6 +129,7 @@ namespace Casemix.Forms.Analisa_BPJS
             this.pivotGridControl1.TableControl.AllowRowResizeUsingCellBoundaries = true;
             this.pivotGridControl1.TableControl.AllowColumnResizeUsingCellBoundaries = true;
 
+
             // this.pivotGridControl1.RowPivotsOnly = true;
             this.pivotGridControl1.AllowSorting = true;
             pivotGridControl1.TableControl.FreezeHeaders = true;
@@ -147,16 +155,14 @@ namespace Casemix.Forms.Analisa_BPJS
             this.pivotGridControl1.PivotSchemaDesigner.RefreshGridSchemaLayout();
             pivotGridControl1.TableModel.Model.ColWidths[1] = 100;
             pivotGridControl1.TableModel.Model.ColWidths[2] = 400;
-            pivotGridControl1.EnableAsyncLoading = true;
+          //  pivotGridControl1.EnableAsyncLoading = true;
 
 
 
-            pivotGridControl1.AsyncLoadStarted += pivotGridControl1_AsyncLoadStarted;
+          //  pivotGridControl1.AsyncLoadStarted += pivotGridControl1_AsyncLoadStarted;
 
-            pivotGridControl1.AsyncLoadCompleted += pivotGridControl1_AsyncLoadCompleted;
-            this.pivotGridControl1.TableModel.QueryCellInfo += TableModel_QueryCellInfo;
-
-            this.pivotGridControl1.TableControl.CellClick += TableControl_CellClick;
+//            pivotGridControl1.AsyncLoadCompleted += pivotGridControl1_AsyncLoadCompleted;
+        
 
         }
 
@@ -257,12 +263,82 @@ namespace Casemix.Forms.Analisa_BPJS
                                     piutangRS = (decimal)dr["dc_piutang_rs"],
                                     umbal = (decimal)dr["dc_umbal"],
                                     namaDokter = dr["vc_nama_kry"].ToString(),
-                                    selisihUmbal = (decimal)dr["selisihUmbal"]
+                                    selisihUmbal = (decimal)dr["selisihUmbal"],
+                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
+
                                 }).ToList();
             return diagnosaBpjsList;
 
         }
+        private List<AnalisaTarif> getTarifRJByReg(string noReg)
+        {
+            List<AnalisaTarif> analisaTarifs = new List<AnalisaTarif>();
+            DataTable dt = new DataTable();
 
+            string query = @"
+                            SELECT VC_No_RegJ noReg,KeuRincianRJ.VC_No_Bukti nobukti,KeuRinciPiutRJ.VC_Kd_GsKlCo kodetarif
+                            ,KeuTaripDasar.VC_Nm_Tarip namatarip,DC_Qty qty,DC_Rupiah rupiah, CAST(DC_Qty* DC_Rupiah  AS DECIMAL(18,2)) total
+                            FROM KeuRincianRJ INNER JOIN KeuRinciPiutRJ 
+                            on KeuRincianRJ.VC_No_Bukti = KeuRinciPiutRJ.VC_No_Bukti
+                            INNER JOIN KeuTaripDasar on KeuTaripDasar.VC_Kd_GsKlCo = KeuRinciPiutRJ.VC_Kd_GsKlCo
+                            where VC_No_RegJ = '" + noReg + "' ";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            analisaTarifs = (from System.Data.DataRow dr in dt.Rows
+                                select new AnalisaTarif()
+                                {
+                                    namaTarif = dr["namatarip"].ToString(),
+                                    kodeTarif = dr["kodetarif"].ToString(),
+                                    noReg = dr["noReg"].ToString(),
+                                    quantity = (decimal)dr["qty"],
+                                    rupiah = (decimal)dr["rupiah"],
+                                    total = (decimal)dr["total"],
+                                }).ToList();
+
+
+
+            return analisaTarifs;
+        }
+
+        private List<AnalisaTarif> getTarifRIByReg(string noReg)
+        {
+            List<AnalisaTarif> analisaTarifs = new List<AnalisaTarif>();
+            DataTable dt = new DataTable();
+
+            string query = @"
+                            SELECT VC_No_Reg noReg,KeuRincian.VC_No_Bukti nobukti,KeuRinciInap.VC_Kd_GsKlCo kodetarif
+                            ,KeuTaripDasar.VC_Nm_Tarip namatarip,DC_Qty qty,DC_Rupiah rupiah, CAST(DC_Qty* DC_Rupiah  AS DECIMAL(18,2)) total
+                            FROM KeuRincian INNER JOIN KeuRinciInap 
+                            on KeuRincian.VC_No_Bukti = KeuRinciInap.VC_No_Bukti
+                            INNER JOIN KeuTaripDasar on KeuTaripDasar.VC_Kd_GsKlCo = KeuRinciInap.VC_Kd_GsKlCo
+                            where VC_No_Reg = '"+ noReg  + "' ";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            analisaTarifs = (from System.Data.DataRow dr in dt.Rows
+                             select new AnalisaTarif()
+                             {
+                                 namaTarif = dr["namatarip"].ToString(),
+                                 kodeTarif = dr["kodetarif"].ToString(),
+                                 noReg = dr["noReg"].ToString(),
+                                 quantity = (decimal)dr["qty"],
+                                 rupiah = (decimal)dr["rupiah"],
+                                 total = (decimal)dr["total"],
+                             }).ToList();
+
+
+
+            return analisaTarifs;
+        }
 
         private List<DiagnosaBpjs> getDataRawatInap()
         {
@@ -383,7 +459,8 @@ namespace Casemix.Forms.Analisa_BPJS
                                     umbal = (decimal)dr["dc_umbal"],
                                     namaDokter = dr["vc_nama_kry"].ToString(),
                                     selisihUmbal = (decimal)dr["selisihUmbal"],
-                                    los = (int)dr["los"]
+                                    los = (int)dr["los"],
+                                    analisaTarifs = getTarifRIByReg(dr["vc_no_reg"].ToString())
                                 }).ToList();
             return diagnosaBpjsList;
 
@@ -556,6 +633,8 @@ namespace Casemix.Forms.Analisa_BPJS
                 return;
             }
             genarateData();
+            pivotGridControl1.TableModel.Refresh();
+            pivotGridControl1.Refresh();
         }
 
 

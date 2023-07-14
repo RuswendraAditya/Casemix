@@ -191,3 +191,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.An
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_Non_BPJS.FrmAnalisaICD10Dtl.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_Non_BPJS.FrmLookup.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_Non_BPJS.FrmAnalisaICD10Dtl_Lvl2.resources
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.Analisa_BPJS.FrmAnalisaPerCodingRincian.resources
