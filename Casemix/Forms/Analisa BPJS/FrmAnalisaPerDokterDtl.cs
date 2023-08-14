@@ -1,8 +1,10 @@
 ﻿using Casemix.Util;
+using Syncfusion.WinForms.DataGrid;
 using Syncfusion.WinForms.DataGridConverter;
 using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -21,13 +23,32 @@ namespace Casemix.Forms.Analisa_BPJS
 
         private void FrmAnalisaPerDokterDtl_Load(object sender, EventArgs e)
         {
-            dgPiutang.AllowEditing = false;
+            GetData();
 
-            dgPiutang.DataSource = rawValue;
-      
+
+        }
+        private void GetData()
+        {
+            this.dgPiutang.DataSource = rawValue;
+
+            GridViewDefinition orderDetailsView = new GridViewDefinition();
+            orderDetailsView.RelationalColumn = "analisaTarifs";
+
+            SfDataGrid childGrid = new SfDataGrid();
+            childGrid.AutoGenerateColumns = false;
+            childGrid.RowHeight = 21;
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalDigits = 2;
+            nfi.NumberGroupSizes = new int[] { };
+            childGrid.Columns.Add(new GridTextColumn() { MappingName = "kodeTarif", Width = 100, HeaderText = "Kode Tarif" });
+            childGrid.Columns.Add(new GridTextColumn() { MappingName = "namaTarif", Width = 400, HeaderText = "Nama Tarif" });
+            childGrid.Columns.Add(new GridNumericColumn() { MappingName = "quantity", Width = 100, HeaderText = "Quantity", NumberFormatInfo = nfi });
+            childGrid.Columns.Add(new GridNumericColumn() { MappingName = "rupiah", Width = 200, HeaderText = "Rupiah", NumberFormatInfo = nfi });
+            childGrid.Columns.Add(new GridNumericColumn() { MappingName = "total", Width = 200, HeaderText = "Total", NumberFormatInfo = nfi });
+            orderDetailsView.DataGrid = childGrid;
+            this.dgPiutang.DetailsViewDefinitions.Add(orderDetailsView);
         }
 
-      
 
         private void FrmAnalisaPerDokterDtl_FormClosing(object sender, FormClosingEventArgs e)
         {

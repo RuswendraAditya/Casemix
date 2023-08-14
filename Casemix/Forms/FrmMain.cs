@@ -1,6 +1,7 @@
 ﻿using Casemix.Forms.Analisa_BPJS;
 using Casemix.Forms.Analisa_Non_BPJS;
 using Casemix.Forms.Anti_Fraud;
+using Casemix.Forms.CasemixForm;
 using Casemix.Forms.Laporan_BPJS;
 using Casemix.Util;
 using System;
@@ -10,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -150,6 +152,22 @@ namespace Casemix.Forms
             //  ClsUtil.SetDataTableRightOnMenu("wendra", "0202", "2201");
             //  SetMenuAccess();
             kdJKN = ClsUtil.GetSetting("Keu_piut_lookup", "vc_value", "vc_code", "KodeJKN");
+          //  string tglPeriksa = "08/07/2023" + " " + "09:00:00";
+           // DateTime tglPeriksaDate = DateTime.ParseExact(tglPeriksa, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+            //tglPeriksaDate = tglPeriksaDate.AddMinutes(4 * (38));
+            //int unixTime = dateToUnixTime(tglPeriksaDate);
+            //var Timestamp = new DateTimeOffset(tglPeriksaDate).ToUnixTimeMilliseconds();
+        }
+
+        public static int dateToUnixTime(DateTime tgl)
+        {
+            TimeZoneInfo tz = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
+            tgl = TimeZoneInfo.ConvertTimeToUtc(tgl, tz);
+            DateTime waktuEpoch = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            TimeSpan timespan = (tgl - waktuEpoch); ;
+
+            double epochTime = timespan.TotalMilliseconds;
+            return (int)(tgl - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
         }
         public string GetKdTaripKamar()
         {
@@ -346,6 +364,13 @@ namespace Casemix.Forms
             FrmAnalisaICD10 frmAnalisaICD10 = new FrmAnalisaICD10();
             frmAnalisaICD10.ShowDialog();
             frmAnalisaICD10.Close();
+        }
+
+        private void mnu020205010000_Click(object sender, EventArgs e)
+        {
+            FrmPasienInapInquiry frmPasienInapInquiry = new FrmPasienInapInquiry();
+            frmPasienInapInquiry.ShowDialog();
+            frmPasienInapInquiry.Close();
         }
     }
 }

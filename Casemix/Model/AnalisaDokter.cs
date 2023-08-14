@@ -34,5 +34,7 @@ namespace Casemix.Model
         public decimal selisihUmbal { get; set; }
 
         public int los { get; set; }
+
+        public List<AnalisaTarif> analisaTarifs { get; set; }
     }
 }

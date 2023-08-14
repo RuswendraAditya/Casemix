@@ -158,7 +158,8 @@ namespace Casemix.Forms.Laporan_BPJS
                 oCmd = new SqlCommand(SQL, clMain.DBConn.objConnection);
                 // oCmd.Connection = clMain.clUtama.objConnection
                 oCmd.CommandTimeout = 0;
-                ObjReader = oCmd.ExecuteReader(); // clMain.clUtama.GeneralQuery(SQL)
+                ObjReader = oCmd.ExecuteReader(); // clMain.clUtama.General
+                                                  // (SQL)
                 oCmd.Dispose();
                 if (ObjReader.HasRows)
                 {
@@ -692,6 +693,11 @@ namespace Casemix.Forms.Laporan_BPJS
         }
 
         private void FrmRincianBiayaAKPN_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNoReg_TextChanged(object sender, EventArgs e)
         {
 
         }

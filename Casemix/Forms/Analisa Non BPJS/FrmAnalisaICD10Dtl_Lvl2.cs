@@ -45,5 +45,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 			return dt;
 
 		}
-	}
+
+        private void FrmAnalisaICD10Dtl_Lvl2_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

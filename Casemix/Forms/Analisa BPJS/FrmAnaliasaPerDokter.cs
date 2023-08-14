@@ -262,13 +262,82 @@ namespace Casemix.Forms.Analisa_BPJS
                                     COB = (decimal)0.00,
                                     piutangRS = (decimal)dr["dc_piutang_rs"],
                                     umbal = (decimal)dr["dc_umbal"],
-                                    selisihUmbal = (decimal)dr["selisihUmbal"]
+                                    selisihUmbal = (decimal)dr["selisihUmbal"],
+                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
                                 }).ToList();
             return diagnosaBpjsList;
 
         }
 
+        private List<AnalisaTarif> getTarifRJByReg(string noReg)
+        {
+            List<AnalisaTarif> analisaTarifs = new List<AnalisaTarif>();
+            DataTable dt = new DataTable();
 
+            string query = @"
+                            SELECT VC_No_RegJ noReg,KeuRincianRJ.VC_No_Bukti nobukti,KeuRinciPiutRJ.VC_Kd_GsKlCo kodetarif
+                            ,KeuTaripDasar.VC_Nm_Tarip namatarip,DC_Qty qty,DC_Rupiah rupiah, CAST(DC_Qty* DC_Rupiah  AS DECIMAL(18,2)) total
+                            FROM KeuRincianRJ INNER JOIN KeuRinciPiutRJ 
+                            on KeuRincianRJ.VC_No_Bukti = KeuRinciPiutRJ.VC_No_Bukti
+                            INNER JOIN KeuTaripDasar on KeuTaripDasar.VC_Kd_GsKlCo = KeuRinciPiutRJ.VC_Kd_GsKlCo
+                            where VC_No_RegJ = '" + noReg + "' ";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            analisaTarifs = (from System.Data.DataRow dr in dt.Rows
+                             select new AnalisaTarif()
+                             {
+                                 namaTarif = dr["namatarip"].ToString(),
+                                 kodeTarif = dr["kodetarif"].ToString(),
+                                 noReg = dr["noReg"].ToString(),
+                                 quantity = (decimal)dr["qty"],
+                                 rupiah = (decimal)dr["rupiah"],
+                                 total = (decimal)dr["total"],
+                             }).ToList();
+
+
+
+            return analisaTarifs;
+        }
+
+        private List<AnalisaTarif> getTarifRIByReg(string noReg)
+        {
+            List<AnalisaTarif> analisaTarifs = new List<AnalisaTarif>();
+            DataTable dt = new DataTable();
+
+            string query = @"
+                            SELECT VC_No_Reg noReg,KeuRincian.VC_No_Bukti nobukti,KeuRinciInap.VC_Kd_GsKlCo kodetarif
+                            ,KeuTaripDasar.VC_Nm_Tarip namatarip,DC_Qty qty,DC_Rupiah rupiah, CAST(DC_Qty* DC_Rupiah  AS DECIMAL(18,2)) total
+                            FROM KeuRincian INNER JOIN KeuRinciInap 
+                            on KeuRincian.VC_No_Bukti = KeuRinciInap.VC_No_Bukti
+                            INNER JOIN KeuTaripDasar on KeuTaripDasar.VC_Kd_GsKlCo = KeuRinciInap.VC_Kd_GsKlCo
+                            where VC_No_Reg = '" + noReg + "' ";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            analisaTarifs = (from System.Data.DataRow dr in dt.Rows
+                             select new AnalisaTarif()
+                             {
+                                 namaTarif = dr["namatarip"].ToString(),
+                                 kodeTarif = dr["kodetarif"].ToString(),
+                                 noReg = dr["noReg"].ToString(),
+                                 quantity = (decimal)dr["qty"],
+                                 rupiah = (decimal)dr["rupiah"],
+                                 total = (decimal)dr["total"],
+                             }).ToList();
+
+
+
+            return analisaTarifs;
+        }
         private List<AnalisaDokter> getDataRawatInap()
         {
             DataTable dt = new DataTable();
@@ -388,7 +457,8 @@ namespace Casemix.Forms.Analisa_BPJS
                                     piutangRS = (decimal)dr["dc_piutang_rs"],
                                     umbal = (decimal)dr["dc_umbal"],
                                     selisihUmbal = (decimal)dr["selisihUmbal"],
-                                    los = (int)dr["los"]
+                                    los = (int)dr["los"],
+                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
                                 }).ToList();
             return diagnosaBpjsList;
 

@@ -53,6 +53,8 @@
             this.mnu020204000000 = new System.Windows.Forms.ToolStripMenuItem();
             this.PicLogo1 = new System.Windows.Forms.PictureBox();
             this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.mnu020205000000 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu020205010000 = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel1.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo1)).BeginInit();
@@ -80,6 +82,7 @@
             this.mnu020201000000,
             this.mnu020202000000,
             this.mnu020203000000,
+            this.mnu020205000000,
             this.mnu020204000000});
             this.MenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -275,6 +278,21 @@
             this.PicLogo.TabStop = false;
             this.PicLogo.Visible = false;
             // 
+            // mnu020205000000
+            // 
+            this.mnu020205000000.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu020205010000});
+            this.mnu020205000000.Name = "mnu020205000000";
+            this.mnu020205000000.Size = new System.Drawing.Size(120, 22);
+            this.mnu020205000000.Text = "Form Casemix";
+            // 
+            // mnu020205010000
+            // 
+            this.mnu020205010000.Name = "mnu020205010000";
+            this.mnu020205010000.Size = new System.Drawing.Size(313, 26);
+            this.mnu020205010000.Text = "Form Evaluasi Dan Catatan MPP";
+            this.mnu020205010000.Click += new System.EventHandler(this.mnu020205010000_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,5 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnu020203100000;
         private System.Windows.Forms.ToolStripMenuItem mnu020201040000;
         private System.Windows.Forms.ToolStripMenuItem mnu020202040000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020205000000;
+        private System.Windows.Forms.ToolStripMenuItem mnu020205010000;
     }
 }

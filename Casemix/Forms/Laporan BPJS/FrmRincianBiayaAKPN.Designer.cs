@@ -363,6 +363,7 @@
             this.txtNoReg.Name = "txtNoReg";
             this.txtNoReg.Size = new System.Drawing.Size(161, 26);
             this.txtNoReg.TabIndex = 13;
+            this.txtNoReg.TextChanged += new System.EventHandler(this.txtNoReg_TextChanged);
             this.txtNoReg.Validated += new System.EventHandler(this.txtNoReg_Validated);
             // 
             // LblKdDr

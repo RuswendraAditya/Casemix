@@ -49,29 +49,30 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPiutang.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgPiutang.Location = new System.Drawing.Point(13, 151);
-            this.dgPiutang.Margin = new System.Windows.Forms.Padding(4);
+            this.dgPiutang.Location = new System.Drawing.Point(10, 123);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
-            this.dgPiutang.Size = new System.Drawing.Size(774, 226);
+            this.dgPiutang.Size = new System.Drawing.Size(581, 184);
             this.dgPiutang.TabIndex = 41;
             this.dgPiutang.Text = "sfDataGrid1";
             // 
             // txtNoRM
             // 
-            this.txtNoRM.Location = new System.Drawing.Point(142, 24);
+            this.txtNoRM.Location = new System.Drawing.Point(106, 20);
+            this.txtNoRM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNoRM.Name = "txtNoRM";
             this.txtNoRM.ReadOnly = true;
-            this.txtNoRM.Size = new System.Drawing.Size(135, 22);
+            this.txtNoRM.Size = new System.Drawing.Size(102, 20);
             this.txtNoRM.TabIndex = 55;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 26);
+            this.label5.Location = new System.Drawing.Point(7, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.Size = new System.Drawing.Size(51, 17);
             this.label5.TabIndex = 54;
             this.label5.Text = "No RM";
             // 
@@ -79,9 +80,10 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 56);
+            this.label1.Location = new System.Drawing.Point(7, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 56;
             this.label1.Text = "No Reg";
             // 
@@ -89,34 +91,37 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 90);
+            this.label2.Location = new System.Drawing.Point(7, 73);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 57;
             this.label2.Text = "Nama Pasien";
             // 
             // txtNoReg
             // 
-            this.txtNoReg.Location = new System.Drawing.Point(142, 54);
+            this.txtNoReg.Location = new System.Drawing.Point(106, 44);
+            this.txtNoReg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNoReg.Name = "txtNoReg";
             this.txtNoReg.ReadOnly = true;
-            this.txtNoReg.Size = new System.Drawing.Size(148, 22);
+            this.txtNoReg.Size = new System.Drawing.Size(112, 20);
             this.txtNoReg.TabIndex = 58;
             // 
             // txtNamPasien
             // 
-            this.txtNamPasien.Location = new System.Drawing.Point(142, 88);
+            this.txtNamPasien.Location = new System.Drawing.Point(106, 72);
+            this.txtNamPasien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNamPasien.Name = "txtNamPasien";
             this.txtNamPasien.ReadOnly = true;
-            this.txtNamPasien.Size = new System.Drawing.Size(602, 22);
+            this.txtNamPasien.Size = new System.Drawing.Size(452, 20);
             this.txtNamPasien.TabIndex = 59;
             // 
             // FrmAnalisaICD10Dtl_Lvl2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(600, 337);
             this.Controls.Add(this.txtNamPasien);
             this.Controls.Add(this.txtNoReg);
             this.Controls.Add(this.label2);
@@ -124,10 +129,12 @@ namespace Casemix.Forms.Analisa_Non_BPJS
             this.Controls.Add(this.txtNoRM);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgPiutang);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "FrmAnalisaICD10Dtl_Lvl2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnosa Sekunder";
+            this.Load += new System.EventHandler(this.FrmAnalisaICD10Dtl_Lvl2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPiutang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,7 +38,9 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                 case "Diagnosa":
                     gridLookup.DataSource = getDataICD("");
                     break;
-
+                case "Ruang":
+                    gridLookup.DataSource = getRuang("");
+                    break;
                 default:
                     break;
             }
@@ -82,6 +84,25 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
             return dt;
         }
+
+        private DataTable getRuang(string param)
+        {
+            dt = new DataTable();
+
+            string query = @"SELECT VC_k_ruang,VC_n_ruang FROM RMRuang  where VC_n_ruang like '%" + param + "%' order by VC_n_ruang asc";
+            using (SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection))
+            {
+
+                cmd.CommandTimeout = 0;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+
+
+            return dt;
+        }
         private void FrmLookup_Load(object sender, EventArgs e)
         {
          
@@ -104,6 +125,14 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                 var dataRow = (selectedItem as DataRowView).Row;
                 this.value = dataRow["vc_kode_icd"].ToString();
                 this.texts = dataRow["vc_nama_icd"].ToString();
+            }
+            if (_source == "Ruang")
+            {
+                this.DialogResult = DialogResult.OK;
+                var selectedItem = this.gridLookup.CurrentItem as DataRowView;
+                var dataRow = (selectedItem as DataRowView).Row;
+                this.value = dataRow["VC_k_ruang"].ToString();
+                this.texts = dataRow["VC_n_ruang"].ToString();
             }
         }
 
@@ -148,6 +177,24 @@ namespace Casemix.Forms.Analisa_Non_BPJS
 
                 }
             }
+
+            if (_source == "Ruang")
+            {
+                if (e.Column.MappingName == "VC_k_ruang")
+                {
+                    e.Column.HeaderText = "Kode ";
+                    e.Column.Width = 100;
+                    e.Column.AllowFiltering = true;
+
+                }
+                if (e.Column.MappingName == "VC_n_ruang")
+                {
+                    e.Column.HeaderText = "Ruang";
+                    e.Column.Width = 400;
+                    e.Column.AllowFiltering = true;
+
+                }
+            }
         }
 
         private void txtCari_TextChanged(object sender, EventArgs e)
@@ -162,7 +209,9 @@ namespace Casemix.Forms.Analisa_Non_BPJS
                 case "Diagnosa":
                     gridLookup.DataSource = getDataICD(txtCari.Text);
                     break;
-
+                case "Ruang":
+                    gridLookup.DataSource = getRuang(txtCari.Text);
+                    break;
                 default:
                     break;
             }
