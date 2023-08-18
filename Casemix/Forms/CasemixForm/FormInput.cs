@@ -131,6 +131,48 @@ namespace Casemix.Forms.CasemixForm
                                    ,[bt_skrining_pasien_kronis]
                                    ,[bt_skrining_pasien_fungsional_rendah]
                                    ,[bt_skrining_pasien_identifikasi_rencanapulang]
+                                   ,[bt_assesmen_pasien_mandiri_penuh]
+                                   ,[bt_assesmen_pasien_mandiri_sebagian]
+                                   ,[bt_assesmen_pasien_total_bantuan]
+                                   ,[bt_assesmen_pasien_riwayat_tdk_pernah_dirawat]
+                                   ,[bt_assesmen_pasien_riwayat_pernah_dirawat]
+                                   ,[vc_assesmen_pasien_riwayat_pernah_dirawat]
+                                   ,[bt_assesmen_pasien_psikokultural_tenang]
+                                   ,[bt_assesmen_pasien_psikokultural_cemas]
+                                   ,[bt_assesmen_pasien_psikokultural_depresi]
+                                   ,[bt_assesmen_pasien_psikokultural_marah]
+                                   ,[bt_assesmen_pasien_psikokultural_lain]
+                                   ,[vc_assesmen_pasien_psikokultural_lain]
+                                   ,[bt_assesmen_pasien_mental_adariwayat]
+                                   ,[bt_assesmen_pasien_mental_tidakada]
+                                   ,[bt_assesmen_pasien_mental_dalampengobatan]
+                                   ,[bt_assesmen_pasien_mental_gagalpengobatan]
+                                   ,[bt_assesmen_pasien_mental_gangguanserius]
+                                   ,[bt_assesmen_pasien_dukungankeluarga_handal]
+                                   ,[bt_assesmen_pasien_dukungankeluarga_dipertanyakan]
+                                   ,[bt_assesmen_pasien_dukungankeluarga_krisis]
+                                   ,[bt_assesmen_pasien_dukungankeluarga_tidakada]
+                                   ,[bt_assesmen_pasien_finansial_pegawainegeri]
+                                   ,[bt_assesmen_pasien_finansial_buruh]
+                                   ,[bt_assesmen_pasien_finansial_tdkkerja]
+                                   ,[bt_assesmen_pasien_finansial_wiraswasta]
+                                   ,[bt_assesmen_pasien_finansial_pensiunan]
+                                   ,[bt_assesmen_pasien_finansial_lain]
+                                   ,[vc_assesmen_pasien_finansial_lain]
+                                   ,[bt_assesmen_pasien_asuransi_adaaktif]
+                                   ,[bt_assesmen_pasien_asuransi_adatidakaktif]
+                                   ,[bt_assesmen_pasien_asuransi_tidakada]
+                                   ,[bt_assesmen_pasien_napza_ya]
+                                   ,[bt_assesmen_pasien_napza_tidak]
+                                   ,[bt_assesmen_pasien_trauma_ya]
+                                   ,[bt_assesmen_pasien_trauma_tidak]
+                                   ,[bt_assesmen_pasien_pemecahankesehatan_pahampatuh]
+                                   ,[bt_assesmen_pasien_pemecahankesehatan_tidakpatuh]
+                                   ,[bt_assesmen_pasien_pemecahankesehatan_pahamtidakpatuh]
+                                   ,[bt_assesmen_pasien_kemampuan_adaptasi]
+                                   ,[bt_assesmen_pasien_kemampuan_tidakadaptasi]
+                                   ,[bt_assesmen_pasien_aspeklegal_ada]
+                                   ,[bt_assesmen_pasien_aspeklegal_tidakada]
                                    ,[vc_operator])
                              VALUES
                                    (@vc_no_reg
@@ -149,6 +191,48 @@ namespace Casemix.Forms.CasemixForm
                                    ,@bt_skrining_pasien_kronis
                                    ,@bt_skrining_pasien_fungsional_rendah
                                    ,@bt_skrining_pasien_identifikasi_rencanapulang
+                                   ,@bt_assesmen_pasien_mandiri_penuh
+                                   ,@bt_assesmen_pasien_mandiri_sebagian
+                                   ,@bt_assesmen_pasien_total_bantuan
+                                   ,@bt_assesmen_pasien_riwayat_tdk_pernah_dirawat
+                                   ,@bt_assesmen_pasien_riwayat_pernah_dirawat
+                                   ,@vc_assesmen_pasien_riwayat_pernah_dirawat
+                                   ,@bt_assesmen_pasien_psikokultural_tenang
+                                   ,@bt_assesmen_pasien_psikokultural_cemas
+                                   ,@bt_assesmen_pasien_psikokultural_depresi
+                                   ,@bt_assesmen_pasien_psikokultural_marah
+                                   ,@bt_assesmen_pasien_psikokultural_lain
+                                   ,@vc_assesmen_pasien_psikokultural_lain
+                                   ,@bt_assesmen_pasien_mental_adariwayat
+                                   ,@bt_assesmen_pasien_mental_tidakada
+                                   ,@bt_assesmen_pasien_mental_dalampengobatan
+                                   ,@bt_assesmen_pasien_mental_gagalpengobatan
+                                   ,@bt_assesmen_pasien_mental_gangguanserius
+                                   ,@bt_assesmen_pasien_dukungankeluarga_handal
+                                   ,@bt_assesmen_pasien_dukungankeluarga_dipertanyakan
+                                   ,@bt_assesmen_pasien_dukungankeluarga_krisis
+                                   ,@bt_assesmen_pasien_dukungankeluarga_tidakada
+                                   ,@bt_assesmen_pasien_finansial_pegawainegeri
+                                   ,@bt_assesmen_pasien_finansial_buruh
+                                   ,@bt_assesmen_pasien_finansial_tdkkerja
+                                   ,@bt_assesmen_pasien_finansial_wiraswasta
+                                   ,@bt_assesmen_pasien_finansial_pensiunan
+                                   ,@bt_assesmen_pasien_finansial_lain
+                                   ,@vc_assesmen_pasien_finansial_lain
+                                   ,@bt_assesmen_pasien_asuransi_adaaktif
+                                   ,@bt_assesmen_pasien_asuransi_adatidakaktif
+                                   ,@bt_assesmen_pasien_asuransi_tidakada
+                                   ,@bt_assesmen_pasien_napza_ya
+                                   ,@bt_assesmen_pasien_napza_tidak
+                                   ,@bt_assesmen_pasien_trauma_ya
+                                   ,@bt_assesmen_pasien_trauma_tidak
+                                   ,@bt_assesmen_pasien_pemecahankesehatan_pahampatuh
+                                   ,@bt_assesmen_pasien_pemecahankesehatan_tidakpatuh
+                                   ,@bt_assesmen_pasien_pemecahankesehatan_pahamtidakpatuh
+                                   ,@bt_assesmen_pasien_kemampuan_adaptasi
+                                   ,@bt_assesmen_pasien_kemampuan_tidakadaptasi
+                                   ,@bt_assesmen_pasien_aspeklegal_ada
+                                   ,@bt_assesmen_pasien_aspeklegal_tidakada
                                    ,@vc_operator)";
                 ;
                   SqlCommand cmd = new SqlCommand(query, clMain.DBConn.objConnection);
@@ -170,6 +254,55 @@ namespace Casemix.Forms.CasemixForm
                 cmd.Parameters.AddWithValue("@bt_skrining_pasien_kronis", chkBoxSkriningKronis.Checked);
                 cmd.Parameters.AddWithValue("@bt_skrining_pasien_fungsional_rendah", chkBoxSkriningFungsionalRendah.Checked);
                 cmd.Parameters.AddWithValue("@bt_skrining_pasien_identifikasi_rencanapulang", chkBoxSkriningPasienDiidintifikasi.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_penuh", chkBoxAssesmentMandiriPenuh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_sebagian", chkBoxAssesmentMandiriSebagian.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_total_bantuan", chkBoxAssesmentTotalBantuan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_penuh", chkBoxAssesmentMandiriPenuh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_sebagian", chkBoxAssesmentMandiriSebagian.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_total_bantuan", chkBoxAssesmentTotalBantuan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_riwayat_tdk_pernah_dirawat", chkBoxAssesmentTdkPernahDirawat.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_riwayat_pernah_dirawat", chkBoxAssesmentPernahDirawat.Checked);
+                cmd.Parameters.AddWithValue("@vc_assesmen_pasien_riwayat_pernah_dirawat", txtPernahDirawat.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_tenang", chkBoxAssesmentPerilakuTenang.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_cemas", chkBoxAssesmentPerilakuCemas.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_depresi", chkBoxAssesmentPerilakuDepresi.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_marah", chkBoxAssesmentPerilakuMarah.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_lain", chkBoxAssesmentPerilakuLain.Checked);
+                cmd.Parameters.AddWithValue("@vc_assesmen_pasien_psikokultural_lain", txtAssesmentPerilakuLain.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_adariwayat", chkBoxAssesmentMentalAdaRiwayat.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_tidakada", chkBoxAssesmentMentalTidakAdaGangguan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_dalampengobatan", chkBoxAssesmentMentalDlmPengobatan.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_gagalpengobatan", chkBoxAssesmentMentalGagalPengobatan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_gangguanserius", chkBoxAssesmentMentalGangguanSerius.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_dukungankeluarga_handal", chkBoxAssesmentDukunganKeluargaHandal.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_dukungankeluarga_dipertanyakan", chkBoxAssesmentDukunganKeluargaDipertanyakan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_dukungankeluarga_krisis", chkBoxAssesmentDukunganKeluargaKrisis.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_dukungankeluarga_tidakada", chkBoxAssesmentDukunganKeluargaTidakAda.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_pegawainegeri", chkBoxAssesmentFinansialPNS.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_buruh", chkBoxAssesmentFinansialBuruh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_tdkkerja", chkBoxAssesmentFinansialTdkKerja.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_wiraswasta", chkBoxAssesmentFinansialWiraswasta.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_pensiunan", chkBoxAssesmentFinansialPensiunan.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_lain", chkBoxAssesmentFinansialLain.Checked);
+                cmd.Parameters.AddWithValue("@vc_assesmen_pasien_finansial_lain", TxtAssesmentFinansialPNS.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_adaaktif", chkBoxAssesmentAsuransiAdaAktif.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_adatidakaktif", chkBoxAssesmentAsuransiAdaTdkAktif.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_tidakada", chkBoxAssesmentAsuransiTidakAda.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_napza_ya", chkBoxAssesmentNapzaYa.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_napza_tidak", chkBoxAssesmentNapzaTidak.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_trauma_ya", chkBoxAssesmentTraumaYa.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_trauma_tidak", chkBoxAssesmentTraumaTidak.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_pemecahankesehatan_pahampatuh", chkBoxAssesmentPemecahanPahamPatuh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_pemecahankesehatan_tidakpatuh", chkBoxAssesmentPemecahanTidakPatuh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_pemecahankesehatan_pahamtidakpatuh", chkBoxAssesmentPemecahanPahamTidakPatuh.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_kemampuan_adaptasi", chkBoxAssesmentPerubahanMampu.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_kemampuan_tidakadaptasi", chkBoxAssesmentPerubahanTdkMampu.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_aspeklegal_ada", chkBoxAssesmentLegalAda.Checked);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_aspeklegal_tidakada", chkBoxAssesmentLegalTdk.Checked);
+            \
+
+
+
                 cmd.Parameters.AddWithValue("@vc_operator", clMain.cUserLogIn);
                 cmd.ExecuteNonQuery();
                   MsgBoxUtil.MsgInfo("Data Berhasil Disimpan");
