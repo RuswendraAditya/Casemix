@@ -116,7 +116,7 @@ namespace Casemix.Forms.CasemixForm
             this.chkBoxAssesmentAsuransiAdaTdkAktif = new System.Windows.Forms.CheckBox();
             this.chkBoxAssesmentAsuransiAdaAktif = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.TxtAssesmentFinansialPNS = new System.Windows.Forms.TextBox();
+            this.TxtAssesmentFinansialLain = new System.Windows.Forms.TextBox();
             this.chkBoxAssesmentFinansialLain = new System.Windows.Forms.CheckBox();
             this.chkBoxAssesmentFinansialPensiunan = new System.Windows.Forms.CheckBox();
             this.chkBoxAssesmentFinansialWiraswasta = new System.Windows.Forms.CheckBox();
@@ -713,7 +713,7 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage1.Controls.Add(this.chkBoxAssesmentAsuransiAdaTdkAktif);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentAsuransiAdaAktif);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.TxtAssesmentFinansialPNS);
+            this.tabPage1.Controls.Add(this.TxtAssesmentFinansialLain);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentFinansialLain);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentFinansialPensiunan);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentFinansialWiraswasta);
@@ -1074,9 +1074,9 @@ namespace Casemix.Forms.CasemixForm
             this.label16.Location = new System.Drawing.Point(7, 641);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(253, 19);
+            this.label16.Size = new System.Drawing.Size(285, 19);
             this.label16.TabIndex = 165;
-            this.label16.Text = "IDENTIFIKASI MASALAH & RESIKO";
+            this.label16.Text = "IDENTIFIKASI MASALAH DAN RESIKO";
             // 
             // chkBoxAssesmentLegalTdk
             // 
@@ -1312,13 +1312,13 @@ namespace Casemix.Forms.CasemixForm
             this.label10.TabIndex = 144;
             this.label10.Text = "7.Asuransi";
             // 
-            // TxtAssesmentFinansialPNS
+            // TxtAssesmentFinansialLain
             // 
-            this.TxtAssesmentFinansialPNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.TxtAssesmentFinansialPNS.Location = new System.Drawing.Point(810, 471);
-            this.TxtAssesmentFinansialPNS.Name = "TxtAssesmentFinansialPNS";
-            this.TxtAssesmentFinansialPNS.Size = new System.Drawing.Size(170, 21);
-            this.TxtAssesmentFinansialPNS.TabIndex = 143;
+            this.TxtAssesmentFinansialLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.TxtAssesmentFinansialLain.Location = new System.Drawing.Point(810, 471);
+            this.TxtAssesmentFinansialLain.Name = "TxtAssesmentFinansialLain";
+            this.TxtAssesmentFinansialLain.Size = new System.Drawing.Size(170, 21);
+            this.TxtAssesmentFinansialLain.TabIndex = 143;
             // 
             // chkBoxAssesmentFinansialLain
             // 
@@ -2043,7 +2043,7 @@ namespace Casemix.Forms.CasemixForm
         private System.Windows.Forms.CheckBox chkBoxAssesmentFinansialPNS;
         private System.Windows.Forms.CheckBox chkBoxAssesmentFinansialPensiunan;
         private System.Windows.Forms.CheckBox chkBoxAssesmentFinansialLain;
-        private System.Windows.Forms.TextBox TxtAssesmentFinansialPNS;
+        private System.Windows.Forms.TextBox TxtAssesmentFinansialLain;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox chkBoxAssesmentAsuransiAdaAktif;
         private System.Windows.Forms.CheckBox chkBoxAssesmentAsuransiAdaTdkAktif;

@@ -63,11 +63,58 @@ namespace Casemix.Forms.CasemixForm
                 chkBoxSkriningKronis.Checked = (bool)dr["bt_skrining_pasien_kronis"];
                 chkBoxSkriningFungsionalRendah.Checked = (bool)dr["bt_skrining_pasien_fungsional_rendah"];
                 chkBoxSkriningPasienDiidintifikasi.Checked = (bool)dr["bt_skrining_pasien_identifikasi_rencanapulang"];
+                chkBoxAssesmentMandiriPenuh.Checked = (bool)dr["bt_assesmen_pasien_mandiri_penuh"];
+                chkBoxAssesmentMandiriSebagian.Checked = (bool)dr["bt_assesmen_pasien_mandiri_sebagian"];
+                chkBoxAssesmentTotalBantuan.Checked = (bool)dr["bt_assesmen_pasien_total_bantuan"];
+                chkBoxAssesmentTdkPernahDirawat.Checked = (bool)dr["bt_assesmen_pasien_riwayat_tdk_pernah_dirawat"];
+                chkBoxAssesmentPernahDirawat.Checked = (bool)dr["bt_assesmen_pasien_riwayat_pernah_dirawat"];
+                txtPernahDirawat.Text = dr["vc_assesmen_pasien_riwayat_pernah_dirawat"].ToString();
+                chkBoxAssesmentPerilakuTenang.Checked = (bool)dr["bt_assesmen_pasien_psikokultural_tenang"];
+                chkBoxAssesmentPerilakuCemas.Checked = (bool)dr["bt_assesmen_pasien_psikokultural_cemas"];
+                chkBoxAssesmentPerilakuDepresi.Checked = (bool)dr["bt_assesmen_pasien_psikokultural_depresi"];
+                chkBoxAssesmentPerilakuMarah.Checked = (bool)dr["bt_assesmen_pasien_psikokultural_marah"];
+                chkBoxAssesmentPerilakuLain.Checked = (bool)dr["bt_assesmen_pasien_psikokultural_lain"];
+                txtAssesmentPerilakuLain.Text = dr["vc_assesmen_pasien_psikokultural_lain"].ToString();
+                chkBoxAssesmentMentalAdaRiwayat.Checked = (bool)dr["bt_assesmen_pasien_mental_adariwayat"];
+                chkBoxAssesmentMentalTidakAdaGangguan.Checked = (bool)dr["bt_assesmen_pasien_mental_tidakada"];
+                chkBoxAssesmentMentalDlmPengobatan.Checked = (bool)dr["bt_assesmen_pasien_mental_dalampengobatan"];
+                chkBoxAssesmentMentalGagalPengobatan.Checked = (bool)dr["bt_assesmen_pasien_mental_gagalpengobatan"];
+                chkBoxAssesmentMentalGangguanSerius.Checked = (bool)dr["bt_assesmen_pasien_mental_gangguanserius"];
+              
+                chkBoxAssesmentDukunganKeluargaHandal.Checked = (bool)dr["bt_assesmen_pasien_dukungankeluarga_handal"];
+                chkBoxAssesmentDukunganKeluargaDipertanyakan.Checked = (bool)dr["bt_assesmen_pasien_dukungankeluarga_dipertanyakan"];
+                chkBoxAssesmentDukunganKeluargaKrisis.Checked = (bool)dr["bt_assesmen_pasien_dukungankeluarga_krisis"];
+                chkBoxAssesmentDukunganKeluargaTidakAda.Checked = (bool)dr["bt_assesmen_pasien_dukungankeluarga_tidakada"];
+                chkBoxAssesmentFinansialPNS.Checked = (bool)dr["bt_assesmen_pasien_finansial_pegawainegeri"];
+                chkBoxAssesmentFinansialBuruh.Checked = (bool)dr["bt_assesmen_pasien_finansial_buruh"];
+                chkBoxAssesmentFinansialTdkKerja.Checked = (bool)dr["bt_assesmen_pasien_finansial_tdkkerja"];
+                chkBoxAssesmentFinansialWiraswasta.Checked = (bool)dr["bt_assesmen_pasien_finansial_wiraswasta"];
+                chkBoxAssesmentFinansialPensiunan.Checked = (bool)dr["bt_assesmen_pasien_finansial_pensiunan"];
+                chkBoxAssesmentFinansialLain.Checked = (bool)dr["bt_assesmen_pasien_finansial_lain"];
+                TxtAssesmentFinansialLain.Text = dr["vc_assesmen_pasien_finansial_lain"].ToString();
+                chkBoxAssesmentAsuransiAdaAktif.Checked = (bool)dr["bt_assesmen_pasien_asuransi_adaaktif"];
+                chkBoxAssesmentAsuransiAdaTdkAktif.Checked = (bool)dr["bt_assesmen_pasien_asuransi_adatidakaktif"];
+                chkBoxAssesmentAsuransiTidakAda.Checked = (bool)dr["bt_assesmen_pasien_asuransi_tidakada"];
+                chkBoxAssesmentNapzaYa.Checked = (bool)dr["bt_assesmen_pasien_napza_ya"];
+                chkBoxAssesmentNapzaTidak.Checked = (bool)dr["bt_assesmen_pasien_napza_tidak"];
+
+                chkBoxAssesmentTraumaYa.Checked = (bool)dr["bt_assesmen_pasien_trauma_ya"];
+                chkBoxAssesmentTraumaTidak.Checked = (bool)dr["bt_assesmen_pasien_trauma_tidak"];
+
+                chkBoxAssesmentPemecahanPahamPatuh.Checked = (bool)dr["bt_assesmen_pasien_pemecahankesehatan_pahampatuh"];
+                chkBoxAssesmentPemecahanTidakPatuh.Checked = (bool)dr["bt_assesmen_pasien_pemecahankesehatan_tidakpatuh"];
+                chkBoxAssesmentPemecahanPahamTidakPatuh.Checked = (bool)dr["bt_assesmen_pasien_pemecahankesehatan_pahamtidakpatuh"];
+                chkBoxAssesmentPerubahanMampu.Checked = (bool)dr["bt_assesmen_pasien_kemampuan_adaptasi"];
+                chkBoxAssesmentPerubahanTdkMampu.Checked = (bool)dr["bt_assesmen_pasien_kemampuan_tidakadaptasi"];
+                chkBoxAssesmentLegalAda.Checked = (bool)dr["bt_assesmen_pasien_aspeklegal_ada"];
+                chkBoxAssesmentLegalTdk.Checked = (bool)dr["bt_assesmen_pasien_aspeklegal_tidakada"];
+
             }
             else
             {
                 _isExists = false;
             }
+            dr.Close();
             
         }
 
@@ -257,21 +304,19 @@ namespace Casemix.Forms.CasemixForm
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_penuh", chkBoxAssesmentMandiriPenuh.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_sebagian", chkBoxAssesmentMandiriSebagian.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_total_bantuan", chkBoxAssesmentTotalBantuan.Checked);
-                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_penuh", chkBoxAssesmentMandiriPenuh.Checked);
-                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mandiri_sebagian", chkBoxAssesmentMandiriSebagian.Checked);
-                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_total_bantuan", chkBoxAssesmentTotalBantuan.Checked);
+
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_riwayat_tdk_pernah_dirawat", chkBoxAssesmentTdkPernahDirawat.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_riwayat_pernah_dirawat", chkBoxAssesmentPernahDirawat.Checked);
                 cmd.Parameters.AddWithValue("@vc_assesmen_pasien_riwayat_pernah_dirawat", txtPernahDirawat.Text);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_tenang", chkBoxAssesmentPerilakuTenang.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_cemas", chkBoxAssesmentPerilakuCemas.Checked);
-                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_depresi", chkBoxAssesmentPerilakuDepresi.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_depresi", chkBoxAssesmentPerilakuDepresi.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_marah", chkBoxAssesmentPerilakuMarah.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_psikokultural_lain", chkBoxAssesmentPerilakuLain.Checked);
                 cmd.Parameters.AddWithValue("@vc_assesmen_pasien_psikokultural_lain", txtAssesmentPerilakuLain.Text);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_adariwayat", chkBoxAssesmentMentalAdaRiwayat.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_tidakada", chkBoxAssesmentMentalTidakAdaGangguan.Checked);
-                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_dalampengobatan", chkBoxAssesmentMentalDlmPengobatan.Text);
+                cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_dalampengobatan", chkBoxAssesmentMentalDlmPengobatan.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_gagalpengobatan", chkBoxAssesmentMentalGagalPengobatan.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_mental_gangguanserius", chkBoxAssesmentMentalGangguanSerius.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_dukungankeluarga_handal", chkBoxAssesmentDukunganKeluargaHandal.Checked);
@@ -284,7 +329,7 @@ namespace Casemix.Forms.CasemixForm
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_wiraswasta", chkBoxAssesmentFinansialWiraswasta.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_pensiunan", chkBoxAssesmentFinansialPensiunan.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_finansial_lain", chkBoxAssesmentFinansialLain.Checked);
-                cmd.Parameters.AddWithValue("@vc_assesmen_pasien_finansial_lain", TxtAssesmentFinansialPNS.Text);
+                cmd.Parameters.AddWithValue("@vc_assesmen_pasien_finansial_lain", TxtAssesmentFinansialLain.Text);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_adaaktif", chkBoxAssesmentAsuransiAdaAktif.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_adatidakaktif", chkBoxAssesmentAsuransiAdaTdkAktif.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_asuransi_tidakada", chkBoxAssesmentAsuransiTidakAda.Checked);
@@ -299,8 +344,7 @@ namespace Casemix.Forms.CasemixForm
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_kemampuan_tidakadaptasi", chkBoxAssesmentPerubahanTdkMampu.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_aspeklegal_ada", chkBoxAssesmentLegalAda.Checked);
                 cmd.Parameters.AddWithValue("@bt_assesmen_pasien_aspeklegal_tidakada", chkBoxAssesmentLegalTdk.Checked);
-            \
-
+           
 
 
                 cmd.Parameters.AddWithValue("@vc_operator", clMain.cUserLogIn);
