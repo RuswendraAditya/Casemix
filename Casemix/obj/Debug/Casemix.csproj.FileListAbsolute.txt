@@ -271,3 +271,4 @@ D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\bin\Debug\zh-CHT\Microsoft
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.CasemixForm.FrmPreviewReport.resources
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\RdlCompile.cache
 D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\RdlCompile.compiled
+D:\Desktop Project\Visual Studio 2019\Casemix\Casemix\obj\Debug\Casemix.Forms.CasemixForm.FrmEditCatatan.resources

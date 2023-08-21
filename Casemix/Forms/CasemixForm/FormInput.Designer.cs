@@ -32,39 +32,39 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
             this.btnSIMPAN = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCatatan = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dgPiutang = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox88 = new System.Windows.Forms.CheckBox();
-            this.checkBox87 = new System.Windows.Forms.CheckBox();
-            this.checkBox86 = new System.Windows.Forms.CheckBox();
-            this.checkBox85 = new System.Windows.Forms.CheckBox();
-            this.checkBox84 = new System.Windows.Forms.CheckBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.btnSimpanB = new System.Windows.Forms.Button();
+            this.txtTerminasiAlasan2 = new System.Windows.Forms.TextBox();
+            this.txtTerminasiAlasan1 = new System.Windows.Forms.TextBox();
+            this.chkBoxTerminasiAlasanMengakhiri = new System.Windows.Forms.CheckBox();
+            this.chkBoxTerminasiMemastikanBiaya = new System.Windows.Forms.CheckBox();
+            this.chkBoxTerminasiPemantauan = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.checkBox83 = new System.Windows.Forms.CheckBox();
-            this.checkBox82 = new System.Windows.Forms.CheckBox();
+            this.chkBoxHasilPelayananPembahasanDPJP = new System.Windows.Forms.CheckBox();
+            this.chkBoxHasilPelayananPasienPaham = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.checkBox81 = new System.Windows.Forms.CheckBox();
+            this.chkBoxAdvokasiPasien = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.checkBox73 = new System.Windows.Forms.CheckBox();
-            this.checkBox78 = new System.Windows.Forms.CheckBox();
-            this.checkBox79 = new System.Windows.Forms.CheckBox();
-            this.checkBox80 = new System.Windows.Forms.CheckBox();
+            this.chkBoxFasilitasiKoordinasiPemulangan = new System.Windows.Forms.CheckBox();
+            this.chkBoxFasilitasiMediasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxFasilitasiKoordinasiAhliGizi = new System.Windows.Forms.CheckBox();
+            this.chkBoxFasilitasiDiskusi = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.checkBox74 = new System.Windows.Forms.CheckBox();
-            this.checkBox75 = new System.Windows.Forms.CheckBox();
-            this.checkBox76 = new System.Windows.Forms.CheckBox();
-            this.checkBox77 = new System.Windows.Forms.CheckBox();
+            this.chkBoxMonitoringPembiayaan = new System.Windows.Forms.CheckBox();
+            this.chkBoxMonitoringEdukasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxMonitoringKolaborasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxMonitoringCatatanPerkembangan = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.checkBox72 = new System.Windows.Forms.CheckBox();
-            this.checkBox71 = new System.Windows.Forms.CheckBox();
-            this.checkBox70 = new System.Windows.Forms.CheckBox();
-            this.checkBox69 = new System.Windows.Forms.CheckBox();
-            this.checkBox68 = new System.Windows.Forms.CheckBox();
+            this.chkBoxPelaksanaanMemastikanBiaya = new System.Windows.Forms.CheckBox();
+            this.chkBoxPelaksanaanPertemuaanDPJP = new System.Windows.Forms.CheckBox();
+            this.chkBoxPelaksanaanPartisipasiKeluarga = new System.Windows.Forms.CheckBox();
+            this.chkBoxPelaksanaanKebutuhanEdukasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxPelaksanaanMemastikanDiagnosis = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -72,29 +72,29 @@ namespace Casemix.Forms.CasemixForm
             this.label32 = new System.Windows.Forms.Label();
             this.lblNoReg = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPerencanaanLain = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.lblNoRM = new System.Windows.Forms.Label();
-            this.checkBox65 = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanLain = new System.Windows.Forms.CheckBox();
             this.lblNama = new System.Windows.Forms.Label();
-            this.checkBox66 = new System.Windows.Forms.CheckBox();
-            this.checkBox67 = new System.Windows.Forms.CheckBox();
-            this.checkBox89 = new System.Windows.Forms.CheckBox();
-            this.checkBox90 = new System.Windows.Forms.CheckBox();
-            this.checkBox91 = new System.Windows.Forms.CheckBox();
-            this.checkBox92 = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanMonitor = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanRencanakanPemberianInformasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanFasilitasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanPastikanRencanaAsuhan = new System.Windows.Forms.CheckBox();
+            this.chkBoxPerencanaanIdentifikasi = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox63 = new System.Windows.Forms.CheckBox();
-            this.checkBox62 = new System.Windows.Forms.CheckBox();
-            this.checkBox61 = new System.Windows.Forms.CheckBox();
-            this.checkBox60 = new System.Windows.Forms.CheckBox();
-            this.checkBox59 = new System.Windows.Forms.CheckBox();
-            this.checkBox58 = new System.Windows.Forms.CheckBox();
-            this.checkBox41 = new System.Windows.Forms.CheckBox();
-            this.checkBox56 = new System.Windows.Forms.CheckBox();
-            this.checkBox57 = new System.Windows.Forms.CheckBox();
+            this.txtIdentifikasiLain = new System.Windows.Forms.TextBox();
+            this.chkBoxIdentifikasiLain = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiPemulanganPasien = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiKendalaKeuangan = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiDukunganKeluarga = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiEdukasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiKetidakpatuhan = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiOverUtiisasi = new System.Windows.Forms.CheckBox();
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.chkBoxAssesmentLegalTdk = new System.Windows.Forms.CheckBox();
             this.chkBoxAssesmentLegalAda = new System.Windows.Forms.CheckBox();
@@ -181,13 +181,13 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage3.BackColor = System.Drawing.Color.LavenderBlush;
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.btnSIMPAN);
-            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Controls.Add(this.txtCatatan);
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Controls.Add(this.dgPiutang);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1264, 929);
+            this.tabPage3.Size = new System.Drawing.Size(1688, 1146);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Form B (Catatan)";
             // 
@@ -195,10 +195,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(13, 150);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(17, 185);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(151, 19);
+            this.label26.Size = new System.Drawing.Size(183, 24);
             this.label26.TabIndex = 390;
             this.label26.Text = "RIWAYAT CATATAN";
             // 
@@ -207,30 +206,31 @@ namespace Casemix.Forms.CasemixForm
             this.btnSIMPAN.BackColor = System.Drawing.Color.Bisque;
             this.btnSIMPAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSIMPAN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSIMPAN.Location = new System.Drawing.Point(13, 112);
+            this.btnSIMPAN.Location = new System.Drawing.Point(17, 138);
+            this.btnSIMPAN.Margin = new System.Windows.Forms.Padding(4);
             this.btnSIMPAN.Name = "btnSIMPAN";
-            this.btnSIMPAN.Size = new System.Drawing.Size(955, 35);
+            this.btnSIMPAN.Size = new System.Drawing.Size(1273, 43);
             this.btnSIMPAN.TabIndex = 389;
             this.btnSIMPAN.Text = "SIMPAN";
             this.btnSIMPAN.UseVisualStyleBackColor = false;
+            this.btnSIMPAN.Click += new System.EventHandler(this.btnSIMPAN_Click);
             // 
-            // textBox7
+            // txtCatatan
             // 
-            this.textBox7.Location = new System.Drawing.Point(13, 39);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(956, 68);
-            this.textBox7.TabIndex = 381;
+            this.txtCatatan.Location = new System.Drawing.Point(17, 48);
+            this.txtCatatan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCatatan.Multiline = true;
+            this.txtCatatan.Name = "txtCatatan";
+            this.txtCatatan.Size = new System.Drawing.Size(1273, 83);
+            this.txtCatatan.TabIndex = 381;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(13, 17);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(17, 21);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(79, 19);
+            this.label25.Size = new System.Drawing.Size(96, 24);
             this.label25.TabIndex = 380;
             this.label25.Text = "CATATAN";
             // 
@@ -240,403 +240,396 @@ namespace Casemix.Forms.CasemixForm
             this.dgPiutang.AllowEditing = false;
             this.dgPiutang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgPiutang.Location = new System.Drawing.Point(13, 172);
-            this.dgPiutang.Margin = new System.Windows.Forms.Padding(2);
+            this.dgPiutang.Location = new System.Drawing.Point(17, 212);
+            this.dgPiutang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgPiutang.Name = "dgPiutang";
             this.dgPiutang.PreviewRowHeight = 35;
             this.dgPiutang.SerializationController = null;
-            this.dgPiutang.Size = new System.Drawing.Size(955, 334);
+            this.dgPiutang.Size = new System.Drawing.Size(1273, 599);
             this.dgPiutang.TabIndex = 379;
             this.dgPiutang.Text = "sfDataGrid1";
+            this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.SeaShell;
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.checkBox88);
-            this.tabPage2.Controls.Add(this.checkBox87);
-            this.tabPage2.Controls.Add(this.checkBox86);
-            this.tabPage2.Controls.Add(this.checkBox85);
-            this.tabPage2.Controls.Add(this.checkBox84);
+            this.tabPage2.Controls.Add(this.label30);
+            this.tabPage2.Controls.Add(this.label29);
+            this.tabPage2.Controls.Add(this.btnSimpanB);
+            this.tabPage2.Controls.Add(this.txtTerminasiAlasan2);
+            this.tabPage2.Controls.Add(this.txtTerminasiAlasan1);
+            this.tabPage2.Controls.Add(this.chkBoxTerminasiAlasanMengakhiri);
+            this.tabPage2.Controls.Add(this.chkBoxTerminasiMemastikanBiaya);
+            this.tabPage2.Controls.Add(this.chkBoxTerminasiPemantauan);
             this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.checkBox83);
-            this.tabPage2.Controls.Add(this.checkBox82);
+            this.tabPage2.Controls.Add(this.chkBoxHasilPelayananPembahasanDPJP);
+            this.tabPage2.Controls.Add(this.chkBoxHasilPelayananPasienPaham);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.checkBox81);
+            this.tabPage2.Controls.Add(this.chkBoxAdvokasiPasien);
             this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.checkBox73);
-            this.tabPage2.Controls.Add(this.checkBox78);
-            this.tabPage2.Controls.Add(this.checkBox79);
-            this.tabPage2.Controls.Add(this.checkBox80);
+            this.tabPage2.Controls.Add(this.chkBoxFasilitasiKoordinasiPemulangan);
+            this.tabPage2.Controls.Add(this.chkBoxFasilitasiMediasi);
+            this.tabPage2.Controls.Add(this.chkBoxFasilitasiKoordinasiAhliGizi);
+            this.tabPage2.Controls.Add(this.chkBoxFasilitasiDiskusi);
             this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.checkBox74);
-            this.tabPage2.Controls.Add(this.checkBox75);
-            this.tabPage2.Controls.Add(this.checkBox76);
-            this.tabPage2.Controls.Add(this.checkBox77);
+            this.tabPage2.Controls.Add(this.chkBoxMonitoringPembiayaan);
+            this.tabPage2.Controls.Add(this.chkBoxMonitoringEdukasi);
+            this.tabPage2.Controls.Add(this.chkBoxMonitoringKolaborasi);
+            this.tabPage2.Controls.Add(this.chkBoxMonitoringCatatanPerkembangan);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.checkBox72);
-            this.tabPage2.Controls.Add(this.checkBox71);
-            this.tabPage2.Controls.Add(this.checkBox70);
-            this.tabPage2.Controls.Add(this.checkBox69);
-            this.tabPage2.Controls.Add(this.checkBox68);
+            this.tabPage2.Controls.Add(this.chkBoxPelaksanaanMemastikanBiaya);
+            this.tabPage2.Controls.Add(this.chkBoxPelaksanaanPertemuaanDPJP);
+            this.tabPage2.Controls.Add(this.chkBoxPelaksanaanPartisipasiKeluarga);
+            this.tabPage2.Controls.Add(this.chkBoxPelaksanaanKebutuhanEdukasi);
+            this.tabPage2.Controls.Add(this.chkBoxPelaksanaanMemastikanDiagnosis);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1264, 929);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1688, 1146);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Form B";
             // 
-            // button1
+            // label30
             // 
-            this.button1.BackColor = System.Drawing.Color.Bisque;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(18, 699);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(955, 35);
-            this.button1.TabIndex = 390;
-            this.button1.Text = "SIMPAN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(21, 805);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(20, 17);
+            this.label30.TabIndex = 392;
+            this.label30.Text = "2.";
             // 
-            // textBox6
+            // label29
             // 
-            this.textBox6.Location = new System.Drawing.Point(82, 657);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(606, 20);
-            this.textBox6.TabIndex = 116;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(21, 779);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(20, 17);
+            this.label29.TabIndex = 391;
+            this.label29.Text = "1.";
             // 
-            // textBox5
+            // btnSimpanB
             // 
-            this.textBox5.Location = new System.Drawing.Point(82, 635);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(606, 20);
-            this.textBox5.TabIndex = 114;
+            this.btnSimpanB.BackColor = System.Drawing.Color.Bisque;
+            this.btnSimpanB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpanB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSimpanB.Location = new System.Drawing.Point(24, 860);
+            this.btnSimpanB.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpanB.Name = "btnSimpanB";
+            this.btnSimpanB.Size = new System.Drawing.Size(1273, 43);
+            this.btnSimpanB.TabIndex = 390;
+            this.btnSimpanB.Text = "SIMPAN";
+            this.btnSimpanB.UseVisualStyleBackColor = false;
+            this.btnSimpanB.Click += new System.EventHandler(this.btnSimpanB_Click_1);
             // 
-            // checkBox88
+            // txtTerminasiAlasan2
             // 
-            this.checkBox88.AutoSize = true;
-            this.checkBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox88.Location = new System.Drawing.Point(18, 657);
-            this.checkBox88.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox88.Name = "checkBox88";
-            this.checkBox88.Size = new System.Drawing.Size(69, 19);
-            this.checkBox88.TabIndex = 115;
-            this.checkBox88.Text = "Lainnya";
-            this.checkBox88.UseVisualStyleBackColor = true;
+            this.txtTerminasiAlasan2.Location = new System.Drawing.Point(49, 805);
+            this.txtTerminasiAlasan2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTerminasiAlasan2.Name = "txtTerminasiAlasan2";
+            this.txtTerminasiAlasan2.Size = new System.Drawing.Size(807, 22);
+            this.txtTerminasiAlasan2.TabIndex = 116;
             // 
-            // checkBox87
+            // txtTerminasiAlasan1
             // 
-            this.checkBox87.AutoSize = true;
-            this.checkBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox87.Location = new System.Drawing.Point(18, 635);
-            this.checkBox87.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox87.Name = "checkBox87";
-            this.checkBox87.Size = new System.Drawing.Size(69, 19);
-            this.checkBox87.TabIndex = 113;
-            this.checkBox87.Text = "Lainnya";
-            this.checkBox87.UseVisualStyleBackColor = true;
+            this.txtTerminasiAlasan1.Location = new System.Drawing.Point(49, 775);
+            this.txtTerminasiAlasan1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTerminasiAlasan1.Name = "txtTerminasiAlasan1";
+            this.txtTerminasiAlasan1.Size = new System.Drawing.Size(807, 22);
+            this.txtTerminasiAlasan1.TabIndex = 114;
             // 
-            // checkBox86
+            // chkBoxTerminasiAlasanMengakhiri
             // 
-            this.checkBox86.AutoSize = true;
-            this.checkBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox86.Location = new System.Drawing.Point(18, 612);
-            this.checkBox86.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox86.Name = "checkBox86";
-            this.checkBox86.Size = new System.Drawing.Size(218, 19);
-            this.checkBox86.TabIndex = 112;
-            this.checkBox86.Text = "Alasan mengakhiri pelayanan MPP";
-            this.checkBox86.UseVisualStyleBackColor = true;
+            this.chkBoxTerminasiAlasanMengakhiri.AutoSize = true;
+            this.chkBoxTerminasiAlasanMengakhiri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxTerminasiAlasanMengakhiri.Location = new System.Drawing.Point(24, 753);
+            this.chkBoxTerminasiAlasanMengakhiri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxTerminasiAlasanMengakhiri.Name = "chkBoxTerminasiAlasanMengakhiri";
+            this.chkBoxTerminasiAlasanMengakhiri.Size = new System.Drawing.Size(257, 22);
+            this.chkBoxTerminasiAlasanMengakhiri.TabIndex = 112;
+            this.chkBoxTerminasiAlasanMengakhiri.Text = "Alasan mengakhiri pelayanan MPP";
+            this.chkBoxTerminasiAlasanMengakhiri.UseVisualStyleBackColor = true;
             // 
-            // checkBox85
+            // chkBoxTerminasiMemastikanBiaya
             // 
-            this.checkBox85.AutoSize = true;
-            this.checkBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox85.Location = new System.Drawing.Point(18, 589);
-            this.checkBox85.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox85.Name = "checkBox85";
-            this.checkBox85.Size = new System.Drawing.Size(271, 19);
-            this.checkBox85.TabIndex = 111;
-            this.checkBox85.Text = "Memastikan biaya perawatan secara optimal";
-            this.checkBox85.UseVisualStyleBackColor = true;
+            this.chkBoxTerminasiMemastikanBiaya.AutoSize = true;
+            this.chkBoxTerminasiMemastikanBiaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxTerminasiMemastikanBiaya.Location = new System.Drawing.Point(24, 725);
+            this.chkBoxTerminasiMemastikanBiaya.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxTerminasiMemastikanBiaya.Name = "chkBoxTerminasiMemastikanBiaya";
+            this.chkBoxTerminasiMemastikanBiaya.Size = new System.Drawing.Size(322, 22);
+            this.chkBoxTerminasiMemastikanBiaya.TabIndex = 111;
+            this.chkBoxTerminasiMemastikanBiaya.Text = "Memastikan biaya perawatan secara optimal";
+            this.chkBoxTerminasiMemastikanBiaya.UseVisualStyleBackColor = true;
             // 
-            // checkBox84
+            // chkBoxTerminasiPemantauan
             // 
-            this.checkBox84.AutoSize = true;
-            this.checkBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox84.Location = new System.Drawing.Point(18, 566);
-            this.checkBox84.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox84.Name = "checkBox84";
-            this.checkBox84.Size = new System.Drawing.Size(435, 19);
-            this.checkBox84.TabIndex = 110;
-            this.checkBox84.Text = "Melakukan pemantauan pelayanan dan pemberian asuhan setelah pulang";
-            this.checkBox84.UseVisualStyleBackColor = true;
+            this.chkBoxTerminasiPemantauan.AutoSize = true;
+            this.chkBoxTerminasiPemantauan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxTerminasiPemantauan.Location = new System.Drawing.Point(24, 697);
+            this.chkBoxTerminasiPemantauan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxTerminasiPemantauan.Name = "chkBoxTerminasiPemantauan";
+            this.chkBoxTerminasiPemantauan.Size = new System.Drawing.Size(508, 22);
+            this.chkBoxTerminasiPemantauan.TabIndex = 110;
+            this.chkBoxTerminasiPemantauan.Text = "Melakukan pemantauan pelayanan dan pemberian asuhan setelah pulang";
+            this.chkBoxTerminasiPemantauan.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(15, 544);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Location = new System.Drawing.Point(20, 670);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(81, 19);
+            this.label24.Size = new System.Drawing.Size(98, 24);
             this.label24.TabIndex = 109;
             this.label24.Text = "Terminasi";
             // 
-            // checkBox83
+            // chkBoxHasilPelayananPembahasanDPJP
             // 
-            this.checkBox83.AutoSize = true;
-            this.checkBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox83.Location = new System.Drawing.Point(18, 509);
-            this.checkBox83.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox83.Name = "checkBox83";
-            this.checkBox83.Size = new System.Drawing.Size(414, 19);
-            this.checkBox83.TabIndex = 108;
-            this.checkBox83.Text = "Tercipta pembahasan kasus antar DPJP dan ada pemecahan masalah";
-            this.checkBox83.UseVisualStyleBackColor = true;
+            this.chkBoxHasilPelayananPembahasanDPJP.AutoSize = true;
+            this.chkBoxHasilPelayananPembahasanDPJP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxHasilPelayananPembahasanDPJP.Location = new System.Drawing.Point(24, 626);
+            this.chkBoxHasilPelayananPembahasanDPJP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxHasilPelayananPembahasanDPJP.Name = "chkBoxHasilPelayananPembahasanDPJP";
+            this.chkBoxHasilPelayananPembahasanDPJP.Size = new System.Drawing.Size(493, 22);
+            this.chkBoxHasilPelayananPembahasanDPJP.TabIndex = 108;
+            this.chkBoxHasilPelayananPembahasanDPJP.Text = "Tercipta pembahasan kasus antar DPJP dan ada pemecahan masalah";
+            this.chkBoxHasilPelayananPembahasanDPJP.UseVisualStyleBackColor = true;
             // 
-            // checkBox82
+            // chkBoxHasilPelayananPasienPaham
             // 
-            this.checkBox82.AutoSize = true;
-            this.checkBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox82.Location = new System.Drawing.Point(18, 487);
-            this.checkBox82.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox82.Name = "checkBox82";
-            this.checkBox82.Size = new System.Drawing.Size(546, 19);
-            this.checkBox82.TabIndex = 107;
-            this.checkBox82.Text = "Pasien dan kelurga dapat memahami terkait perawatn dan pengobatan yang diberikan " +
-    "oleh RS";
-            this.checkBox82.UseVisualStyleBackColor = true;
+            this.chkBoxHasilPelayananPasienPaham.AutoSize = true;
+            this.chkBoxHasilPelayananPasienPaham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxHasilPelayananPasienPaham.Location = new System.Drawing.Point(24, 599);
+            this.chkBoxHasilPelayananPasienPaham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxHasilPelayananPasienPaham.Name = "chkBoxHasilPelayananPasienPaham";
+            this.chkBoxHasilPelayananPasienPaham.Size = new System.Drawing.Size(653, 22);
+            this.chkBoxHasilPelayananPasienPaham.TabIndex = 107;
+            this.chkBoxHasilPelayananPasienPaham.Text = "Pasien dan kelurga dapat memahami terkait perawatan dan pengobatan yang diberikan" +
+    " oleh RS";
+            this.chkBoxHasilPelayananPasienPaham.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(15, 465);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(20, 572);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(125, 19);
+            this.label23.Size = new System.Drawing.Size(154, 24);
             this.label23.TabIndex = 106;
             this.label23.Text = "Hasil Pelayanan";
             // 
-            // checkBox81
+            // chkBoxAdvokasiPasien
             // 
-            this.checkBox81.AutoSize = true;
-            this.checkBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox81.Location = new System.Drawing.Point(18, 436);
-            this.checkBox81.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox81.Name = "checkBox81";
-            this.checkBox81.Size = new System.Drawing.Size(355, 19);
-            this.checkBox81.TabIndex = 105;
-            this.checkBox81.Text = "Melakukan advokasi pada pasien terkait program kesehatan";
-            this.checkBox81.UseVisualStyleBackColor = true;
+            this.chkBoxAdvokasiPasien.AutoSize = true;
+            this.chkBoxAdvokasiPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxAdvokasiPasien.Location = new System.Drawing.Point(24, 537);
+            this.chkBoxAdvokasiPasien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxAdvokasiPasien.Name = "chkBoxAdvokasiPasien";
+            this.chkBoxAdvokasiPasien.Size = new System.Drawing.Size(424, 22);
+            this.chkBoxAdvokasiPasien.TabIndex = 105;
+            this.chkBoxAdvokasiPasien.Text = "Melakukan advokasi pada pasien terkait program kesehatan";
+            this.chkBoxAdvokasiPasien.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(15, 414);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(20, 510);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 19);
+            this.label22.Size = new System.Drawing.Size(92, 24);
             this.label22.TabIndex = 104;
             this.label22.Text = "Advokasi";
             // 
-            // checkBox73
+            // chkBoxFasilitasiKoordinasiPemulangan
             // 
-            this.checkBox73.AutoSize = true;
-            this.checkBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox73.Location = new System.Drawing.Point(18, 387);
-            this.checkBox73.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox73.Name = "checkBox73";
-            this.checkBox73.Size = new System.Drawing.Size(596, 19);
-            this.checkBox73.TabIndex = 103;
-            this.checkBox73.Text = "Melakukan koordinasi saat pemulangan pasien serta jadwal kontrol dan terapi lanju" +
+            this.chkBoxFasilitasiKoordinasiPemulangan.AutoSize = true;
+            this.chkBoxFasilitasiKoordinasiPemulangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxFasilitasiKoordinasiPemulangan.Location = new System.Drawing.Point(24, 476);
+            this.chkBoxFasilitasiKoordinasiPemulangan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxFasilitasiKoordinasiPemulangan.Name = "chkBoxFasilitasiKoordinasiPemulangan";
+            this.chkBoxFasilitasiKoordinasiPemulangan.Size = new System.Drawing.Size(705, 22);
+            this.chkBoxFasilitasiKoordinasiPemulangan.TabIndex = 103;
+            this.chkBoxFasilitasiKoordinasiPemulangan.Text = "Melakukan koordinasi saat pemulangan pasien serta jadwal kontrol dan terapi lanju" +
     "tan selama di rumah";
-            this.checkBox73.UseVisualStyleBackColor = true;
+            this.chkBoxFasilitasiKoordinasiPemulangan.UseVisualStyleBackColor = true;
             // 
-            // checkBox78
+            // chkBoxFasilitasiMediasi
             // 
-            this.checkBox78.AutoSize = true;
-            this.checkBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox78.Location = new System.Drawing.Point(18, 364);
-            this.checkBox78.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox78.Name = "checkBox78";
-            this.checkBox78.Size = new System.Drawing.Size(394, 19);
-            this.checkBox78.TabIndex = 102;
-            this.checkBox78.Text = "Melakukan mediasi dan negosiasi untuk meningkatkan komunikasi";
-            this.checkBox78.UseVisualStyleBackColor = true;
+            this.chkBoxFasilitasiMediasi.AutoSize = true;
+            this.chkBoxFasilitasiMediasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxFasilitasiMediasi.Location = new System.Drawing.Point(24, 448);
+            this.chkBoxFasilitasiMediasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxFasilitasiMediasi.Name = "chkBoxFasilitasiMediasi";
+            this.chkBoxFasilitasiMediasi.Size = new System.Drawing.Size(468, 22);
+            this.chkBoxFasilitasiMediasi.TabIndex = 102;
+            this.chkBoxFasilitasiMediasi.Text = "Melakukan mediasi dan negosiasi untuk meningkatkan komunikasi";
+            this.chkBoxFasilitasiMediasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox79
+            // chkBoxFasilitasiKoordinasiAhliGizi
             // 
-            this.checkBox79.AutoSize = true;
-            this.checkBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox79.Location = new System.Drawing.Point(18, 341);
-            this.checkBox79.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox79.Name = "checkBox79";
-            this.checkBox79.Size = new System.Drawing.Size(315, 19);
-            this.checkBox79.TabIndex = 101;
-            this.checkBox79.Text = "Melakukan koordinasi dengan ahii gizi/PPA yang lain";
-            this.checkBox79.UseVisualStyleBackColor = true;
+            this.chkBoxFasilitasiKoordinasiAhliGizi.AutoSize = true;
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Location = new System.Drawing.Point(24, 420);
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Name = "chkBoxFasilitasiKoordinasiAhliGizi";
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Size = new System.Drawing.Size(373, 22);
+            this.chkBoxFasilitasiKoordinasiAhliGizi.TabIndex = 101;
+            this.chkBoxFasilitasiKoordinasiAhliGizi.Text = "Melakukan koordinasi dengan ahii gizi/PPA yang lain";
+            this.chkBoxFasilitasiKoordinasiAhliGizi.UseVisualStyleBackColor = true;
             // 
-            // checkBox80
+            // chkBoxFasilitasiDiskusi
             // 
-            this.checkBox80.AutoSize = true;
-            this.checkBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox80.Location = new System.Drawing.Point(18, 318);
-            this.checkBox80.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox80.Name = "checkBox80";
-            this.checkBox80.Size = new System.Drawing.Size(383, 19);
-            this.checkBox80.TabIndex = 100;
-            this.checkBox80.Text = "Memfasilitasi diskusi kasus antara DPJP dengan keluarga pasien";
-            this.checkBox80.UseVisualStyleBackColor = true;
+            this.chkBoxFasilitasiDiskusi.AutoSize = true;
+            this.chkBoxFasilitasiDiskusi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxFasilitasiDiskusi.Location = new System.Drawing.Point(24, 391);
+            this.chkBoxFasilitasiDiskusi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxFasilitasiDiskusi.Name = "chkBoxFasilitasiDiskusi";
+            this.chkBoxFasilitasiDiskusi.Size = new System.Drawing.Size(457, 22);
+            this.chkBoxFasilitasiDiskusi.TabIndex = 100;
+            this.chkBoxFasilitasiDiskusi.Text = "Memfasilitasi diskusi kasus antara DPJP dengan keluarga pasien";
+            this.chkBoxFasilitasiDiskusi.UseVisualStyleBackColor = true;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 297);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(20, 366);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(355, 19);
+            this.label21.Size = new System.Drawing.Size(438, 24);
             this.label21.TabIndex = 99;
             this.label21.Text = "Fasilitasi,Koordinasi,Komunikasi dan Kolaborasi";
             // 
-            // checkBox74
+            // chkBoxMonitoringPembiayaan
             // 
-            this.checkBox74.AutoSize = true;
-            this.checkBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox74.Location = new System.Drawing.Point(18, 268);
-            this.checkBox74.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox74.Name = "checkBox74";
-            this.checkBox74.Size = new System.Drawing.Size(437, 19);
-            this.checkBox74.TabIndex = 98;
-            this.checkBox74.Text = "Melakukan monitoring terkait pembiyaan (Asuransi/BPJS/Lama Perawatan)";
-            this.checkBox74.UseVisualStyleBackColor = true;
+            this.chkBoxMonitoringPembiayaan.AutoSize = true;
+            this.chkBoxMonitoringPembiayaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxMonitoringPembiayaan.Location = new System.Drawing.Point(24, 330);
+            this.chkBoxMonitoringPembiayaan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxMonitoringPembiayaan.Name = "chkBoxMonitoringPembiayaan";
+            this.chkBoxMonitoringPembiayaan.Size = new System.Drawing.Size(531, 22);
+            this.chkBoxMonitoringPembiayaan.TabIndex = 98;
+            this.chkBoxMonitoringPembiayaan.Text = "Melakukan monitoring terkait pembiayaan (Asuransi/BPJS/Lama Perawatan)";
+            this.chkBoxMonitoringPembiayaan.UseVisualStyleBackColor = true;
             // 
-            // checkBox75
+            // chkBoxMonitoringEdukasi
             // 
-            this.checkBox75.AutoSize = true;
-            this.checkBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox75.Location = new System.Drawing.Point(18, 245);
-            this.checkBox75.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox75.Name = "checkBox75";
-            this.checkBox75.Size = new System.Drawing.Size(247, 19);
-            this.checkBox75.TabIndex = 97;
-            this.checkBox75.Text = "Melakukan monitoring terhadap edukasi";
-            this.checkBox75.UseVisualStyleBackColor = true;
+            this.chkBoxMonitoringEdukasi.AutoSize = true;
+            this.chkBoxMonitoringEdukasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxMonitoringEdukasi.Location = new System.Drawing.Point(24, 302);
+            this.chkBoxMonitoringEdukasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxMonitoringEdukasi.Name = "chkBoxMonitoringEdukasi";
+            this.chkBoxMonitoringEdukasi.Size = new System.Drawing.Size(292, 22);
+            this.chkBoxMonitoringEdukasi.TabIndex = 97;
+            this.chkBoxMonitoringEdukasi.Text = "Melakukan monitoring terhadap edukasi";
+            this.chkBoxMonitoringEdukasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox76
+            // chkBoxMonitoringKolaborasi
             // 
-            this.checkBox76.AutoSize = true;
-            this.checkBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox76.Location = new System.Drawing.Point(18, 223);
-            this.checkBox76.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox76.Name = "checkBox76";
-            this.checkBox76.Size = new System.Drawing.Size(411, 19);
-            this.checkBox76.TabIndex = 96;
-            this.checkBox76.Text = "Melakukan kolaborasi terkait perubahan rencana dan pelaksanaannya";
-            this.checkBox76.UseVisualStyleBackColor = true;
+            this.chkBoxMonitoringKolaborasi.AutoSize = true;
+            this.chkBoxMonitoringKolaborasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxMonitoringKolaborasi.Location = new System.Drawing.Point(24, 274);
+            this.chkBoxMonitoringKolaborasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxMonitoringKolaborasi.Name = "chkBoxMonitoringKolaborasi";
+            this.chkBoxMonitoringKolaborasi.Size = new System.Drawing.Size(487, 22);
+            this.chkBoxMonitoringKolaborasi.TabIndex = 96;
+            this.chkBoxMonitoringKolaborasi.Text = "Melakukan kolaborasi terkait perubahan rencana dan pelaksanaannya";
+            this.chkBoxMonitoringKolaborasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox77
+            // chkBoxMonitoringCatatanPerkembangan
             // 
-            this.checkBox77.AutoSize = true;
-            this.checkBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox77.Location = new System.Drawing.Point(18, 200);
-            this.checkBox77.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox77.Name = "checkBox77";
-            this.checkBox77.Size = new System.Drawing.Size(497, 19);
-            this.checkBox77.TabIndex = 95;
-            this.checkBox77.Text = "Mencatatan perkembangan kolaborasi terkait asuhan pasien yang telah diberikan PPA" +
+            this.chkBoxMonitoringCatatanPerkembangan.AutoSize = true;
+            this.chkBoxMonitoringCatatanPerkembangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxMonitoringCatatanPerkembangan.Location = new System.Drawing.Point(24, 246);
+            this.chkBoxMonitoringCatatanPerkembangan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxMonitoringCatatanPerkembangan.Name = "chkBoxMonitoringCatatanPerkembangan";
+            this.chkBoxMonitoringCatatanPerkembangan.Size = new System.Drawing.Size(591, 22);
+            this.chkBoxMonitoringCatatanPerkembangan.TabIndex = 95;
+            this.chkBoxMonitoringCatatanPerkembangan.Text = "Mencatatan perkembangan kolaborasi terkait asuhan pasien yang telah diberikan PPA" +
     "";
-            this.checkBox77.UseVisualStyleBackColor = true;
+            this.chkBoxMonitoringCatatanPerkembangan.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(15, 178);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(20, 219);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(87, 19);
+            this.label20.Size = new System.Drawing.Size(107, 24);
             this.label20.TabIndex = 94;
             this.label20.Text = "Monitoring";
             // 
-            // checkBox72
+            // chkBoxPelaksanaanMemastikanBiaya
             // 
-            this.checkBox72.AutoSize = true;
-            this.checkBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox72.Location = new System.Drawing.Point(18, 150);
-            this.checkBox72.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox72.Name = "checkBox72";
-            this.checkBox72.Size = new System.Drawing.Size(214, 19);
-            this.checkBox72.TabIndex = 93;
-            this.checkBox72.Text = "Memastikan jaminan biaya pasien";
-            this.checkBox72.UseVisualStyleBackColor = true;
+            this.chkBoxPelaksanaanMemastikanBiaya.AutoSize = true;
+            this.chkBoxPelaksanaanMemastikanBiaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPelaksanaanMemastikanBiaya.Location = new System.Drawing.Point(24, 185);
+            this.chkBoxPelaksanaanMemastikanBiaya.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPelaksanaanMemastikanBiaya.Name = "chkBoxPelaksanaanMemastikanBiaya";
+            this.chkBoxPelaksanaanMemastikanBiaya.Size = new System.Drawing.Size(251, 22);
+            this.chkBoxPelaksanaanMemastikanBiaya.TabIndex = 93;
+            this.chkBoxPelaksanaanMemastikanBiaya.Text = "Memastikan jaminan biaya pasien";
+            this.chkBoxPelaksanaanMemastikanBiaya.UseVisualStyleBackColor = true;
             // 
-            // checkBox71
+            // chkBoxPelaksanaanPertemuaanDPJP
             // 
-            this.checkBox71.AutoSize = true;
-            this.checkBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox71.Location = new System.Drawing.Point(18, 127);
-            this.checkBox71.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox71.Name = "checkBox71";
-            this.checkBox71.Size = new System.Drawing.Size(407, 19);
-            this.checkBox71.TabIndex = 92;
-            this.checkBox71.Text = "Mempersiapkan pertemuan dengan DPJP dalam pembahasan kasus";
-            this.checkBox71.UseVisualStyleBackColor = true;
+            this.chkBoxPelaksanaanPertemuaanDPJP.AutoSize = true;
+            this.chkBoxPelaksanaanPertemuaanDPJP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPelaksanaanPertemuaanDPJP.Location = new System.Drawing.Point(24, 156);
+            this.chkBoxPelaksanaanPertemuaanDPJP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPelaksanaanPertemuaanDPJP.Name = "chkBoxPelaksanaanPertemuaanDPJP";
+            this.chkBoxPelaksanaanPertemuaanDPJP.Size = new System.Drawing.Size(482, 22);
+            this.chkBoxPelaksanaanPertemuaanDPJP.TabIndex = 92;
+            this.chkBoxPelaksanaanPertemuaanDPJP.Text = "Mempersiapkan pertemuan dengan DPJP dalam pembahasan kasus";
+            this.chkBoxPelaksanaanPertemuaanDPJP.UseVisualStyleBackColor = true;
             // 
-            // checkBox70
+            // chkBoxPelaksanaanPartisipasiKeluarga
             // 
-            this.checkBox70.AutoSize = true;
-            this.checkBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox70.Location = new System.Drawing.Point(18, 104);
-            this.checkBox70.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox70.Name = "checkBox70";
-            this.checkBox70.Size = new System.Drawing.Size(234, 19);
-            this.checkBox70.TabIndex = 91;
-            this.checkBox70.Text = "Mengikutsertakan partisipasi keluarga";
-            this.checkBox70.UseVisualStyleBackColor = true;
+            this.chkBoxPelaksanaanPartisipasiKeluarga.AutoSize = true;
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Location = new System.Drawing.Point(24, 128);
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Name = "chkBoxPelaksanaanPartisipasiKeluarga";
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Size = new System.Drawing.Size(277, 22);
+            this.chkBoxPelaksanaanPartisipasiKeluarga.TabIndex = 91;
+            this.chkBoxPelaksanaanPartisipasiKeluarga.Text = "Mengikutsertakan partisipasi keluarga";
+            this.chkBoxPelaksanaanPartisipasiKeluarga.UseVisualStyleBackColor = true;
             // 
-            // checkBox69
+            // chkBoxPelaksanaanKebutuhanEdukasi
             // 
-            this.checkBox69.AutoSize = true;
-            this.checkBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox69.Location = new System.Drawing.Point(18, 81);
-            this.checkBox69.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox69.Name = "checkBox69";
-            this.checkBox69.Size = new System.Drawing.Size(226, 19);
-            this.checkBox69.TabIndex = 90;
-            this.checkBox69.Text = "Menentukan kebutuhan dan edukasi";
-            this.checkBox69.UseVisualStyleBackColor = true;
+            this.chkBoxPelaksanaanKebutuhanEdukasi.AutoSize = true;
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Location = new System.Drawing.Point(24, 100);
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Name = "chkBoxPelaksanaanKebutuhanEdukasi";
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Size = new System.Drawing.Size(266, 22);
+            this.chkBoxPelaksanaanKebutuhanEdukasi.TabIndex = 90;
+            this.chkBoxPelaksanaanKebutuhanEdukasi.Text = "Menentukan kebutuhan dan edukasi";
+            this.chkBoxPelaksanaanKebutuhanEdukasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox68
+            // chkBoxPelaksanaanMemastikanDiagnosis
             // 
-            this.checkBox68.AutoSize = true;
-            this.checkBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox68.Location = new System.Drawing.Point(18, 58);
-            this.checkBox68.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox68.Name = "checkBox68";
-            this.checkBox68.Size = new System.Drawing.Size(452, 19);
-            this.checkBox68.TabIndex = 89;
-            this.checkBox68.Text = "Memastikan diagnosis,prognosis,kebutuhan dan sasaran hasil asuhan pasien";
-            this.checkBox68.UseVisualStyleBackColor = true;
+            this.chkBoxPelaksanaanMemastikanDiagnosis.AutoSize = true;
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Location = new System.Drawing.Point(24, 71);
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Name = "chkBoxPelaksanaanMemastikanDiagnosis";
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Size = new System.Drawing.Size(538, 22);
+            this.chkBoxPelaksanaanMemastikanDiagnosis.TabIndex = 89;
+            this.chkBoxPelaksanaanMemastikanDiagnosis.Text = "Memastikan diagnosis,prognosis,kebutuhan dan sasaran hasil asuhan pasien";
+            this.chkBoxPelaksanaanMemastikanDiagnosis.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(356, 11);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(475, 14);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(479, 19);
+            this.label19.Size = new System.Drawing.Size(597, 24);
             this.label19.TabIndex = 88;
             this.label19.Text = "FORM B- Catatan Implementasi Manajer Pelayanan Pasien(MPP)";
             // 
@@ -644,10 +637,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(15, 37);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(20, 46);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(208, 19);
+            this.label17.Size = new System.Drawing.Size(258, 24);
             this.label17.TabIndex = 1;
             this.label17.Text = "Pelaksanaan Rencana MPP";
             // 
@@ -656,11 +648,11 @@ namespace Casemix.Forms.CasemixForm
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Location = new System.Drawing.Point(4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1272, 955);
+            this.tabControl1.Size = new System.Drawing.Size(1696, 1175);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -669,29 +661,29 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage1.Controls.Add(this.label32);
             this.tabPage1.Controls.Add(this.lblNoReg);
             this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.txtPerencanaanLain);
             this.tabPage1.Controls.Add(this.label27);
             this.tabPage1.Controls.Add(this.lblNoRM);
-            this.tabPage1.Controls.Add(this.checkBox65);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanLain);
             this.tabPage1.Controls.Add(this.lblNama);
-            this.tabPage1.Controls.Add(this.checkBox66);
-            this.tabPage1.Controls.Add(this.checkBox67);
-            this.tabPage1.Controls.Add(this.checkBox89);
-            this.tabPage1.Controls.Add(this.checkBox90);
-            this.tabPage1.Controls.Add(this.checkBox91);
-            this.tabPage1.Controls.Add(this.checkBox92);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanMonitor);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanRencanakanKeterlibatanPasien);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanRencanakanPemberianInformasi);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanFasilitasi);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanPastikanRencanaAsuhan);
+            this.tabPage1.Controls.Add(this.chkBoxPerencanaanIdentifikasi);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.checkBox63);
-            this.tabPage1.Controls.Add(this.checkBox62);
-            this.tabPage1.Controls.Add(this.checkBox61);
-            this.tabPage1.Controls.Add(this.checkBox60);
-            this.tabPage1.Controls.Add(this.checkBox59);
-            this.tabPage1.Controls.Add(this.checkBox58);
-            this.tabPage1.Controls.Add(this.checkBox41);
-            this.tabPage1.Controls.Add(this.checkBox56);
-            this.tabPage1.Controls.Add(this.checkBox57);
+            this.tabPage1.Controls.Add(this.txtIdentifikasiLain);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiLain);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiPemulanganPasien);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiKendalaKeuangan);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiPenurunanDeterminasiPasien);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiDukunganKeluarga);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiEdukasi);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiKetidakpatuhan);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiOverUtiisasi);
+            this.tabPage1.Controls.Add(this.chkBoxIdentifikasiTidakSesuaiKebutuhan);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentLegalTdk);
             this.tabPage1.Controls.Add(this.chkBoxAssesmentLegalAda);
@@ -766,10 +758,11 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1264, 929);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1688, 1146);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Form A";
             // 
@@ -777,9 +770,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(979, 55);
+            this.label32.Location = new System.Drawing.Point(1305, 68);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(55, 15);
+            this.label32.Size = new System.Drawing.Size(65, 18);
             this.label32.TabIndex = 6;
             this.label32.Text = "No Reg";
             // 
@@ -787,9 +781,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.lblNoReg.AutoSize = true;
             this.lblNoReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoReg.Location = new System.Drawing.Point(1034, 55);
+            this.lblNoReg.Location = new System.Drawing.Point(1379, 68);
+            this.lblNoReg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoReg.Name = "lblNoReg";
-            this.lblNoReg.Size = new System.Drawing.Size(71, 15);
+            this.lblNoReg.Size = new System.Drawing.Size(80, 18);
             this.lblNoReg.TabIndex = 7;
             this.lblNoReg.Text = "00000000";
             // 
@@ -797,27 +792,30 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(979, 40);
+            this.label28.Location = new System.Drawing.Point(1305, 49);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(51, 15);
+            this.label28.Size = new System.Drawing.Size(61, 18);
             this.label28.TabIndex = 3;
             this.label28.Text = "No RM";
             // 
-            // textBox8
+            // txtPerencanaanLain
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBox8.Location = new System.Drawing.Point(736, 801);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(503, 21);
-            this.textBox8.TabIndex = 401;
+            this.txtPerencanaanLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtPerencanaanLain.Location = new System.Drawing.Point(981, 986);
+            this.txtPerencanaanLain.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPerencanaanLain.Name = "txtPerencanaanLain";
+            this.txtPerencanaanLain.Size = new System.Drawing.Size(669, 24);
+            this.txtPerencanaanLain.TabIndex = 401;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(979, 23);
+            this.label27.Location = new System.Drawing.Point(1305, 28);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(49, 15);
+            this.label27.Size = new System.Drawing.Size(57, 18);
             this.label27.TabIndex = 2;
             this.label27.Text = "Nama ";
             // 
@@ -825,115 +823,116 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.lblNoRM.AutoSize = true;
             this.lblNoRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoRM.Location = new System.Drawing.Point(1034, 40);
+            this.lblNoRM.Location = new System.Drawing.Point(1379, 49);
+            this.lblNoRM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoRM.Name = "lblNoRM";
-            this.lblNoRM.Size = new System.Drawing.Size(71, 15);
+            this.lblNoRM.Size = new System.Drawing.Size(80, 18);
             this.lblNoRM.TabIndex = 5;
             this.lblNoRM.Text = "00000000";
             // 
-            // checkBox65
+            // chkBoxPerencanaanLain
             // 
-            this.checkBox65.AutoSize = true;
-            this.checkBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox65.Location = new System.Drawing.Point(647, 801);
-            this.checkBox65.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox65.Name = "checkBox65";
-            this.checkBox65.Size = new System.Drawing.Size(78, 19);
-            this.checkBox65.TabIndex = 399;
-            this.checkBox65.Text = "Lain-Lain";
-            this.checkBox65.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanLain.AutoSize = true;
+            this.chkBoxPerencanaanLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanLain.Location = new System.Drawing.Point(863, 986);
+            this.chkBoxPerencanaanLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanLain.Name = "chkBoxPerencanaanLain";
+            this.chkBoxPerencanaanLain.Size = new System.Drawing.Size(89, 22);
+            this.chkBoxPerencanaanLain.TabIndex = 399;
+            this.chkBoxPerencanaanLain.Text = "Lain-Lain";
+            this.chkBoxPerencanaanLain.UseVisualStyleBackColor = true;
             // 
             // lblNama
             // 
             this.lblNama.AutoSize = true;
             this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNama.Location = new System.Drawing.Point(1034, 23);
+            this.lblNama.Location = new System.Drawing.Point(1379, 28);
+            this.lblNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(175, 15);
+            this.lblNama.Size = new System.Drawing.Size(200, 18);
             this.lblNama.TabIndex = 4;
             this.lblNama.Text = "xxxxxxxxxxxxxxxxxxxxxxxx";
             // 
-            // checkBox66
+            // chkBoxPerencanaanMonitor
             // 
-            this.checkBox66.AutoSize = true;
-            this.checkBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox66.Location = new System.Drawing.Point(647, 777);
-            this.checkBox66.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox66.Name = "checkBox66";
-            this.checkBox66.Size = new System.Drawing.Size(272, 19);
-            this.checkBox66.TabIndex = 398;
-            this.checkBox66.Text = "Monitor pembiayaan dan penjaminan pasien";
-            this.checkBox66.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanMonitor.AutoSize = true;
+            this.chkBoxPerencanaanMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanMonitor.Location = new System.Drawing.Point(863, 956);
+            this.chkBoxPerencanaanMonitor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanMonitor.Name = "chkBoxPerencanaanMonitor";
+            this.chkBoxPerencanaanMonitor.Size = new System.Drawing.Size(318, 22);
+            this.chkBoxPerencanaanMonitor.TabIndex = 398;
+            this.chkBoxPerencanaanMonitor.Text = "Monitor pembiayaan dan penjaminan pasien";
+            this.chkBoxPerencanaanMonitor.UseVisualStyleBackColor = true;
             // 
-            // checkBox67
+            // chkBoxPerencanaanRencanakanKeterlibatanPasien
             // 
-            this.checkBox67.AutoSize = true;
-            this.checkBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox67.Location = new System.Drawing.Point(647, 757);
-            this.checkBox67.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox67.Name = "checkBox67";
-            this.checkBox67.Size = new System.Drawing.Size(329, 19);
-            this.checkBox67.TabIndex = 397;
-            this.checkBox67.Text = "Rencanakan keterlibatan pasien/kelurga dalam asuhan";
-            this.checkBox67.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.AutoSize = true;
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Location = new System.Drawing.Point(863, 932);
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Name = "chkBoxPerencanaanRencanakanKeterlibatanPasien";
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Size = new System.Drawing.Size(387, 22);
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.TabIndex = 397;
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.Text = "Rencanakan keterlibatan pasien/kelurga dalam asuhan";
+            this.chkBoxPerencanaanRencanakanKeterlibatanPasien.UseVisualStyleBackColor = true;
             // 
-            // checkBox89
+            // chkBoxPerencanaanRencanakanPemberianInformasi
             // 
-            this.checkBox89.AutoSize = true;
-            this.checkBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox89.Location = new System.Drawing.Point(647, 734);
-            this.checkBox89.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox89.Name = "checkBox89";
-            this.checkBox89.Size = new System.Drawing.Size(510, 19);
-            this.checkBox89.TabIndex = 396;
-            this.checkBox89.Text = "Rencanakan pemberian informasi kepada pasien/kelurga untuk pengambilan keputusan";
-            this.checkBox89.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.AutoSize = true;
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Location = new System.Drawing.Point(863, 903);
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Name = "chkBoxPerencanaanRencanakanPemberianInformasi";
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Size = new System.Drawing.Size(601, 22);
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.TabIndex = 396;
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.Text = "Rencanakan pemberian informasi kepada pasien/kelurga untuk pengambilan keputusan";
+            this.chkBoxPerencanaanRencanakanPemberianInformasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox90
+            // chkBoxPerencanaanFasilitasi
             // 
-            this.checkBox90.AutoSize = true;
-            this.checkBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox90.Location = new System.Drawing.Point(647, 710);
-            this.checkBox90.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox90.Name = "checkBox90";
-            this.checkBox90.Size = new System.Drawing.Size(281, 19);
-            this.checkBox90.TabIndex = 395;
-            this.checkBox90.Text = "Fasilitasi untuk mengatasi masalah dan konflik";
-            this.checkBox90.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanFasilitasi.AutoSize = true;
+            this.chkBoxPerencanaanFasilitasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanFasilitasi.Location = new System.Drawing.Point(863, 874);
+            this.chkBoxPerencanaanFasilitasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanFasilitasi.Name = "chkBoxPerencanaanFasilitasi";
+            this.chkBoxPerencanaanFasilitasi.Size = new System.Drawing.Size(334, 22);
+            this.chkBoxPerencanaanFasilitasi.TabIndex = 395;
+            this.chkBoxPerencanaanFasilitasi.Text = "Fasilitasi untuk mengatasi masalah dan konflik";
+            this.chkBoxPerencanaanFasilitasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox91
+            // chkBoxPerencanaanPastikanRencanaAsuhan
             // 
-            this.checkBox91.AutoSize = true;
-            this.checkBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox91.Location = new System.Drawing.Point(647, 687);
-            this.checkBox91.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox91.Name = "checkBox91";
-            this.checkBox91.Size = new System.Drawing.Size(543, 19);
-            this.checkBox91.TabIndex = 394;
-            this.checkBox91.Text = "Pastikan rencana asuhan konsisten dengan panduan yang digunakan (clinical pathway" +
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.AutoSize = true;
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Location = new System.Drawing.Point(863, 846);
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Name = "chkBoxPerencanaanPastikanRencanaAsuhan";
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Size = new System.Drawing.Size(645, 22);
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.TabIndex = 394;
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.Text = "Pastikan rencana asuhan konsisten dengan panduan yang digunakan (clinical pathway" +
     " yg ada)";
-            this.checkBox91.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanPastikanRencanaAsuhan.UseVisualStyleBackColor = true;
             // 
-            // checkBox92
+            // chkBoxPerencanaanIdentifikasi
             // 
-            this.checkBox92.AutoSize = true;
-            this.checkBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox92.Location = new System.Drawing.Point(647, 664);
-            this.checkBox92.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox92.Name = "checkBox92";
-            this.checkBox92.Size = new System.Drawing.Size(448, 19);
-            this.checkBox92.TabIndex = 393;
-            this.checkBox92.Text = "Identifikasi diagnosis , prognosis,kebutuhan dan sasaran hasil asuhan pasien";
-            this.checkBox92.UseVisualStyleBackColor = true;
+            this.chkBoxPerencanaanIdentifikasi.AutoSize = true;
+            this.chkBoxPerencanaanIdentifikasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxPerencanaanIdentifikasi.Location = new System.Drawing.Point(863, 817);
+            this.chkBoxPerencanaanIdentifikasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxPerencanaanIdentifikasi.Name = "chkBoxPerencanaanIdentifikasi";
+            this.chkBoxPerencanaanIdentifikasi.Size = new System.Drawing.Size(533, 22);
+            this.chkBoxPerencanaanIdentifikasi.TabIndex = 393;
+            this.chkBoxPerencanaanIdentifikasi.Text = "Identifikasi diagnosis , prognosis,kebutuhan dan sasaran hasil asuhan pasien";
+            this.chkBoxPerencanaanIdentifikasi.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(643, 641);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(857, 789);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(380, 19);
+            this.label18.Size = new System.Drawing.Size(469, 24);
             this.label18.TabIndex = 392;
             this.label18.Text = "PERENCANAAN MANAJEMEN PELAYANAN PASIEN";
             // 
@@ -942,139 +941,140 @@ namespace Casemix.Forms.CasemixForm
             this.button2.BackColor = System.Drawing.Color.Bisque;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(552, 852);
+            this.button2.Location = new System.Drawing.Point(736, 1049);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 35);
+            this.button2.Size = new System.Drawing.Size(148, 43);
             this.button2.TabIndex = 391;
             this.button2.Text = "SIMPAN";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox4
+            // txtIdentifikasiLain
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBox4.Location = new System.Drawing.Point(90, 851);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(330, 21);
-            this.textBox4.TabIndex = 175;
+            this.txtIdentifikasiLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtIdentifikasiLain.Location = new System.Drawing.Point(120, 1047);
+            this.txtIdentifikasiLain.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdentifikasiLain.Name = "txtIdentifikasiLain";
+            this.txtIdentifikasiLain.Size = new System.Drawing.Size(439, 24);
+            this.txtIdentifikasiLain.TabIndex = 175;
             // 
-            // checkBox63
+            // chkBoxIdentifikasiLain
             // 
-            this.checkBox63.AutoSize = true;
-            this.checkBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox63.Location = new System.Drawing.Point(12, 850);
-            this.checkBox63.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox63.Name = "checkBox63";
-            this.checkBox63.Size = new System.Drawing.Size(78, 19);
-            this.checkBox63.TabIndex = 174;
-            this.checkBox63.Text = "Lain-Lain";
-            this.checkBox63.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiLain.AutoSize = true;
+            this.chkBoxIdentifikasiLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiLain.Location = new System.Drawing.Point(16, 1046);
+            this.chkBoxIdentifikasiLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiLain.Name = "chkBoxIdentifikasiLain";
+            this.chkBoxIdentifikasiLain.Size = new System.Drawing.Size(89, 22);
+            this.chkBoxIdentifikasiLain.TabIndex = 174;
+            this.chkBoxIdentifikasiLain.Text = "Lain-Lain";
+            this.chkBoxIdentifikasiLain.UseVisualStyleBackColor = true;
             // 
-            // checkBox62
+            // chkBoxIdentifikasiPemulanganPasien
             // 
-            this.checkBox62.AutoSize = true;
-            this.checkBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox62.Location = new System.Drawing.Point(11, 826);
-            this.checkBox62.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox62.Name = "checkBox62";
-            this.checkBox62.Size = new System.Drawing.Size(361, 19);
-            this.checkBox62.TabIndex = 173;
-            this.checkBox62.Text = "Pemulangan atau rujukan yang memenuhi kriteria atau tunda";
-            this.checkBox62.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiPemulanganPasien.AutoSize = true;
+            this.chkBoxIdentifikasiPemulanganPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiPemulanganPasien.Location = new System.Drawing.Point(15, 1017);
+            this.chkBoxIdentifikasiPemulanganPasien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiPemulanganPasien.Name = "chkBoxIdentifikasiPemulanganPasien";
+            this.chkBoxIdentifikasiPemulanganPasien.Size = new System.Drawing.Size(424, 22);
+            this.chkBoxIdentifikasiPemulanganPasien.TabIndex = 173;
+            this.chkBoxIdentifikasiPemulanganPasien.Text = "Pemulangan atau rujukan yang memenuhi kriteria atau tunda";
+            this.chkBoxIdentifikasiPemulanganPasien.UseVisualStyleBackColor = true;
             // 
-            // checkBox61
+            // chkBoxIdentifikasiKendalaKeuangan
             // 
-            this.checkBox61.AutoSize = true;
-            this.checkBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox61.Location = new System.Drawing.Point(11, 801);
-            this.checkBox61.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox61.Name = "checkBox61";
-            this.checkBox61.Size = new System.Drawing.Size(288, 19);
-            this.checkBox61.TabIndex = 172;
-            this.checkBox61.Text = "Kendala keuangan ketika komplikasi meningkat";
-            this.checkBox61.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiKendalaKeuangan.AutoSize = true;
+            this.chkBoxIdentifikasiKendalaKeuangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiKendalaKeuangan.Location = new System.Drawing.Point(15, 986);
+            this.chkBoxIdentifikasiKendalaKeuangan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiKendalaKeuangan.Name = "chkBoxIdentifikasiKendalaKeuangan";
+            this.chkBoxIdentifikasiKendalaKeuangan.Size = new System.Drawing.Size(341, 22);
+            this.chkBoxIdentifikasiKendalaKeuangan.TabIndex = 172;
+            this.chkBoxIdentifikasiKendalaKeuangan.Text = "Kendala keuangan ketika komplikasi meningkat";
+            this.chkBoxIdentifikasiKendalaKeuangan.UseVisualStyleBackColor = true;
             // 
-            // checkBox60
+            // chkBoxIdentifikasiPenurunanDeterminasiPasien
             // 
-            this.checkBox60.AutoSize = true;
-            this.checkBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox60.Location = new System.Drawing.Point(11, 777);
-            this.checkBox60.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox60.Name = "checkBox60";
-            this.checkBox60.Size = new System.Drawing.Size(427, 19);
-            this.checkBox60.TabIndex = 171;
-            this.checkBox60.Text = "Penurunan Determinasi Pasien(tingkat keparahan/komplikasi meningkat)";
-            this.checkBox60.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.AutoSize = true;
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Location = new System.Drawing.Point(15, 956);
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Name = "chkBoxIdentifikasiPenurunanDeterminasiPasien";
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Size = new System.Drawing.Size(506, 22);
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.TabIndex = 171;
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.Text = "Penurunan Determinasi Pasien(tingkat keparahan/komplikasi meningkat)";
+            this.chkBoxIdentifikasiPenurunanDeterminasiPasien.UseVisualStyleBackColor = true;
             // 
-            // checkBox59
+            // chkBoxIdentifikasiDukunganKeluarga
             // 
-            this.checkBox59.AutoSize = true;
-            this.checkBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox59.Location = new System.Drawing.Point(11, 757);
-            this.checkBox59.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox59.Name = "checkBox59";
-            this.checkBox59.Size = new System.Drawing.Size(175, 19);
-            this.checkBox59.TabIndex = 170;
-            this.checkBox59.Text = "Kurang dukungan keluarga";
-            this.checkBox59.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiDukunganKeluarga.AutoSize = true;
+            this.chkBoxIdentifikasiDukunganKeluarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiDukunganKeluarga.Location = new System.Drawing.Point(15, 932);
+            this.chkBoxIdentifikasiDukunganKeluarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiDukunganKeluarga.Name = "chkBoxIdentifikasiDukunganKeluarga";
+            this.chkBoxIdentifikasiDukunganKeluarga.Size = new System.Drawing.Size(205, 22);
+            this.chkBoxIdentifikasiDukunganKeluarga.TabIndex = 170;
+            this.chkBoxIdentifikasiDukunganKeluarga.Text = "Kurang dukungan keluarga";
+            this.chkBoxIdentifikasiDukunganKeluarga.UseVisualStyleBackColor = true;
             // 
-            // checkBox58
+            // chkBoxIdentifikasiEdukasi
             // 
-            this.checkBox58.AutoSize = true;
-            this.checkBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox58.Location = new System.Drawing.Point(11, 734);
-            this.checkBox58.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox58.Name = "checkBox58";
-            this.checkBox58.Size = new System.Drawing.Size(596, 19);
-            this.checkBox58.TabIndex = 169;
-            this.checkBox58.Text = "Edukasi Pemahanan kurang memadai terkait proses penyakit, kondisi penyakit dan re" +
+            this.chkBoxIdentifikasiEdukasi.AutoSize = true;
+            this.chkBoxIdentifikasiEdukasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiEdukasi.Location = new System.Drawing.Point(15, 903);
+            this.chkBoxIdentifikasiEdukasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiEdukasi.Name = "chkBoxIdentifikasiEdukasi";
+            this.chkBoxIdentifikasiEdukasi.Size = new System.Drawing.Size(711, 22);
+            this.chkBoxIdentifikasiEdukasi.TabIndex = 169;
+            this.chkBoxIdentifikasiEdukasi.Text = "Edukasi Pemahanan kurang memadai terkait proses penyakit, kondisi penyakit dan re" +
     "ncana pengobatan";
-            this.checkBox58.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiEdukasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox41
+            // chkBoxIdentifikasiKetidakpatuhan
             // 
-            this.checkBox41.AutoSize = true;
-            this.checkBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox41.Location = new System.Drawing.Point(11, 710);
-            this.checkBox41.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox41.Name = "checkBox41";
-            this.checkBox41.Size = new System.Drawing.Size(112, 19);
-            this.checkBox41.TabIndex = 168;
-            this.checkBox41.Text = "Ketidakpatuhan";
-            this.checkBox41.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiKetidakpatuhan.AutoSize = true;
+            this.chkBoxIdentifikasiKetidakpatuhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiKetidakpatuhan.Location = new System.Drawing.Point(15, 874);
+            this.chkBoxIdentifikasiKetidakpatuhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiKetidakpatuhan.Name = "chkBoxIdentifikasiKetidakpatuhan";
+            this.chkBoxIdentifikasiKetidakpatuhan.Size = new System.Drawing.Size(131, 22);
+            this.chkBoxIdentifikasiKetidakpatuhan.TabIndex = 168;
+            this.chkBoxIdentifikasiKetidakpatuhan.Text = "Ketidakpatuhan";
+            this.chkBoxIdentifikasiKetidakpatuhan.UseVisualStyleBackColor = true;
             // 
-            // checkBox56
+            // chkBoxIdentifikasiOverUtiisasi
             // 
-            this.checkBox56.AutoSize = true;
-            this.checkBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox56.Location = new System.Drawing.Point(11, 687);
-            this.checkBox56.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox56.Name = "checkBox56";
-            this.checkBox56.Size = new System.Drawing.Size(351, 19);
-            this.checkBox56.TabIndex = 167;
-            this.checkBox56.Text = "Over/Under utilisasi pelayanan sesuai standar yg digunakan";
-            this.checkBox56.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiOverUtiisasi.AutoSize = true;
+            this.chkBoxIdentifikasiOverUtiisasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiOverUtiisasi.Location = new System.Drawing.Point(15, 846);
+            this.chkBoxIdentifikasiOverUtiisasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiOverUtiisasi.Name = "chkBoxIdentifikasiOverUtiisasi";
+            this.chkBoxIdentifikasiOverUtiisasi.Size = new System.Drawing.Size(418, 22);
+            this.chkBoxIdentifikasiOverUtiisasi.TabIndex = 167;
+            this.chkBoxIdentifikasiOverUtiisasi.Text = "Over/Under utilisasi pelayanan sesuai standar yg digunakan";
+            this.chkBoxIdentifikasiOverUtiisasi.UseVisualStyleBackColor = true;
             // 
-            // checkBox57
+            // chkBoxIdentifikasiTidakSesuaiKebutuhan
             // 
-            this.checkBox57.AutoSize = true;
-            this.checkBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox57.Location = new System.Drawing.Point(11, 664);
-            this.checkBox57.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox57.Name = "checkBox57";
-            this.checkBox57.Size = new System.Drawing.Size(285, 19);
-            this.checkBox57.TabIndex = 166;
-            this.checkBox57.Text = "Asuhan pelayanan yang tidak sesuai kebutuhan";
-            this.checkBox57.UseVisualStyleBackColor = true;
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.AutoSize = true;
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Location = new System.Drawing.Point(15, 817);
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Name = "chkBoxIdentifikasiTidakSesuaiKebutuhan";
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Size = new System.Drawing.Size(338, 22);
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.TabIndex = 166;
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.Text = "Asuhan pelayanan yang tidak sesuai kebutuhan";
+            this.chkBoxIdentifikasiTidakSesuaiKebutuhan.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(7, 641);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(9, 789);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(285, 19);
+            this.label16.Size = new System.Drawing.Size(351, 24);
             this.label16.TabIndex = 165;
             this.label16.Text = "IDENTIFIKASI MASALAH DAN RESIKO";
             // 
@@ -1082,10 +1082,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentLegalTdk.AutoSize = true;
             this.chkBoxAssesmentLegalTdk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentLegalTdk.Location = new System.Drawing.Point(482, 616);
-            this.chkBoxAssesmentLegalTdk.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentLegalTdk.Location = new System.Drawing.Point(643, 758);
+            this.chkBoxAssesmentLegalTdk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentLegalTdk.Name = "chkBoxAssesmentLegalTdk";
-            this.chkBoxAssesmentLegalTdk.Size = new System.Drawing.Size(80, 19);
+            this.chkBoxAssesmentLegalTdk.Size = new System.Drawing.Size(95, 22);
             this.chkBoxAssesmentLegalTdk.TabIndex = 164;
             this.chkBoxAssesmentLegalTdk.Text = "Tidak Ada";
             this.chkBoxAssesmentLegalTdk.UseVisualStyleBackColor = true;
@@ -1094,10 +1094,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentLegalAda.AutoSize = true;
             this.chkBoxAssesmentLegalAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentLegalAda.Location = new System.Drawing.Point(316, 616);
-            this.chkBoxAssesmentLegalAda.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentLegalAda.Location = new System.Drawing.Point(421, 758);
+            this.chkBoxAssesmentLegalAda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentLegalAda.Name = "chkBoxAssesmentLegalAda";
-            this.chkBoxAssesmentLegalAda.Size = new System.Drawing.Size(47, 19);
+            this.chkBoxAssesmentLegalAda.Size = new System.Drawing.Size(55, 22);
             this.chkBoxAssesmentLegalAda.TabIndex = 163;
             this.chkBoxAssesmentLegalAda.Text = "Ada";
             this.chkBoxAssesmentLegalAda.UseVisualStyleBackColor = true;
@@ -1106,10 +1106,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label15.Location = new System.Drawing.Point(8, 616);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(11, 758);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 15);
+            this.label15.Size = new System.Drawing.Size(108, 18);
             this.label15.TabIndex = 162;
             this.label15.Text = "12.Aspek Legal";
             // 
@@ -1117,10 +1116,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerubahanTdkMampu.AutoSize = true;
             this.chkBoxAssesmentPerubahanTdkMampu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerubahanTdkMampu.Location = new System.Drawing.Point(482, 592);
-            this.chkBoxAssesmentPerubahanTdkMampu.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerubahanTdkMampu.Location = new System.Drawing.Point(643, 729);
+            this.chkBoxAssesmentPerubahanTdkMampu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerubahanTdkMampu.Name = "chkBoxAssesmentPerubahanTdkMampu";
-            this.chkBoxAssesmentPerubahanTdkMampu.Size = new System.Drawing.Size(154, 19);
+            this.chkBoxAssesmentPerubahanTdkMampu.Size = new System.Drawing.Size(183, 22);
             this.chkBoxAssesmentPerubahanTdkMampu.TabIndex = 161;
             this.chkBoxAssesmentPerubahanTdkMampu.Text = "Tdk Mampu Berdaptasi";
             this.chkBoxAssesmentPerubahanTdkMampu.UseVisualStyleBackColor = true;
@@ -1129,10 +1128,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerubahanMampu.AutoSize = true;
             this.chkBoxAssesmentPerubahanMampu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerubahanMampu.Location = new System.Drawing.Point(316, 592);
-            this.chkBoxAssesmentPerubahanMampu.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerubahanMampu.Location = new System.Drawing.Point(421, 729);
+            this.chkBoxAssesmentPerubahanMampu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerubahanMampu.Name = "chkBoxAssesmentPerubahanMampu";
-            this.chkBoxAssesmentPerubahanMampu.Size = new System.Drawing.Size(131, 19);
+            this.chkBoxAssesmentPerubahanMampu.Size = new System.Drawing.Size(154, 22);
             this.chkBoxAssesmentPerubahanMampu.TabIndex = 160;
             this.chkBoxAssesmentPerubahanMampu.Text = "Mampu Berdaptasi";
             this.chkBoxAssesmentPerubahanMampu.UseVisualStyleBackColor = true;
@@ -1141,10 +1140,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label14.Location = new System.Drawing.Point(8, 592);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(11, 729);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(219, 15);
+            this.label14.Size = new System.Drawing.Size(255, 18);
             this.label14.TabIndex = 159;
             this.label14.Text = "11.Kemampuan menerima perubahan";
             // 
@@ -1152,10 +1150,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.AutoSize = true;
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Location = new System.Drawing.Point(575, 567);
-            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Location = new System.Drawing.Point(767, 698);
+            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.Name = "chkBoxAssesmentPemecahanPahamTidakPatuh";
-            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Size = new System.Drawing.Size(134, 19);
+            this.chkBoxAssesmentPemecahanPahamTidakPatuh.Size = new System.Drawing.Size(159, 22);
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.TabIndex = 158;
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.Text = "Paham Tidak Patuh";
             this.chkBoxAssesmentPemecahanPahamTidakPatuh.UseVisualStyleBackColor = true;
@@ -1164,10 +1162,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPemecahanTidakPatuh.AutoSize = true;
             this.chkBoxAssesmentPemecahanTidakPatuh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPemecahanTidakPatuh.Location = new System.Drawing.Point(482, 567);
-            this.chkBoxAssesmentPemecahanTidakPatuh.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPemecahanTidakPatuh.Location = new System.Drawing.Point(643, 698);
+            this.chkBoxAssesmentPemecahanTidakPatuh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPemecahanTidakPatuh.Name = "chkBoxAssesmentPemecahanTidakPatuh";
-            this.chkBoxAssesmentPemecahanTidakPatuh.Size = new System.Drawing.Size(81, 19);
+            this.chkBoxAssesmentPemecahanTidakPatuh.Size = new System.Drawing.Size(97, 22);
             this.chkBoxAssesmentPemecahanTidakPatuh.TabIndex = 157;
             this.chkBoxAssesmentPemecahanTidakPatuh.Text = "Tdk Patuh";
             this.chkBoxAssesmentPemecahanTidakPatuh.UseVisualStyleBackColor = true;
@@ -1176,10 +1174,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPemecahanPahamPatuh.AutoSize = true;
             this.chkBoxAssesmentPemecahanPahamPatuh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPemecahanPahamPatuh.Location = new System.Drawing.Point(316, 567);
-            this.chkBoxAssesmentPemecahanPahamPatuh.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPemecahanPahamPatuh.Location = new System.Drawing.Point(421, 698);
+            this.chkBoxAssesmentPemecahanPahamPatuh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPemecahanPahamPatuh.Name = "chkBoxAssesmentPemecahanPahamPatuh";
-            this.chkBoxAssesmentPemecahanPahamPatuh.Size = new System.Drawing.Size(127, 19);
+            this.chkBoxAssesmentPemecahanPahamPatuh.Size = new System.Drawing.Size(150, 22);
             this.chkBoxAssesmentPemecahanPahamPatuh.TabIndex = 156;
             this.chkBoxAssesmentPemecahanPahamPatuh.Text = "Paham Dan Patuh";
             this.chkBoxAssesmentPemecahanPahamPatuh.UseVisualStyleBackColor = true;
@@ -1188,10 +1186,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label13.Location = new System.Drawing.Point(8, 567);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(11, 698);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(295, 15);
+            this.label13.Size = new System.Drawing.Size(352, 18);
             this.label13.TabIndex = 155;
             this.label13.Text = "10.Pemecahan tentang kesehatan (Kondisi penyakit)";
             // 
@@ -1199,10 +1196,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentTraumaTidak.AutoSize = true;
             this.chkBoxAssesmentTraumaTidak.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentTraumaTidak.Location = new System.Drawing.Point(482, 542);
-            this.chkBoxAssesmentTraumaTidak.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentTraumaTidak.Location = new System.Drawing.Point(643, 667);
+            this.chkBoxAssesmentTraumaTidak.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentTraumaTidak.Name = "chkBoxAssesmentTraumaTidak";
-            this.chkBoxAssesmentTraumaTidak.Size = new System.Drawing.Size(56, 19);
+            this.chkBoxAssesmentTraumaTidak.Size = new System.Drawing.Size(66, 22);
             this.chkBoxAssesmentTraumaTidak.TabIndex = 154;
             this.chkBoxAssesmentTraumaTidak.Text = "Tidak";
             this.chkBoxAssesmentTraumaTidak.UseVisualStyleBackColor = true;
@@ -1211,10 +1208,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentTraumaYa.AutoSize = true;
             this.chkBoxAssesmentTraumaYa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentTraumaYa.Location = new System.Drawing.Point(316, 542);
-            this.chkBoxAssesmentTraumaYa.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentTraumaYa.Location = new System.Drawing.Point(421, 667);
+            this.chkBoxAssesmentTraumaYa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentTraumaYa.Name = "chkBoxAssesmentTraumaYa";
-            this.chkBoxAssesmentTraumaYa.Size = new System.Drawing.Size(40, 19);
+            this.chkBoxAssesmentTraumaYa.Size = new System.Drawing.Size(47, 22);
             this.chkBoxAssesmentTraumaYa.TabIndex = 153;
             this.chkBoxAssesmentTraumaYa.Text = "Ya";
             this.chkBoxAssesmentTraumaYa.UseVisualStyleBackColor = true;
@@ -1223,10 +1220,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label12.Location = new System.Drawing.Point(8, 542);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(11, 667);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 15);
+            this.label12.Size = new System.Drawing.Size(127, 18);
             this.label12.TabIndex = 152;
             this.label12.Text = "9.Riwayat Trauma";
             // 
@@ -1234,10 +1230,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentNapzaTidak.AutoSize = true;
             this.chkBoxAssesmentNapzaTidak.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentNapzaTidak.Location = new System.Drawing.Point(482, 516);
-            this.chkBoxAssesmentNapzaTidak.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentNapzaTidak.Location = new System.Drawing.Point(643, 635);
+            this.chkBoxAssesmentNapzaTidak.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentNapzaTidak.Name = "chkBoxAssesmentNapzaTidak";
-            this.chkBoxAssesmentNapzaTidak.Size = new System.Drawing.Size(56, 19);
+            this.chkBoxAssesmentNapzaTidak.Size = new System.Drawing.Size(66, 22);
             this.chkBoxAssesmentNapzaTidak.TabIndex = 151;
             this.chkBoxAssesmentNapzaTidak.Text = "Tidak";
             this.chkBoxAssesmentNapzaTidak.UseVisualStyleBackColor = true;
@@ -1246,10 +1242,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentNapzaYa.AutoSize = true;
             this.chkBoxAssesmentNapzaYa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentNapzaYa.Location = new System.Drawing.Point(316, 516);
-            this.chkBoxAssesmentNapzaYa.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentNapzaYa.Location = new System.Drawing.Point(421, 635);
+            this.chkBoxAssesmentNapzaYa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentNapzaYa.Name = "chkBoxAssesmentNapzaYa";
-            this.chkBoxAssesmentNapzaYa.Size = new System.Drawing.Size(40, 19);
+            this.chkBoxAssesmentNapzaYa.Size = new System.Drawing.Size(47, 22);
             this.chkBoxAssesmentNapzaYa.TabIndex = 150;
             this.chkBoxAssesmentNapzaYa.Text = "Ya";
             this.chkBoxAssesmentNapzaYa.UseVisualStyleBackColor = true;
@@ -1258,10 +1254,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label11.Location = new System.Drawing.Point(8, 516);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(11, 635);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(256, 15);
+            this.label11.Size = new System.Drawing.Size(302, 18);
             this.label11.TabIndex = 149;
             this.label11.Text = "8.Riwayat penggunaan obat(alternatip/napza)";
             // 
@@ -1269,10 +1264,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentAsuransiTidakAda.AutoSize = true;
             this.chkBoxAssesmentAsuransiTidakAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentAsuransiTidakAda.Location = new System.Drawing.Point(482, 494);
-            this.chkBoxAssesmentAsuransiTidakAda.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentAsuransiTidakAda.Location = new System.Drawing.Point(643, 608);
+            this.chkBoxAssesmentAsuransiTidakAda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentAsuransiTidakAda.Name = "chkBoxAssesmentAsuransiTidakAda";
-            this.chkBoxAssesmentAsuransiTidakAda.Size = new System.Drawing.Size(80, 19);
+            this.chkBoxAssesmentAsuransiTidakAda.Size = new System.Drawing.Size(95, 22);
             this.chkBoxAssesmentAsuransiTidakAda.TabIndex = 148;
             this.chkBoxAssesmentAsuransiTidakAda.Text = "Tidak Ada";
             this.chkBoxAssesmentAsuransiTidakAda.UseVisualStyleBackColor = true;
@@ -1281,10 +1276,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentAsuransiAdaTdkAktif.AutoSize = true;
             this.chkBoxAssesmentAsuransiAdaTdkAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentAsuransiAdaTdkAktif.Location = new System.Drawing.Point(316, 495);
-            this.chkBoxAssesmentAsuransiAdaTdkAktif.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentAsuransiAdaTdkAktif.Location = new System.Drawing.Point(421, 609);
+            this.chkBoxAssesmentAsuransiAdaTdkAktif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentAsuransiAdaTdkAktif.Name = "chkBoxAssesmentAsuransiAdaTdkAktif";
-            this.chkBoxAssesmentAsuransiAdaTdkAktif.Size = new System.Drawing.Size(105, 19);
+            this.chkBoxAssesmentAsuransiAdaTdkAktif.Size = new System.Drawing.Size(127, 22);
             this.chkBoxAssesmentAsuransiAdaTdkAktif.TabIndex = 147;
             this.chkBoxAssesmentAsuransiAdaTdkAktif.Text = "Ada Tidak Aktif";
             this.chkBoxAssesmentAsuransiAdaTdkAktif.UseVisualStyleBackColor = true;
@@ -1293,10 +1288,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentAsuransiAdaAktif.AutoSize = true;
             this.chkBoxAssesmentAsuransiAdaAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentAsuransiAdaAktif.Location = new System.Drawing.Point(196, 495);
-            this.chkBoxAssesmentAsuransiAdaAktif.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentAsuransiAdaAktif.Location = new System.Drawing.Point(261, 609);
+            this.chkBoxAssesmentAsuransiAdaAktif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentAsuransiAdaAktif.Name = "chkBoxAssesmentAsuransiAdaAktif";
-            this.chkBoxAssesmentAsuransiAdaAktif.Size = new System.Drawing.Size(72, 19);
+            this.chkBoxAssesmentAsuransiAdaAktif.Size = new System.Drawing.Size(87, 22);
             this.chkBoxAssesmentAsuransiAdaAktif.TabIndex = 146;
             this.chkBoxAssesmentAsuransiAdaAktif.Text = "Ada Aktif";
             this.chkBoxAssesmentAsuransiAdaAktif.UseVisualStyleBackColor = true;
@@ -1305,29 +1300,29 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label10.Location = new System.Drawing.Point(8, 495);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(11, 609);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 15);
+            this.label10.Size = new System.Drawing.Size(77, 18);
             this.label10.TabIndex = 144;
             this.label10.Text = "7.Asuransi";
             // 
             // TxtAssesmentFinansialLain
             // 
             this.TxtAssesmentFinansialLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.TxtAssesmentFinansialLain.Location = new System.Drawing.Point(810, 471);
+            this.TxtAssesmentFinansialLain.Location = new System.Drawing.Point(1080, 580);
+            this.TxtAssesmentFinansialLain.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAssesmentFinansialLain.Name = "TxtAssesmentFinansialLain";
-            this.TxtAssesmentFinansialLain.Size = new System.Drawing.Size(170, 21);
+            this.TxtAssesmentFinansialLain.Size = new System.Drawing.Size(225, 24);
             this.TxtAssesmentFinansialLain.TabIndex = 143;
             // 
             // chkBoxAssesmentFinansialLain
             // 
             this.chkBoxAssesmentFinansialLain.AutoSize = true;
             this.chkBoxAssesmentFinansialLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialLain.Location = new System.Drawing.Point(748, 471);
-            this.chkBoxAssesmentFinansialLain.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialLain.Location = new System.Drawing.Point(997, 580);
+            this.chkBoxAssesmentFinansialLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialLain.Name = "chkBoxAssesmentFinansialLain";
-            this.chkBoxAssesmentFinansialLain.Size = new System.Drawing.Size(57, 19);
+            this.chkBoxAssesmentFinansialLain.Size = new System.Drawing.Size(65, 22);
             this.chkBoxAssesmentFinansialLain.TabIndex = 142;
             this.chkBoxAssesmentFinansialLain.Text = "Lain2";
             this.chkBoxAssesmentFinansialLain.UseVisualStyleBackColor = true;
@@ -1336,10 +1331,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentFinansialPensiunan.AutoSize = true;
             this.chkBoxAssesmentFinansialPensiunan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialPensiunan.Location = new System.Drawing.Point(659, 471);
-            this.chkBoxAssesmentFinansialPensiunan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialPensiunan.Location = new System.Drawing.Point(879, 580);
+            this.chkBoxAssesmentFinansialPensiunan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialPensiunan.Name = "chkBoxAssesmentFinansialPensiunan";
-            this.chkBoxAssesmentFinansialPensiunan.Size = new System.Drawing.Size(85, 19);
+            this.chkBoxAssesmentFinansialPensiunan.Size = new System.Drawing.Size(99, 22);
             this.chkBoxAssesmentFinansialPensiunan.TabIndex = 141;
             this.chkBoxAssesmentFinansialPensiunan.Text = "Pensiunan";
             this.chkBoxAssesmentFinansialPensiunan.UseVisualStyleBackColor = true;
@@ -1348,10 +1343,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentFinansialWiraswasta.AutoSize = true;
             this.chkBoxAssesmentFinansialWiraswasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialWiraswasta.Location = new System.Drawing.Point(575, 471);
-            this.chkBoxAssesmentFinansialWiraswasta.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialWiraswasta.Location = new System.Drawing.Point(767, 580);
+            this.chkBoxAssesmentFinansialWiraswasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialWiraswasta.Name = "chkBoxAssesmentFinansialWiraswasta";
-            this.chkBoxAssesmentFinansialWiraswasta.Size = new System.Drawing.Size(89, 19);
+            this.chkBoxAssesmentFinansialWiraswasta.Size = new System.Drawing.Size(108, 22);
             this.chkBoxAssesmentFinansialWiraswasta.TabIndex = 140;
             this.chkBoxAssesmentFinansialWiraswasta.Text = "Wiraswasta";
             this.chkBoxAssesmentFinansialWiraswasta.UseVisualStyleBackColor = true;
@@ -1360,10 +1355,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentFinansialTdkKerja.AutoSize = true;
             this.chkBoxAssesmentFinansialTdkKerja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialTdkKerja.Location = new System.Drawing.Point(482, 471);
-            this.chkBoxAssesmentFinansialTdkKerja.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialTdkKerja.Location = new System.Drawing.Point(643, 580);
+            this.chkBoxAssesmentFinansialTdkKerja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialTdkKerja.Name = "chkBoxAssesmentFinansialTdkKerja";
-            this.chkBoxAssesmentFinansialTdkKerja.Size = new System.Drawing.Size(90, 19);
+            this.chkBoxAssesmentFinansialTdkKerja.Size = new System.Drawing.Size(107, 22);
             this.chkBoxAssesmentFinansialTdkKerja.TabIndex = 139;
             this.chkBoxAssesmentFinansialTdkKerja.Text = "Tdk bekerja";
             this.chkBoxAssesmentFinansialTdkKerja.UseVisualStyleBackColor = true;
@@ -1372,10 +1367,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentFinansialBuruh.AutoSize = true;
             this.chkBoxAssesmentFinansialBuruh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialBuruh.Location = new System.Drawing.Point(316, 471);
-            this.chkBoxAssesmentFinansialBuruh.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialBuruh.Location = new System.Drawing.Point(421, 580);
+            this.chkBoxAssesmentFinansialBuruh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialBuruh.Name = "chkBoxAssesmentFinansialBuruh";
-            this.chkBoxAssesmentFinansialBuruh.Size = new System.Drawing.Size(162, 19);
+            this.chkBoxAssesmentFinansialBuruh.Size = new System.Drawing.Size(192, 22);
             this.chkBoxAssesmentFinansialBuruh.TabIndex = 138;
             this.chkBoxAssesmentFinansialBuruh.Text = "Buruh/pekerja tidak tetap";
             this.chkBoxAssesmentFinansialBuruh.UseVisualStyleBackColor = true;
@@ -1384,10 +1379,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentFinansialPNS.AutoSize = true;
             this.chkBoxAssesmentFinansialPNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentFinansialPNS.Location = new System.Drawing.Point(196, 471);
-            this.chkBoxAssesmentFinansialPNS.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentFinansialPNS.Location = new System.Drawing.Point(261, 580);
+            this.chkBoxAssesmentFinansialPNS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentFinansialPNS.Name = "chkBoxAssesmentFinansialPNS";
-            this.chkBoxAssesmentFinansialPNS.Size = new System.Drawing.Size(114, 19);
+            this.chkBoxAssesmentFinansialPNS.Size = new System.Drawing.Size(133, 22);
             this.chkBoxAssesmentFinansialPNS.TabIndex = 137;
             this.chkBoxAssesmentFinansialPNS.Text = "Pegawai Negeri";
             this.chkBoxAssesmentFinansialPNS.UseVisualStyleBackColor = true;
@@ -1396,10 +1391,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label9.Location = new System.Drawing.Point(8, 471);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(11, 580);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 15);
+            this.label9.Size = new System.Drawing.Size(204, 18);
             this.label9.TabIndex = 136;
             this.label9.Text = "6.Finansial/Sumber Keuangan";
             // 
@@ -1407,10 +1401,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentDukunganKeluargaTidakAda.AutoSize = true;
             this.chkBoxAssesmentDukunganKeluargaTidakAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentDukunganKeluargaTidakAda.Location = new System.Drawing.Point(679, 445);
-            this.chkBoxAssesmentDukunganKeluargaTidakAda.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentDukunganKeluargaTidakAda.Location = new System.Drawing.Point(905, 548);
+            this.chkBoxAssesmentDukunganKeluargaTidakAda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentDukunganKeluargaTidakAda.Name = "chkBoxAssesmentDukunganKeluargaTidakAda";
-            this.chkBoxAssesmentDukunganKeluargaTidakAda.Size = new System.Drawing.Size(80, 19);
+            this.chkBoxAssesmentDukunganKeluargaTidakAda.Size = new System.Drawing.Size(94, 22);
             this.chkBoxAssesmentDukunganKeluargaTidakAda.TabIndex = 135;
             this.chkBoxAssesmentDukunganKeluargaTidakAda.Text = "Tidak ada";
             this.chkBoxAssesmentDukunganKeluargaTidakAda.UseVisualStyleBackColor = true;
@@ -1419,10 +1413,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentDukunganKeluargaKrisis.AutoSize = true;
             this.chkBoxAssesmentDukunganKeluargaKrisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentDukunganKeluargaKrisis.Location = new System.Drawing.Point(622, 445);
-            this.chkBoxAssesmentDukunganKeluargaKrisis.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentDukunganKeluargaKrisis.Location = new System.Drawing.Point(829, 548);
+            this.chkBoxAssesmentDukunganKeluargaKrisis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentDukunganKeluargaKrisis.Name = "chkBoxAssesmentDukunganKeluargaKrisis";
-            this.chkBoxAssesmentDukunganKeluargaKrisis.Size = new System.Drawing.Size(56, 19);
+            this.chkBoxAssesmentDukunganKeluargaKrisis.Size = new System.Drawing.Size(67, 22);
             this.chkBoxAssesmentDukunganKeluargaKrisis.TabIndex = 134;
             this.chkBoxAssesmentDukunganKeluargaKrisis.Text = "Krisis";
             this.chkBoxAssesmentDukunganKeluargaKrisis.UseVisualStyleBackColor = true;
@@ -1431,10 +1425,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.AutoSize = true;
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Location = new System.Drawing.Point(513, 445);
-            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Location = new System.Drawing.Point(684, 548);
+            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Name = "chkBoxAssesmentDukunganKeluargaDipertanyakan";
-            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Size = new System.Drawing.Size(105, 19);
+            this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Size = new System.Drawing.Size(124, 22);
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.TabIndex = 133;
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.Text = "Dipertanyakan";
             this.chkBoxAssesmentDukunganKeluargaDipertanyakan.UseVisualStyleBackColor = true;
@@ -1443,10 +1437,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentDukunganKeluargaHandal.AutoSize = true;
             this.chkBoxAssesmentDukunganKeluargaHandal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentDukunganKeluargaHandal.Location = new System.Drawing.Point(443, 445);
-            this.chkBoxAssesmentDukunganKeluargaHandal.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentDukunganKeluargaHandal.Location = new System.Drawing.Point(591, 548);
+            this.chkBoxAssesmentDukunganKeluargaHandal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentDukunganKeluargaHandal.Name = "chkBoxAssesmentDukunganKeluargaHandal";
-            this.chkBoxAssesmentDukunganKeluargaHandal.Size = new System.Drawing.Size(66, 19);
+            this.chkBoxAssesmentDukunganKeluargaHandal.Size = new System.Drawing.Size(76, 22);
             this.chkBoxAssesmentDukunganKeluargaHandal.TabIndex = 132;
             this.chkBoxAssesmentDukunganKeluargaHandal.Text = "Handal";
             this.chkBoxAssesmentDukunganKeluargaHandal.UseVisualStyleBackColor = true;
@@ -1455,10 +1449,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label8.Location = new System.Drawing.Point(8, 445);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(11, 548);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(431, 15);
+            this.label8.Size = new System.Drawing.Size(509, 18);
             this.label8.TabIndex = 131;
             this.label8.Text = "5.Tersediany Dukungan Keluarga,kemampuan merawat dari pemberi asuhan";
             // 
@@ -1466,10 +1459,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMentalGangguanSerius.AutoSize = true;
             this.chkBoxAssesmentMentalGangguanSerius.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMentalGangguanSerius.Location = new System.Drawing.Point(903, 424);
-            this.chkBoxAssesmentMentalGangguanSerius.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMentalGangguanSerius.Location = new System.Drawing.Point(1204, 522);
+            this.chkBoxAssesmentMentalGangguanSerius.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMentalGangguanSerius.Name = "chkBoxAssesmentMentalGangguanSerius";
-            this.chkBoxAssesmentMentalGangguanSerius.Size = new System.Drawing.Size(163, 19);
+            this.chkBoxAssesmentMentalGangguanSerius.Size = new System.Drawing.Size(192, 22);
             this.chkBoxAssesmentMentalGangguanSerius.TabIndex = 130;
             this.chkBoxAssesmentMentalGangguanSerius.Text = "Terjadi Gangguan Serius";
             this.chkBoxAssesmentMentalGangguanSerius.UseVisualStyleBackColor = true;
@@ -1478,10 +1471,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMentalGagalPengobatan.AutoSize = true;
             this.chkBoxAssesmentMentalGagalPengobatan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMentalGagalPengobatan.Location = new System.Drawing.Point(770, 424);
-            this.chkBoxAssesmentMentalGagalPengobatan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMentalGagalPengobatan.Location = new System.Drawing.Point(1027, 522);
+            this.chkBoxAssesmentMentalGagalPengobatan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMentalGagalPengobatan.Name = "chkBoxAssesmentMentalGagalPengobatan";
-            this.chkBoxAssesmentMentalGagalPengobatan.Size = new System.Drawing.Size(129, 19);
+            this.chkBoxAssesmentMentalGagalPengobatan.Size = new System.Drawing.Size(152, 22);
             this.chkBoxAssesmentMentalGagalPengobatan.TabIndex = 129;
             this.chkBoxAssesmentMentalGagalPengobatan.Text = "Gagal Pengobatan";
             this.chkBoxAssesmentMentalGagalPengobatan.UseVisualStyleBackColor = true;
@@ -1490,10 +1483,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMentalDlmPengobatan.AutoSize = true;
             this.chkBoxAssesmentMentalDlmPengobatan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMentalDlmPengobatan.Location = new System.Drawing.Point(647, 424);
-            this.chkBoxAssesmentMentalDlmPengobatan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMentalDlmPengobatan.Location = new System.Drawing.Point(863, 522);
+            this.chkBoxAssesmentMentalDlmPengobatan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMentalDlmPengobatan.Name = "chkBoxAssesmentMentalDlmPengobatan";
-            this.chkBoxAssesmentMentalDlmPengobatan.Size = new System.Drawing.Size(119, 19);
+            this.chkBoxAssesmentMentalDlmPengobatan.Size = new System.Drawing.Size(140, 22);
             this.chkBoxAssesmentMentalDlmPengobatan.TabIndex = 128;
             this.chkBoxAssesmentMentalDlmPengobatan.Text = "Dlm Pengobatan";
             this.chkBoxAssesmentMentalDlmPengobatan.UseVisualStyleBackColor = true;
@@ -1502,10 +1495,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMentalTidakAdaGangguan.AutoSize = true;
             this.chkBoxAssesmentMentalTidakAdaGangguan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMentalTidakAdaGangguan.Location = new System.Drawing.Point(512, 424);
-            this.chkBoxAssesmentMentalTidakAdaGangguan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMentalTidakAdaGangguan.Location = new System.Drawing.Point(683, 522);
+            this.chkBoxAssesmentMentalTidakAdaGangguan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMentalTidakAdaGangguan.Name = "chkBoxAssesmentMentalTidakAdaGangguan";
-            this.chkBoxAssesmentMentalTidakAdaGangguan.Size = new System.Drawing.Size(131, 19);
+            this.chkBoxAssesmentMentalTidakAdaGangguan.Size = new System.Drawing.Size(155, 22);
             this.chkBoxAssesmentMentalTidakAdaGangguan.TabIndex = 127;
             this.chkBoxAssesmentMentalTidakAdaGangguan.Text = "Tdk ada Gangguan";
             this.chkBoxAssesmentMentalTidakAdaGangguan.UseVisualStyleBackColor = true;
@@ -1514,10 +1507,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMentalAdaRiwayat.AutoSize = true;
             this.chkBoxAssesmentMentalAdaRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMentalAdaRiwayat.Location = new System.Drawing.Point(313, 424);
-            this.chkBoxAssesmentMentalAdaRiwayat.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMentalAdaRiwayat.Location = new System.Drawing.Point(417, 522);
+            this.chkBoxAssesmentMentalAdaRiwayat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMentalAdaRiwayat.Name = "chkBoxAssesmentMentalAdaRiwayat";
-            this.chkBoxAssesmentMentalAdaRiwayat.Size = new System.Drawing.Size(195, 19);
+            this.chkBoxAssesmentMentalAdaRiwayat.Size = new System.Drawing.Size(231, 22);
             this.chkBoxAssesmentMentalAdaRiwayat.TabIndex = 126;
             this.chkBoxAssesmentMentalAdaRiwayat.Text = "Ada Riwayat Gangguan Mental";
             this.chkBoxAssesmentMentalAdaRiwayat.UseVisualStyleBackColor = true;
@@ -1526,29 +1519,29 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label7.Location = new System.Drawing.Point(8, 424);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(11, 522);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 15);
+            this.label7.Size = new System.Drawing.Size(138, 18);
             this.label7.TabIndex = 125;
             this.label7.Text = "4.Kesehatan Mental";
             // 
             // txtAssesmentPerilakuLain
             // 
             this.txtAssesmentPerilakuLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtAssesmentPerilakuLain.Location = new System.Drawing.Point(675, 398);
+            this.txtAssesmentPerilakuLain.Location = new System.Drawing.Point(900, 490);
+            this.txtAssesmentPerilakuLain.Margin = new System.Windows.Forms.Padding(4);
             this.txtAssesmentPerilakuLain.Name = "txtAssesmentPerilakuLain";
-            this.txtAssesmentPerilakuLain.Size = new System.Drawing.Size(289, 21);
+            this.txtAssesmentPerilakuLain.Size = new System.Drawing.Size(384, 24);
             this.txtAssesmentPerilakuLain.TabIndex = 124;
             // 
             // chkBoxAssesmentPerilakuLain
             // 
             this.chkBoxAssesmentPerilakuLain.AutoSize = true;
             this.chkBoxAssesmentPerilakuLain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerilakuLain.Location = new System.Drawing.Point(592, 398);
-            this.chkBoxAssesmentPerilakuLain.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerilakuLain.Location = new System.Drawing.Point(789, 490);
+            this.chkBoxAssesmentPerilakuLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerilakuLain.Name = "chkBoxAssesmentPerilakuLain";
-            this.chkBoxAssesmentPerilakuLain.Size = new System.Drawing.Size(78, 19);
+            this.chkBoxAssesmentPerilakuLain.Size = new System.Drawing.Size(89, 22);
             this.chkBoxAssesmentPerilakuLain.TabIndex = 123;
             this.chkBoxAssesmentPerilakuLain.Text = "Lain-Lain";
             this.chkBoxAssesmentPerilakuLain.UseVisualStyleBackColor = true;
@@ -1557,10 +1550,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerilakuMarah.AutoSize = true;
             this.chkBoxAssesmentPerilakuMarah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerilakuMarah.Location = new System.Drawing.Point(531, 398);
-            this.chkBoxAssesmentPerilakuMarah.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerilakuMarah.Location = new System.Drawing.Point(708, 490);
+            this.chkBoxAssesmentPerilakuMarah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerilakuMarah.Name = "chkBoxAssesmentPerilakuMarah";
-            this.chkBoxAssesmentPerilakuMarah.Size = new System.Drawing.Size(62, 19);
+            this.chkBoxAssesmentPerilakuMarah.Size = new System.Drawing.Size(72, 22);
             this.chkBoxAssesmentPerilakuMarah.TabIndex = 122;
             this.chkBoxAssesmentPerilakuMarah.Text = "Marah";
             this.chkBoxAssesmentPerilakuMarah.UseVisualStyleBackColor = true;
@@ -1569,10 +1562,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerilakuDepresi.AutoSize = true;
             this.chkBoxAssesmentPerilakuDepresi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerilakuDepresi.Location = new System.Drawing.Point(458, 398);
-            this.chkBoxAssesmentPerilakuDepresi.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerilakuDepresi.Location = new System.Drawing.Point(611, 490);
+            this.chkBoxAssesmentPerilakuDepresi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerilakuDepresi.Name = "chkBoxAssesmentPerilakuDepresi";
-            this.chkBoxAssesmentPerilakuDepresi.Size = new System.Drawing.Size(69, 19);
+            this.chkBoxAssesmentPerilakuDepresi.Size = new System.Drawing.Size(81, 22);
             this.chkBoxAssesmentPerilakuDepresi.TabIndex = 121;
             this.chkBoxAssesmentPerilakuDepresi.Text = "Depresi";
             this.chkBoxAssesmentPerilakuDepresi.UseVisualStyleBackColor = true;
@@ -1581,10 +1574,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerilakuCemas.AutoSize = true;
             this.chkBoxAssesmentPerilakuCemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerilakuCemas.Location = new System.Drawing.Point(386, 398);
-            this.chkBoxAssesmentPerilakuCemas.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerilakuCemas.Location = new System.Drawing.Point(515, 490);
+            this.chkBoxAssesmentPerilakuCemas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerilakuCemas.Name = "chkBoxAssesmentPerilakuCemas";
-            this.chkBoxAssesmentPerilakuCemas.Size = new System.Drawing.Size(65, 19);
+            this.chkBoxAssesmentPerilakuCemas.Size = new System.Drawing.Size(78, 22);
             this.chkBoxAssesmentPerilakuCemas.TabIndex = 120;
             this.chkBoxAssesmentPerilakuCemas.Text = "Cemas";
             this.chkBoxAssesmentPerilakuCemas.UseVisualStyleBackColor = true;
@@ -1593,10 +1586,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentPerilakuTenang.AutoSize = true;
             this.chkBoxAssesmentPerilakuTenang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPerilakuTenang.Location = new System.Drawing.Point(313, 398);
-            this.chkBoxAssesmentPerilakuTenang.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPerilakuTenang.Location = new System.Drawing.Point(417, 490);
+            this.chkBoxAssesmentPerilakuTenang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPerilakuTenang.Name = "chkBoxAssesmentPerilakuTenang";
-            this.chkBoxAssesmentPerilakuTenang.Size = new System.Drawing.Size(68, 19);
+            this.chkBoxAssesmentPerilakuTenang.Size = new System.Drawing.Size(79, 22);
             this.chkBoxAssesmentPerilakuTenang.TabIndex = 119;
             this.chkBoxAssesmentPerilakuTenang.Text = "Tenang";
             this.chkBoxAssesmentPerilakuTenang.UseVisualStyleBackColor = true;
@@ -1605,29 +1598,29 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label6.Location = new System.Drawing.Point(8, 398);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(11, 490);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 15);
+            this.label6.Size = new System.Drawing.Size(162, 18);
             this.label6.TabIndex = 118;
             this.label6.Text = "3.Perilaku Psikokultural";
             // 
             // txtPernahDirawat
             // 
             this.txtPernahDirawat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtPernahDirawat.Location = new System.Drawing.Point(575, 373);
+            this.txtPernahDirawat.Location = new System.Drawing.Point(767, 459);
+            this.txtPernahDirawat.Margin = new System.Windows.Forms.Padding(4);
             this.txtPernahDirawat.Name = "txtPernahDirawat";
-            this.txtPernahDirawat.Size = new System.Drawing.Size(389, 21);
+            this.txtPernahDirawat.Size = new System.Drawing.Size(517, 24);
             this.txtPernahDirawat.TabIndex = 117;
             // 
             // chkBoxAssesmentPernahDirawat
             // 
             this.chkBoxAssesmentPernahDirawat.AutoSize = true;
             this.chkBoxAssesmentPernahDirawat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentPernahDirawat.Location = new System.Drawing.Point(458, 373);
-            this.chkBoxAssesmentPernahDirawat.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentPernahDirawat.Location = new System.Drawing.Point(611, 459);
+            this.chkBoxAssesmentPernahDirawat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentPernahDirawat.Name = "chkBoxAssesmentPernahDirawat";
-            this.chkBoxAssesmentPernahDirawat.Size = new System.Drawing.Size(111, 19);
+            this.chkBoxAssesmentPernahDirawat.Size = new System.Drawing.Size(131, 22);
             this.chkBoxAssesmentPernahDirawat.TabIndex = 116;
             this.chkBoxAssesmentPernahDirawat.Text = "Pernah Dirawat";
             this.chkBoxAssesmentPernahDirawat.UseVisualStyleBackColor = true;
@@ -1636,10 +1629,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentTdkPernahDirawat.AutoSize = true;
             this.chkBoxAssesmentTdkPernahDirawat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentTdkPernahDirawat.Location = new System.Drawing.Point(313, 373);
-            this.chkBoxAssesmentTdkPernahDirawat.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentTdkPernahDirawat.Location = new System.Drawing.Point(417, 459);
+            this.chkBoxAssesmentTdkPernahDirawat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentTdkPernahDirawat.Name = "chkBoxAssesmentTdkPernahDirawat";
-            this.chkBoxAssesmentTdkPernahDirawat.Size = new System.Drawing.Size(141, 19);
+            this.chkBoxAssesmentTdkPernahDirawat.Size = new System.Drawing.Size(166, 22);
             this.chkBoxAssesmentTdkPernahDirawat.TabIndex = 115;
             this.chkBoxAssesmentTdkPernahDirawat.Text = "Tidak pernah dirawat";
             this.chkBoxAssesmentTdkPernahDirawat.UseVisualStyleBackColor = true;
@@ -1648,10 +1641,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(8, 373);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(11, 459);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 15);
+            this.label5.Size = new System.Drawing.Size(146, 18);
             this.label5.TabIndex = 114;
             this.label5.Text = "2.Riwayat Kesehatan";
             // 
@@ -1659,10 +1651,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentTotalBantuan.AutoSize = true;
             this.chkBoxAssesmentTotalBantuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentTotalBantuan.Location = new System.Drawing.Point(552, 350);
-            this.chkBoxAssesmentTotalBantuan.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentTotalBantuan.Location = new System.Drawing.Point(736, 431);
+            this.chkBoxAssesmentTotalBantuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentTotalBantuan.Name = "chkBoxAssesmentTotalBantuan";
-            this.chkBoxAssesmentTotalBantuan.Size = new System.Drawing.Size(102, 19);
+            this.chkBoxAssesmentTotalBantuan.Size = new System.Drawing.Size(121, 22);
             this.chkBoxAssesmentTotalBantuan.TabIndex = 113;
             this.chkBoxAssesmentTotalBantuan.Text = "Total Bantuan";
             this.chkBoxAssesmentTotalBantuan.UseVisualStyleBackColor = true;
@@ -1671,10 +1663,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMandiriSebagian.AutoSize = true;
             this.chkBoxAssesmentMandiriSebagian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMandiriSebagian.Location = new System.Drawing.Point(424, 350);
-            this.chkBoxAssesmentMandiriSebagian.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMandiriSebagian.Location = new System.Drawing.Point(565, 431);
+            this.chkBoxAssesmentMandiriSebagian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMandiriSebagian.Name = "chkBoxAssesmentMandiriSebagian";
-            this.chkBoxAssesmentMandiriSebagian.Size = new System.Drawing.Size(124, 19);
+            this.chkBoxAssesmentMandiriSebagian.Size = new System.Drawing.Size(143, 22);
             this.chkBoxAssesmentMandiriSebagian.TabIndex = 112;
             this.chkBoxAssesmentMandiriSebagian.Text = "Mandiri Sebagian";
             this.chkBoxAssesmentMandiriSebagian.UseVisualStyleBackColor = true;
@@ -1683,10 +1675,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxAssesmentMandiriPenuh.AutoSize = true;
             this.chkBoxAssesmentMandiriPenuh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxAssesmentMandiriPenuh.Location = new System.Drawing.Point(313, 350);
-            this.chkBoxAssesmentMandiriPenuh.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxAssesmentMandiriPenuh.Location = new System.Drawing.Point(417, 431);
+            this.chkBoxAssesmentMandiriPenuh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxAssesmentMandiriPenuh.Name = "chkBoxAssesmentMandiriPenuh";
-            this.chkBoxAssesmentMandiriPenuh.Size = new System.Drawing.Size(107, 19);
+            this.chkBoxAssesmentMandiriPenuh.Size = new System.Drawing.Size(124, 22);
             this.chkBoxAssesmentMandiriPenuh.TabIndex = 111;
             this.chkBoxAssesmentMandiriPenuh.Text = "Mandiri Penuh";
             this.chkBoxAssesmentMandiriPenuh.UseVisualStyleBackColor = true;
@@ -1695,10 +1687,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(8, 350);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(11, 431);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 15);
+            this.label4.Size = new System.Drawing.Size(361, 18);
             this.label4.TabIndex = 110;
             this.label4.Text = "1.Fisik,Fungsional,kekuatan.kemampuan/kemandirian";
             // 
@@ -1706,10 +1697,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 331);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 407);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 19);
+            this.label3.Size = new System.Drawing.Size(113, 24);
             this.label3.TabIndex = 109;
             this.label3.Text = "ASESSMEN";
             // 
@@ -1717,10 +1707,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningPasienDiidintifikasi.AutoSize = true;
             this.chkBoxSkriningPasienDiidintifikasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningPasienDiidintifikasi.Location = new System.Drawing.Point(11, 310);
-            this.chkBoxSkriningPasienDiidintifikasi.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningPasienDiidintifikasi.Location = new System.Drawing.Point(15, 382);
+            this.chkBoxSkriningPasienDiidintifikasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningPasienDiidintifikasi.Name = "chkBoxSkriningPasienDiidintifikasi";
-            this.chkBoxSkriningPasienDiidintifikasi.Size = new System.Drawing.Size(649, 19);
+            this.chkBoxSkriningPasienDiidintifikasi.Size = new System.Drawing.Size(769, 22);
             this.chkBoxSkriningPasienDiidintifikasi.TabIndex = 108;
             this.chkBoxSkriningPasienDiidintifikasi.Text = "Kasus yang diinditifikasi rencana pemulangannya penting/berisiko ayau yang membut" +
     "uhkan kontinuitas pelayanan";
@@ -1730,10 +1720,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningFungsionalRendah.AutoSize = true;
             this.chkBoxSkriningFungsionalRendah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningFungsionalRendah.Location = new System.Drawing.Point(11, 287);
-            this.chkBoxSkriningFungsionalRendah.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningFungsionalRendah.Location = new System.Drawing.Point(15, 353);
+            this.chkBoxSkriningFungsionalRendah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningFungsionalRendah.Name = "chkBoxSkriningFungsionalRendah";
-            this.chkBoxSkriningFungsionalRendah.Size = new System.Drawing.Size(330, 19);
+            this.chkBoxSkriningFungsionalRendah.Size = new System.Drawing.Size(390, 22);
             this.chkBoxSkriningFungsionalRendah.TabIndex = 107;
             this.chkBoxSkriningFungsionalRendah.Text = "Status fungsional rendah,kebutuhan bantuan ADL tinggi";
             this.chkBoxSkriningFungsionalRendah.UseVisualStyleBackColor = true;
@@ -1742,10 +1732,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningKronis.AutoSize = true;
             this.chkBoxSkriningKronis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningKronis.Location = new System.Drawing.Point(11, 264);
-            this.chkBoxSkriningKronis.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningKronis.Location = new System.Drawing.Point(15, 325);
+            this.chkBoxSkriningKronis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningKronis.Name = "chkBoxSkriningKronis";
-            this.chkBoxSkriningKronis.Size = new System.Drawing.Size(303, 19);
+            this.chkBoxSkriningKronis.Size = new System.Drawing.Size(363, 22);
             this.chkBoxSkriningKronis.TabIndex = 106;
             this.chkBoxSkriningKronis.Text = "Pasien dengan penyakit kronis,katastropik,terminal";
             this.chkBoxSkriningKronis.UseVisualStyleBackColor = true;
@@ -1754,10 +1744,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningKognitif.AutoSize = true;
             this.chkBoxSkriningKognitif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningKognitif.Location = new System.Drawing.Point(11, 241);
-            this.chkBoxSkriningKognitif.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningKognitif.Location = new System.Drawing.Point(15, 297);
+            this.chkBoxSkriningKognitif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningKognitif.Name = "chkBoxSkriningKognitif";
-            this.chkBoxSkriningKognitif.Size = new System.Drawing.Size(229, 19);
+            this.chkBoxSkriningKognitif.Size = new System.Drawing.Size(270, 22);
             this.chkBoxSkriningKognitif.TabIndex = 105;
             this.chkBoxSkriningKognitif.Text = "Pasien dengan fungsi kognitif rendah";
             this.chkBoxSkriningKognitif.UseVisualStyleBackColor = true;
@@ -1766,10 +1756,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningBiayaKompleks.AutoSize = true;
             this.chkBoxSkriningBiayaKompleks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningBiayaKompleks.Location = new System.Drawing.Point(11, 218);
-            this.chkBoxSkriningBiayaKompleks.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningBiayaKompleks.Location = new System.Drawing.Point(15, 268);
+            this.chkBoxSkriningBiayaKompleks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningBiayaKompleks.Name = "chkBoxSkriningBiayaKompleks";
-            this.chkBoxSkriningBiayaKompleks.Size = new System.Drawing.Size(308, 19);
+            this.chkBoxSkriningBiayaKompleks.Size = new System.Drawing.Size(363, 22);
             this.chkBoxSkriningBiayaKompleks.TabIndex = 104;
             this.chkBoxSkriningBiayaKompleks.Text = "Pasien dengan kemungkinan pembiayaan komplek";
             this.chkBoxSkriningBiayaKompleks.UseVisualStyleBackColor = true;
@@ -1778,10 +1768,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningRumit.AutoSize = true;
             this.chkBoxSkriningRumit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningRumit.Location = new System.Drawing.Point(11, 195);
-            this.chkBoxSkriningRumit.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningRumit.Location = new System.Drawing.Point(15, 240);
+            this.chkBoxSkriningRumit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningRumit.Name = "chkBoxSkriningRumit";
-            this.chkBoxSkriningRumit.Size = new System.Drawing.Size(383, 19);
+            this.chkBoxSkriningRumit.Size = new System.Drawing.Size(459, 22);
             this.chkBoxSkriningRumit.TabIndex = 103;
             this.chkBoxSkriningRumit.Text = "Pasien kasus komplek/rumit yang dikelola oleh 2 DPJP atau lebih";
             this.chkBoxSkriningRumit.UseVisualStyleBackColor = true;
@@ -1790,10 +1780,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningResikoKomplain.AutoSize = true;
             this.chkBoxSkriningResikoKomplain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningResikoKomplain.Location = new System.Drawing.Point(11, 172);
-            this.chkBoxSkriningResikoKomplain.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningResikoKomplain.Location = new System.Drawing.Point(15, 212);
+            this.chkBoxSkriningResikoKomplain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningResikoKomplain.Name = "chkBoxSkriningResikoKomplain";
-            this.chkBoxSkriningResikoKomplain.Size = new System.Drawing.Size(146, 19);
+            this.chkBoxSkriningResikoKomplain.Size = new System.Drawing.Size(176, 22);
             this.chkBoxSkriningResikoKomplain.TabIndex = 102;
             this.chkBoxSkriningResikoKomplain.Text = "Potensi resiko koplain";
             this.chkBoxSkriningResikoKomplain.UseVisualStyleBackColor = true;
@@ -1802,10 +1792,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningPrioritas.AutoSize = true;
             this.chkBoxSkriningPrioritas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningPrioritas.Location = new System.Drawing.Point(11, 149);
-            this.chkBoxSkriningPrioritas.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningPrioritas.Location = new System.Drawing.Point(15, 183);
+            this.chkBoxSkriningPrioritas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningPrioritas.Name = "chkBoxSkriningPrioritas";
-            this.chkBoxSkriningPrioritas.Size = new System.Drawing.Size(511, 19);
+            this.chkBoxSkriningPrioritas.Size = new System.Drawing.Size(606, 22);
             this.chkBoxSkriningPrioritas.TabIndex = 101;
             this.chkBoxSkriningPrioritas.Text = "Pasien prioritas pelayanan bedah dan kardiologi yang terkait pelaksnaan clinical " +
     "pathway";
@@ -1815,10 +1805,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningUsia75.AutoSize = true;
             this.chkBoxSkriningUsia75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningUsia75.Location = new System.Drawing.Point(308, 34);
-            this.chkBoxSkriningUsia75.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningUsia75.Location = new System.Drawing.Point(411, 42);
+            this.chkBoxSkriningUsia75.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningUsia75.Name = "chkBoxSkriningUsia75";
-            this.chkBoxSkriningUsia75.Size = new System.Drawing.Size(67, 19);
+            this.chkBoxSkriningUsia75.Size = new System.Drawing.Size(80, 22);
             this.chkBoxSkriningUsia75.TabIndex = 100;
             this.chkBoxSkriningUsia75.Text = "< 75 Th";
             this.chkBoxSkriningUsia75.UseVisualStyleBackColor = true;
@@ -1827,10 +1817,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningUsia60.AutoSize = true;
             this.chkBoxSkriningUsia60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningUsia60.Location = new System.Drawing.Point(110, 34);
-            this.chkBoxSkriningUsia60.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningUsia60.Location = new System.Drawing.Point(147, 42);
+            this.chkBoxSkriningUsia60.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningUsia60.Name = "chkBoxSkriningUsia60";
-            this.chkBoxSkriningUsia60.Size = new System.Drawing.Size(194, 19);
+            this.chkBoxSkriningUsia60.Size = new System.Drawing.Size(228, 22);
             this.chkBoxSkriningUsia60.TabIndex = 99;
             this.chkBoxSkriningUsia60.Text = ">60 th dengan ketergantungan";
             this.chkBoxSkriningUsia60.UseVisualStyleBackColor = true;
@@ -1839,10 +1829,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningBPJSOverINA.AutoSize = true;
             this.chkBoxSkriningBPJSOverINA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningBPJSOverINA.Location = new System.Drawing.Point(11, 126);
-            this.chkBoxSkriningBPJSOverINA.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningBPJSOverINA.Location = new System.Drawing.Point(15, 155);
+            this.chkBoxSkriningBPJSOverINA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningBPJSOverINA.Name = "chkBoxSkriningBPJSOverINA";
-            this.chkBoxSkriningBPJSOverINA.Size = new System.Drawing.Size(282, 19);
+            this.chkBoxSkriningBPJSOverINA.Size = new System.Drawing.Size(338, 22);
             this.chkBoxSkriningBPJSOverINA.TabIndex = 98;
             this.chkBoxSkriningBPJSOverINA.Text = "Pasien BPJS dengan biaya melebihi INA-CBGs";
             this.chkBoxSkriningBPJSOverINA.UseVisualStyleBackColor = true;
@@ -1851,10 +1841,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningBPJSLos5.AutoSize = true;
             this.chkBoxSkriningBPJSLos5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningBPJSLos5.Location = new System.Drawing.Point(11, 103);
-            this.chkBoxSkriningBPJSLos5.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningBPJSLos5.Location = new System.Drawing.Point(15, 127);
+            this.chkBoxSkriningBPJSLos5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningBPJSLos5.Name = "chkBoxSkriningBPJSLos5";
-            this.chkBoxSkriningBPJSLos5.Size = new System.Drawing.Size(229, 19);
+            this.chkBoxSkriningBPJSLos5.Size = new System.Drawing.Size(278, 22);
             this.chkBoxSkriningBPJSLos5.TabIndex = 97;
             this.chkBoxSkriningBPJSLos5.Text = "Pasien BPJS LOS > 5 hari/biaya > 5 jt";
             this.chkBoxSkriningBPJSLos5.UseVisualStyleBackColor = true;
@@ -1863,10 +1853,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningBiaya10jt.AutoSize = true;
             this.chkBoxSkriningBiaya10jt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningBiaya10jt.Location = new System.Drawing.Point(11, 80);
-            this.chkBoxSkriningBiaya10jt.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningBiaya10jt.Location = new System.Drawing.Point(15, 98);
+            this.chkBoxSkriningBiaya10jt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningBiaya10jt.Name = "chkBoxSkriningBiaya10jt";
-            this.chkBoxSkriningBiaya10jt.Size = new System.Drawing.Size(192, 19);
+            this.chkBoxSkriningBiaya10jt.Size = new System.Drawing.Size(229, 22);
             this.chkBoxSkriningBiaya10jt.TabIndex = 96;
             this.chkBoxSkriningBiaya10jt.Text = "Pasien Umum biayanya > 10 jt";
             this.chkBoxSkriningBiaya10jt.UseVisualStyleBackColor = true;
@@ -1875,10 +1865,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningCritical.AutoSize = true;
             this.chkBoxSkriningCritical.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningCritical.Location = new System.Drawing.Point(11, 57);
-            this.chkBoxSkriningCritical.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningCritical.Location = new System.Drawing.Point(15, 70);
+            this.chkBoxSkriningCritical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningCritical.Name = "chkBoxSkriningCritical";
-            this.chkBoxSkriningCritical.Size = new System.Drawing.Size(217, 19);
+            this.chkBoxSkriningCritical.Size = new System.Drawing.Size(257, 22);
             this.chkBoxSkriningCritical.TabIndex = 95;
             this.chkBoxSkriningCritical.Text = "Pasien Yang dirawat di critical area";
             this.chkBoxSkriningCritical.UseVisualStyleBackColor = true;
@@ -1887,10 +1877,10 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.chkBoxSkriningUsia18.AutoSize = true;
             this.chkBoxSkriningUsia18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxSkriningUsia18.Location = new System.Drawing.Point(11, 34);
-            this.chkBoxSkriningUsia18.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBoxSkriningUsia18.Location = new System.Drawing.Point(15, 42);
+            this.chkBoxSkriningUsia18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkBoxSkriningUsia18.Name = "chkBoxSkriningUsia18";
-            this.chkBoxSkriningUsia18.Size = new System.Drawing.Size(95, 19);
+            this.chkBoxSkriningUsia18.Size = new System.Drawing.Size(114, 22);
             this.chkBoxSkriningUsia18.TabIndex = 94;
             this.chkBoxSkriningUsia18.Text = "Usia < 18 Th";
             this.chkBoxSkriningUsia18.UseVisualStyleBackColor = true;
@@ -1899,10 +1889,9 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.Size = new System.Drawing.Size(83, 24);
             this.label2.TabIndex = 90;
             this.label2.Text = "Skrining";
             // 
@@ -1910,29 +1899,29 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(392, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(523, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 19);
+            this.label1.Size = new System.Drawing.Size(527, 24);
             this.label1.TabIndex = 89;
             this.label1.Text = "FORM A- Evaluasi Awal Manajer Pelayanan Pasien (MPP)";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(970, 13);
+            this.panel1.Location = new System.Drawing.Point(1293, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 76);
+            this.panel1.Size = new System.Drawing.Size(354, 93);
             this.panel1.TabIndex = 402;
             // 
             // FormInput
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1273, 749);
+            this.ClientSize = new System.Drawing.Size(1697, 922);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sql";
@@ -1955,39 +1944,37 @@ namespace Casemix.Forms.CasemixForm
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label26;
         internal System.Windows.Forms.Button btnSIMPAN;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCatatan;
         private System.Windows.Forms.Label label25;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dgPiutang;
         private System.Windows.Forms.TabPage tabPage2;
-        internal System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox88;
-        private System.Windows.Forms.CheckBox checkBox87;
-        private System.Windows.Forms.CheckBox checkBox86;
-        private System.Windows.Forms.CheckBox checkBox85;
-        private System.Windows.Forms.CheckBox checkBox84;
+        internal System.Windows.Forms.Button btnSimpanB;
+        private System.Windows.Forms.TextBox txtTerminasiAlasan2;
+        private System.Windows.Forms.TextBox txtTerminasiAlasan1;
+        private System.Windows.Forms.CheckBox chkBoxTerminasiAlasanMengakhiri;
+        private System.Windows.Forms.CheckBox chkBoxTerminasiMemastikanBiaya;
+        private System.Windows.Forms.CheckBox chkBoxTerminasiPemantauan;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckBox checkBox83;
-        private System.Windows.Forms.CheckBox checkBox82;
+        private System.Windows.Forms.CheckBox chkBoxHasilPelayananPembahasanDPJP;
+        private System.Windows.Forms.CheckBox chkBoxHasilPelayananPasienPaham;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox checkBox81;
+        private System.Windows.Forms.CheckBox chkBoxAdvokasiPasien;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox checkBox73;
-        private System.Windows.Forms.CheckBox checkBox78;
-        private System.Windows.Forms.CheckBox checkBox79;
-        private System.Windows.Forms.CheckBox checkBox80;
+        private System.Windows.Forms.CheckBox chkBoxFasilitasiKoordinasiPemulangan;
+        private System.Windows.Forms.CheckBox chkBoxFasilitasiMediasi;
+        private System.Windows.Forms.CheckBox chkBoxFasilitasiKoordinasiAhliGizi;
+        private System.Windows.Forms.CheckBox chkBoxFasilitasiDiskusi;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.CheckBox checkBox74;
-        private System.Windows.Forms.CheckBox checkBox75;
-        private System.Windows.Forms.CheckBox checkBox76;
-        private System.Windows.Forms.CheckBox checkBox77;
+        private System.Windows.Forms.CheckBox chkBoxMonitoringPembiayaan;
+        private System.Windows.Forms.CheckBox chkBoxMonitoringEdukasi;
+        private System.Windows.Forms.CheckBox chkBoxMonitoringKolaborasi;
+        private System.Windows.Forms.CheckBox chkBoxMonitoringCatatanPerkembangan;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.CheckBox checkBox72;
-        private System.Windows.Forms.CheckBox checkBox71;
-        private System.Windows.Forms.CheckBox checkBox70;
-        private System.Windows.Forms.CheckBox checkBox69;
-        private System.Windows.Forms.CheckBox checkBox68;
+        private System.Windows.Forms.CheckBox chkBoxPelaksanaanMemastikanBiaya;
+        private System.Windows.Forms.CheckBox chkBoxPelaksanaanPertemuaanDPJP;
+        private System.Windows.Forms.CheckBox chkBoxPelaksanaanPartisipasiKeluarga;
+        private System.Windows.Forms.CheckBox chkBoxPelaksanaanKebutuhanEdukasi;
+        private System.Windows.Forms.CheckBox chkBoxPelaksanaanMemastikanDiagnosis;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabControl tabControl1;
@@ -2065,25 +2052,25 @@ namespace Casemix.Forms.CasemixForm
         private System.Windows.Forms.CheckBox chkBoxAssesmentLegalTdk;
         private System.Windows.Forms.CheckBox chkBoxAssesmentLegalAda;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox41;
-        private System.Windows.Forms.CheckBox checkBox56;
-        private System.Windows.Forms.CheckBox checkBox57;
-        private System.Windows.Forms.CheckBox checkBox58;
-        private System.Windows.Forms.CheckBox checkBox59;
-        private System.Windows.Forms.CheckBox checkBox60;
-        private System.Windows.Forms.CheckBox checkBox61;
-        private System.Windows.Forms.CheckBox checkBox62;
-        private System.Windows.Forms.CheckBox checkBox63;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiKetidakpatuhan;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiOverUtiisasi;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiTidakSesuaiKebutuhan;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiEdukasi;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiDukunganKeluarga;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiPenurunanDeterminasiPasien;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiKendalaKeuangan;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiPemulanganPasien;
+        private System.Windows.Forms.CheckBox chkBoxIdentifikasiLain;
+        private System.Windows.Forms.TextBox txtIdentifikasiLain;
         internal System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox65;
-        private System.Windows.Forms.CheckBox checkBox66;
-        private System.Windows.Forms.CheckBox checkBox67;
-        private System.Windows.Forms.CheckBox checkBox89;
-        private System.Windows.Forms.CheckBox checkBox90;
-        private System.Windows.Forms.CheckBox checkBox91;
-        private System.Windows.Forms.CheckBox checkBox92;
+        private System.Windows.Forms.TextBox txtPerencanaanLain;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanLain;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanMonitor;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanRencanakanKeterlibatanPasien;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanRencanakanPemberianInformasi;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanFasilitasi;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanPastikanRencanaAsuhan;
+        private System.Windows.Forms.CheckBox chkBoxPerencanaanIdentifikasi;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label lblNoReg;
@@ -2092,5 +2079,7 @@ namespace Casemix.Forms.CasemixForm
         private System.Windows.Forms.Label lblNoRM;
         private System.Windows.Forms.Label lblNama;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
     }
 }

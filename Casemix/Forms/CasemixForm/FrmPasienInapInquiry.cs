@@ -44,11 +44,15 @@ namespace Casemix.Forms.CasemixForm
             // formInput.ShowDialog();
             // formInput.Close();
             getPasien();
+
         }
 
         private void getPasien()
         {
             DataTable dt = new DataTable();
+            dgPiutang.DataSource = null;
+            dgPiutang.Columns.Clear();
+            
            string query = @"SELECT
 	                    RMP_inap.vc_no_reg,
 	                    RMP_inap.vc_no_rm,
@@ -139,7 +143,7 @@ namespace Casemix.Forms.CasemixForm
             var nama = ClsUtil.getValueFromGridEvent(dgPiutang, dgPiutang.CurrentCell.RowIndex, "vc_nama_p");
             FormInput formInput = new FormInput(noReg,noRM,nama);
             formInput.ShowDialog();
-             formInput.Close();
+            formInput.Close();
         }
 
         private void dgPiutang_AutoGeneratingColumn(object sender, Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnArgs e)

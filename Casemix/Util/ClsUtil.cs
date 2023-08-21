@@ -37,7 +37,7 @@ namespace Casemix.Util
         }
 
         public static string getValueFromGridEvent(SfDataGrid dataGrid, int rowIndex, string model)
-        {
+        {   
             var record = dataGrid.View.Records[dataGrid.TableControl.ResolveToRecordIndex(rowIndex)];
             var value = dataGrid.View.GetPropertyAccessProvider().GetValue((record as RecordEntry).Data, model);
             return value.ToString();
