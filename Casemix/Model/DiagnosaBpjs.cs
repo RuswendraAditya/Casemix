@@ -34,6 +34,8 @@ namespace Casemix.Model
         public int los { get; set; }
         public List<AnalisaTarif> analisaTarifs { get; set; }
 
+        public string klinik { get; set; }
+
 
 
     }

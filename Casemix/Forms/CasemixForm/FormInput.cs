@@ -41,7 +41,6 @@ namespace Casemix.Forms.CasemixForm
             getDataExistsB();
             getCatatan();
             
-            this.dgPiutang.CellButtonClick += deleteCatatan_click;
         }
         public void getDataExistsA()
         {

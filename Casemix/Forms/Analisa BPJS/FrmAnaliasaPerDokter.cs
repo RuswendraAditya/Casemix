@@ -88,6 +88,7 @@ namespace Casemix.Forms.Analisa_BPJS
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "piutangRS", FieldHeader = "Piutang RS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true, FieldCaption = "Piutang RS" });
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "umbal", FieldHeader = "Umbal BPJS", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true });
             this.pivotGridControl1.PivotCalculations.Add(new PivotComputationInfo { FieldName = "selisihUmbal", FieldHeader = "Selisih DUmbal", SummaryType = SummaryType.Sum, Format = "#,##0", AllowSort = true, FieldCaption = "Selisih Umbal" });
+           
 
             if (cmbJenisPel.Text.Equals("Rawat Inap"))
             {
@@ -224,7 +225,7 @@ namespace Casemix.Forms.Analisa_BPJS
 	                            kartuPiutang.dc_potongan,
                                 kartuPiutang.dc_piutang_rs,
                                 ISNULL(tagihan.dc_umbal,0) as dc_umbal,
-                                ISNULL(tagihan.dc_umbal,0)-kartuPiutang.dc_piutang_rs as selisihUmbal
+                                ISNULL(tagihan.dc_umbal,0)-kartuPiutang.dc_piutang_rs as selisihUmbal,vc_n_klinik as klinik
                             FROM
 	                            AKPRJ_DTagihan tagihan
 	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = tagihan.vc_no_sep
@@ -232,6 +233,7 @@ namespace Casemix.Forms.Analisa_BPJS
                                 INNER JOIN RMKunjung kunjung on kunjung.vc_no_regj = tagihan.vc_no_regj
                                 INNER JOIN RMpasien pasien on pasien.vc_no_rm = kunjung.vc_no_rm
 	                            INNER JOIN AKPRJ_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_regj = tagihan.vc_no_regj 
+                                INNER JOIN RMKLINIK klinik on klinik.vc_k_klinik = kunjung.VC_K_KLINIK
 								left join SDMJ_Pend spesialis on spesialis.vc_k_jpend = dokter.vc_k_jpend
                             WHERE
 	                            ISNULL( sep.bt_hapus, '0' ) <> 1
@@ -263,7 +265,8 @@ namespace Casemix.Forms.Analisa_BPJS
                                     piutangRS = (decimal)dr["dc_piutang_rs"],
                                     umbal = (decimal)dr["dc_umbal"],
                                     selisihUmbal = (decimal)dr["selisihUmbal"],
-                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
+                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString()),
+                                    klinik = dr["klinik"].ToString()
                                 }).ToList();
             return diagnosaBpjsList;
 
@@ -458,7 +461,7 @@ namespace Casemix.Forms.Analisa_BPJS
                                     umbal = (decimal)dr["dc_umbal"],
                                     selisihUmbal = (decimal)dr["selisihUmbal"],
                                     los = (int)dr["los"],
-                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
+                                    analisaTarifs = getTarifRIByReg(dr["vc_no_reg"].ToString())
                                 }).ToList();
             return diagnosaBpjsList;
 

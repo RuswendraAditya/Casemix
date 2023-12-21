@@ -1,6 +1,7 @@
 ﻿using Casemix.Forms.Analisa_Non_BPJS;
 using Casemix.Util;
 using Syncfusion.WinForms.DataGrid;
+using Syncfusion.WinForms.DataGrid.Enums;
 using Syncfusion.WinForms.DataGrid.Events;
 using System;
 using System.Collections.Generic;
@@ -57,7 +58,10 @@ namespace Casemix.Forms.CasemixForm
 	                    RMP_inap.vc_no_reg,
 	                    RMP_inap.vc_no_rm,
 	                    RMPasien.vc_nama_p,
-	                    RMP_inap.dt_tgl_msk ,RMRuang.VC_n_ruang
+	                    RMP_inap.dt_tgl_msk ,RMRuang.VC_n_ruang,(SELECT COUNT(1) formAexists FROM CASEMIX_Form_A
+where vc_no_reg  = RMP_inap.vc_no_Reg) formAexists,
+(SELECT COUNT(1) formBexists FROM CASEMIX_Form_B
+where vc_no_reg  = RMP_inap.vc_no_Reg) formBexists
                     FROM
 	                    RMP_inap
 	                    INNER JOIN RMKamar ON (
@@ -133,7 +137,34 @@ namespace Casemix.Forms.CasemixForm
                
                 Width = 180
             }); ;
-            this.dgPiutang.CellButtonClick += pilihPasien_click;
+            dgPiutang.QueryRowStyle += SfDataGrid_QueryRowStyle1;
+            //   this.dgPiutang.CellButtonClick += pilihPasien_click;
+        }
+
+        private void SfDataGrid_QueryRowStyle1(object sender, QueryRowStyleEventArgs e)
+        {
+            if (e.RowData == null || e.RowType != RowType.DefaultRow)
+
+                return;
+            int rowIndex = e.RowIndex;
+            int adaFormA = int.Parse(ClsUtil.getValueFromGridEvent(dgPiutang, rowIndex, "formAexists"));
+            int adaFormB = int.Parse(ClsUtil.getValueFromGridEvent(dgPiutang, rowIndex, "formBexists"));
+            if (adaFormA == 1 || adaFormB == 1)
+            {
+
+                e.Style.BackColor = Color.CadetBlue;
+            }
+            if (adaFormA == 1 && adaFormB == 1)
+            {
+
+                e.Style.BackColor = Color.GreenYellow;
+            }
+            if (adaFormA == 0 && adaFormB == 0)
+            {
+
+                e.Style.BackColor = Color.LavenderBlush;
+            }
+
         }
 
         private void pilihPasien_click(object sender, CellButtonClickEventArgs e)
@@ -170,6 +201,7 @@ namespace Casemix.Forms.CasemixForm
             {
                 e.Column.HeaderText = "Tgl Masuk";
                 e.Column.Width = 80;
+                e.Column.Format = "dd/MM/yyyy";
                 e.Column.AllowFiltering = true;
             }
             if (e.Column.MappingName == "VC_n_ruang")
@@ -177,6 +209,14 @@ namespace Casemix.Forms.CasemixForm
                 e.Column.HeaderText = "Ruang";
                 e.Column.Width = 160;
                 e.Column.AllowFiltering = true;
+            }
+            if (e.Column.MappingName == "formAexists")
+            {
+                e.Column.Visible = false;
+            }
+            if (e.Column.MappingName == "formBexists")
+            {
+               e.Column.Visible = false;
             }
         }
     }

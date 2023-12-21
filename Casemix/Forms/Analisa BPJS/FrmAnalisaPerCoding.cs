@@ -225,7 +225,7 @@ namespace Casemix.Forms.Analisa_BPJS
                                 kartuPiutang.dc_piutang_rs,
                                 ISNULL(tagihan.dc_umbal,0) as dc_umbal,
                                 ISNULL(tagihan.dc_umbal,0)-kartuPiutang.dc_piutang_rs as selisihUmbal,
-                                dokter.vc_nama_kry
+                                dokter.vc_nama_kry,klinik.vc_n_klinik klinik
                             FROM
 	                            AKPRJ_DTagihan tagihan
 	                            INNER JOIN bpjs_sep sep ON sep.vc_no_sep = tagihan.vc_no_sep
@@ -233,6 +233,7 @@ namespace Casemix.Forms.Analisa_BPJS
                                 INNER JOIN RMpasien pasien on pasien.vc_no_rm = kunjung.vc_no_rm
 	                            LEFT JOIN AKPRJ_KODE_INACBG inacbg ON inacbg.vc_kode_inacbg = tagihan.vc_diagnosa_grouper
 	                            INNER JOIN AKPRJ_Kartu_piutang_JKN_V kartuPiutang ON kartuPiutang.vc_no_regj = tagihan.vc_no_regj
+                                INNER JOIN RMKLINIK klinik on klinik.vc_k_klinik = kunjung.vc_k_klinik
                                 LEFT JOIN SDMDOKTER dokter ON dokter.vc_nid = tagihan.vc_nid_dpjp
                             WHERE
 	                            ISNULL( sep.bt_hapus, '0' ) <> 1 
@@ -264,8 +265,8 @@ namespace Casemix.Forms.Analisa_BPJS
                                     umbal = (decimal)dr["dc_umbal"],
                                     namaDokter = dr["vc_nama_kry"].ToString(),
                                     selisihUmbal = (decimal)dr["selisihUmbal"],
-                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString())
-
+                                    analisaTarifs = getTarifRJByReg(dr["vc_no_regj"].ToString()),
+                                      klinik = dr["klinik"].ToString(),
                                 }).ToList();
             return diagnosaBpjsList;
 

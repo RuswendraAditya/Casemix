@@ -174,6 +174,7 @@ namespace Casemix.Forms.CasemixForm
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage3
@@ -249,6 +250,7 @@ namespace Casemix.Forms.CasemixForm
             this.dgPiutang.TabIndex = 379;
             this.dgPiutang.Text = "sfDataGrid1";
             this.dgPiutang.AutoGeneratingColumn += new Syncfusion.WinForms.DataGrid.Events.AutoGeneratingColumnEventHandler(this.dgPiutang_AutoGeneratingColumn);
+            this.dgPiutang.CellButtonClick += new Syncfusion.WinForms.DataGrid.Events.CellButtonClickEventHandler(this.deleteCatatan_click);
             // 
             // tabPage2
             // 
@@ -658,14 +660,8 @@ namespace Casemix.Forms.CasemixForm
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.SeaShell;
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.lblNoReg);
-            this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.txtPerencanaanLain);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.lblNoRM);
             this.tabPage1.Controls.Add(this.chkBoxPerencanaanLain);
-            this.tabPage1.Controls.Add(this.lblNama);
             this.tabPage1.Controls.Add(this.chkBoxPerencanaanMonitor);
             this.tabPage1.Controls.Add(this.chkBoxPerencanaanRencanakanKeterlibatanPasien);
             this.tabPage1.Controls.Add(this.chkBoxPerencanaanRencanakanPemberianInformasi);
@@ -770,7 +766,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(1305, 68);
+            this.label32.Location = new System.Drawing.Point(13, 54);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(65, 18);
@@ -781,7 +777,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.lblNoReg.AutoSize = true;
             this.lblNoReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoReg.Location = new System.Drawing.Point(1379, 68);
+            this.lblNoReg.Location = new System.Drawing.Point(87, 54);
             this.lblNoReg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoReg.Name = "lblNoReg";
             this.lblNoReg.Size = new System.Drawing.Size(80, 18);
@@ -792,7 +788,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(1305, 49);
+            this.label28.Location = new System.Drawing.Point(13, 35);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(61, 18);
@@ -812,7 +808,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1305, 28);
+            this.label27.Location = new System.Drawing.Point(13, 14);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(57, 18);
@@ -823,7 +819,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.lblNoRM.AutoSize = true;
             this.lblNoRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoRM.Location = new System.Drawing.Point(1379, 49);
+            this.lblNoRM.Location = new System.Drawing.Point(87, 35);
             this.lblNoRM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoRM.Name = "lblNoRM";
             this.lblNoRM.Size = new System.Drawing.Size(80, 18);
@@ -846,7 +842,7 @@ namespace Casemix.Forms.CasemixForm
             // 
             this.lblNama.AutoSize = true;
             this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNama.Location = new System.Drawing.Point(1379, 28);
+            this.lblNama.Location = new System.Drawing.Point(87, 14);
             this.lblNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNama.Name = "lblNama";
             this.lblNama.Size = new System.Drawing.Size(200, 18);
@@ -1908,10 +1904,16 @@ namespace Casemix.Forms.CasemixForm
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(1293, 16);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.lblNoReg);
+            this.panel1.Controls.Add(this.lblNama);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.lblNoRM);
+            this.panel1.Location = new System.Drawing.Point(1158, 16);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(354, 93);
+            this.panel1.Size = new System.Drawing.Size(489, 93);
             this.panel1.TabIndex = 402;
             // 
             // FormInput
@@ -1919,12 +1921,12 @@ namespace Casemix.Forms.CasemixForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1697, 922);
+            this.ClientSize = new System.Drawing.Size(1718, 943);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "sql";
+            this.Text = "Formulir MPP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormInput_Load);
             this.tabPage3.ResumeLayout(false);
@@ -1935,6 +1937,8 @@ namespace Casemix.Forms.CasemixForm
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
